@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import { ArrowRight, CheckCircle2, Shield, Award, Users, Brain, Lock } from "lucide-react";
+import { ArrowRight, CheckCircle2, Shield, Award, Users, Brain, Lock, Linkedin } from "lucide-react";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import heroIceberg from "@/assets/landing-bg-grey.png";
 import wiselookLogo from "@/assets/wiselook-logo.svg";
@@ -8,6 +8,8 @@ import hrSummit1 from "@/assets/hr_summit/WhatsApp Image 2025-10-06 at 11.24.31.
 import hrSummit2 from "@/assets/hr_summit/HR-584.jpg";
 import hrSummit3 from "@/assets/hr_summit/1759481576972.jpeg";
 import hrSummit4 from "@/assets/hr_summit/IMG_8293.JPG?url";
+import jaimePhoto from "@/assets/profiles/jaime.jpg";
+import rocioPhoto from "@/assets/profiles/rocio.png";
 
 const Index = () => {
   const scrollToSection = (sectionId: string) => {
@@ -57,6 +59,12 @@ const Index = () => {
                 className="text-muted-foreground hover:text-foreground transition-colors"
               >
                 About
+              </button>
+              <button 
+                onClick={() => scrollToSection('team')}
+                className="text-muted-foreground hover:text-foreground transition-colors"
+              >
+                Team
               </button>
               <button 
                 onClick={() => scrollToSection('contact')}
@@ -551,6 +559,145 @@ const Index = () => {
         </div>
       </section>
 
+      {/* Team Section */}
+      <section id="team" className="py-20 md:py-28 bg-gradient-card">
+        <div className="container mx-auto px-6">
+          <div className="max-w-6xl mx-auto space-y-12">
+            <div className="text-center space-y-4">
+              <h2 className="font-heading font-bold text-3xl md:text-4xl text-foreground">
+                Meet the Team
+              </h2>
+              <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+                Visionary leaders combining deep expertise in AI, data science, and customer experience to revolutionize workforce intelligence.
+              </p>
+            </div>
+
+            <div className="grid md:grid-cols-2 gap-8 lg:gap-12">
+              {/* Jaime Oliver Huidobro */}
+              <div className="bg-background rounded-xl p-8 shadow-card">
+                <div className="text-center space-y-6">
+                  <img 
+                    src={jaimePhoto} 
+                    alt="Jaime Oliver Huidobro, PhD" 
+                    className="w-32 h-32 rounded-full mx-auto object-cover shadow-soft"
+                  />
+                  <div className="space-y-2">
+                    <h3 className="font-heading font-bold text-2xl text-foreground">
+                      Jaime Oliver Huidobro, PhD
+                    </h3>
+                    <p className="text-lg text-primary font-medium">
+                      Co-Founder, Product, Science & AI
+                    </p>
+                  </div>
+                  
+                  <div className="space-y-3 text-left">
+                    <ul className="space-y-2 text-muted-foreground">
+                      <li className="flex items-start gap-2">
+                        <CheckCircle2 className="h-4 w-4 text-primary mt-1 flex-shrink-0" />
+                        <span className="text-sm">PhD in Mathematical Engineering with expertise in AI, data science, and sustainability</span>
+                      </li>
+                      <li className="flex items-start gap-2">
+                        <CheckCircle2 className="h-4 w-4 text-primary mt-1 flex-shrink-0" />
+                        <span className="text-sm">Former Lead Data Scientist at Clarity AI and Visiting Scientist at MIT</span>
+                      </li>
+                      <li className="flex items-start gap-2">
+                        <CheckCircle2 className="h-4 w-4 text-primary mt-1 flex-shrink-0" />
+                        <span className="text-sm">Assistant Professor at top universities, bridging science and business</span>
+                      </li>
+                      <li className="flex items-start gap-2">
+                        <CheckCircle2 className="h-4 w-4 text-primary mt-1 flex-shrink-0" />
+                        <span className="text-sm">Founder of Epoch Metrics, building human-centric future-of-work solutions</span>
+                      </li>
+                    </ul>
+                  </div>
+
+                  <p className="text-muted-foreground text-sm leading-relaxed">
+                    Passionate about empowering organizations through AI-driven insights into human potential, combining rigorous scientific methodology with practical business applications.
+                  </p>
+
+                  <a 
+                    href="https://es.linkedin.com/in/jaime-oliver-huidobro" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-2 text-primary hover:text-primary/80 transition-colors text-sm font-medium"
+                  >
+                    <Linkedin className="h-4 w-4" />
+                    Connect on LinkedIn
+                  </a>
+                </div>
+              </div>
+
+              {/* Rocío Fernández-Rubíes Aguirre */}
+              <div className="bg-background rounded-xl p-8 shadow-card">
+                <div className="text-center space-y-6">
+                  <img 
+                    src={rocioPhoto} 
+                    alt="Rocío Fernández-Rubíes Aguirre" 
+                    className="w-32 h-32 rounded-full mx-auto object-cover shadow-soft"
+                  />
+                  <div className="space-y-2">
+                    <h3 className="font-heading font-bold text-2xl text-foreground">
+                      Rocío Fernández-Rubíes Aguirre
+                    </h3>
+                    <p className="text-lg text-primary font-medium">
+                      Co-Founder & CEO
+                    </p>
+                  </div>
+                  
+                  <div className="space-y-3 text-left">
+                    <ul className="space-y-2 text-muted-foreground">
+                      <li className="flex items-start gap-2">
+                        <CheckCircle2 className="h-4 w-4 text-primary mt-1 flex-shrink-0" />
+                        <span className="text-sm">Chief Experience Officer at Restaurant Brands Iberia, driving digital transformation</span>
+                      </li>
+                      <li className="flex items-start gap-2">
+                        <CheckCircle2 className="h-4 w-4 text-primary mt-1 flex-shrink-0" />
+                        <span className="text-sm">Former Amazon executive with strong customer-centric and operational DNA</span>
+                      </li>
+                      <li className="flex items-start gap-2">
+                        <CheckCircle2 className="h-4 w-4 text-primary mt-1 flex-shrink-0" />
+                        <span className="text-sm">Business Connector at Klarna, facilitating tech-driven customer solutions</span>
+                      </li>
+                      <li className="flex items-start gap-2">
+                        <CheckCircle2 className="h-4 w-4 text-primary mt-1 flex-shrink-0" />
+                        <span className="text-sm">Recognized at HR Innovation Summit for Strategic Workforce Intelligence innovation</span>
+                      </li>
+                    </ul>
+                  </div>
+
+                  <p className="text-muted-foreground text-sm leading-relaxed">
+                    Championing a new era in workforce intelligence, focusing on measuring and activating human potential through data, science, and AI to help organizations gain a competitive edge.
+                  </p>
+
+                  <a 
+                    href="https://es.linkedin.com/in/rocio-fernandez-rubies-aguirre-b8b1373b" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-2 text-primary hover:text-primary/80 transition-colors text-sm font-medium"
+                  >
+                    <Linkedin className="h-4 w-4" />
+                    Connect on LinkedIn
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            {/* Join the Team CTA */}
+            <div className="text-center pt-8">
+              <Button 
+                variant="hero" 
+                size="lg"
+                className="group"
+                onClick={() => window.open('https://www.linkedin.com/company/wiselook/jobs/', '_blank')}
+              >
+                Join the Team
+                <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
+              </Button>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Contact Section */}
       <section id="contact" className="py-20 md:py-28 bg-gradient-hero">
         <div className="container mx-auto px-6">
@@ -625,6 +772,12 @@ const Index = () => {
                 className="hover:text-foreground transition-colors min-h-[44px] min-w-[44px] flex items-center focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 rounded"
               >
                 About
+              </button>
+              <button 
+                onClick={() => scrollToSection('team')}
+                className="hover:text-foreground transition-colors min-h-[44px] min-w-[44px] flex items-center focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 rounded"
+              >
+                Team
               </button>
               <button 
                 onClick={() => scrollToSection('contact')}
