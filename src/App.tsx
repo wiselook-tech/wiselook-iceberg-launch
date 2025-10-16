@@ -13,7 +13,7 @@ const App = () => (
     <TooltipProvider>
       <Toaster />
       <Sonner />
-      <BrowserRouter basename="/wiselook-iceberg-launch">
+      <BrowserRouter basename={import.meta.env.PROD && import.meta.env.VITE_GITHUB_PAGES ? "/wiselook-iceberg-launch" : ""}>
         <Routes>
           <Route path="/" element={<Index />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
