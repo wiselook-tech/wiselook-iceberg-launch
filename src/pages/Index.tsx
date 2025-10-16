@@ -7,7 +7,7 @@ import wiselookIcon from "@/assets/favicon.png";
 import hrSummit1 from "@/assets/hr_summit/WhatsApp Image 2025-10-06 at 11.24.31.jpeg";
 import hrSummit2 from "@/assets/hr_summit/HR-584.jpg";
 import hrSummit3 from "@/assets/hr_summit/1759481576972.jpeg";
-import hrSummit4 from "@/assets/hr_summit/IMG_8293.JPG";
+import hrSummit4 from "@/assets/hr_summit/IMG_8293.JPG?url";
 
 const Index = () => {
   const scrollToSection = (sectionId: string) => {
@@ -65,15 +65,26 @@ const Index = () => {
                 Contact
               </button>
             </div>
-            <Button 
-              variant="hero" 
-              size="sm"
-              className="group"
-              onClick={() => window.open('https://calendar.app.google/NvJxzr9aQzB77DeHA', '_blank')}
-            >
-              Contact us to know more
-              <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
-            </Button>
+            <div className="hidden md:flex items-center gap-3">
+              <Button 
+                variant="outline" 
+                size="sm"
+                onClick={() => window.open('https://calendar.app.google/NvJxzr9aQzB77DeHA', '_blank')}
+                className="group"
+              >
+                Request Demo
+                <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
+              </Button>
+              <Button 
+                variant="hero" 
+                size="sm"
+                className="group"
+                onClick={() => window.open('https://calendar.app.google/NvJxzr9aQzB77DeHA', '_blank')}
+              >
+                See a 5-minute demo
+                <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
+              </Button>
+            </div>
           </div>
         </div>
       </nav>
@@ -85,19 +96,19 @@ const Index = () => {
             {/* Hero Content */}
             <div className="space-y-8 animate-fade-up">
               <h1 className="font-heading font-bold text-4xl md:text-5xl lg:text-6xl leading-tight text-foreground">
-                Recognize your talent. Fast, practical, and science‑based.
+                Discover your talent in minutes, not weeks
               </h1>
               <p className="text-lg md:text-xl text-muted-foreground max-w-xl">
-                Wiselook runs inside Microsoft Teams to help HR make scalable, informed decisions with AI and validated psychometrics.
+                Uncover hidden potential with science-backed, conversational assessments delivered natively in Microsoft Teams. Predictive soft-skills intelligence for succession planning, mobility, and workforce decisions.
               </p>
               <div className="pt-4 flex flex-col gap-4">
                 <Button 
                   variant="hero" 
                   size="xl" 
-                  className="group w-fit"
+                  className="group w-fit animate-pulse-glow"
                   onClick={() => window.open('https://calendar.app.google/NvJxzr9aQzB77DeHA', '_blank')}
                 >
-                  Contact us to know more
+                  See a 5-minute demo
                   <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
                 </Button>
                 <a 
@@ -110,12 +121,33 @@ const Index = () => {
             </div>
 
             {/* Hero Image */}
-            <div className="relative lg:block animate-float">
+            <div className="relative lg:block animate-reveal">
               <img 
                 src={heroIceberg} 
                 alt="Wiselook iceberg visualization showing visible and hidden talent potential" 
-                className="w-full h-auto rounded-2xl shadow-soft"
+                className="w-full h-auto rounded-2xl shadow-soft hover:shadow-soft transition-all duration-300"
               />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Social Proof Strip */}
+      <section className="py-8 bg-gradient-to-r from-primary/5 to-secondary/5 border-y border-border/50">
+        <div className="container mx-auto px-6">
+          <div className="flex items-center justify-center gap-8 flex-wrap">
+            <div className="flex items-center gap-3">
+              <div className="h-8 w-8 rounded-full bg-primary/10 flex items-center justify-center">
+                <Brain className="h-4 w-4 text-primary" />
+              </div>
+              <span className="text-sm font-medium text-foreground">Backed by UAM psychometrics</span>
+            </div>
+            <div className="h-4 w-px bg-border"></div>
+            <div className="flex items-center gap-3">
+              <div className="h-8 w-8 rounded-full bg-primary/10 flex items-center justify-center">
+                <Users className="h-4 w-4 text-primary" />
+              </div>
+              <span className="text-sm font-medium text-foreground">In partnership with Talengo</span>
             </div>
           </div>
         </div>
@@ -142,33 +174,53 @@ const Index = () => {
 
             {/* Award Photos Grid */}
             <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
-              <div className="relative group">
+              <div className="relative group cursor-pointer">
                 <img 
                   src={hrSummit1} 
                   alt="HR Innovation Summit 2025 - Wiselook team receiving award" 
                   className="w-full h-48 object-cover rounded-xl shadow-card group-hover:shadow-soft transition-all"
                 />
+                <div className="absolute inset-0 bg-black/0 group-hover:bg-black/60 transition-all duration-300 rounded-xl flex items-end">
+                  <div className="p-4 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                    <p className="text-sm font-medium">HR Innovation Summit 2025 - Startup of the Year</p>
+                  </div>
+                </div>
               </div>
-              <div className="relative group">
+              <div className="relative group cursor-pointer">
                 <img 
                   src={hrSummit2} 
                   alt="HR Innovation Summit 2025 - Award ceremony" 
                   className="w-full h-48 object-cover rounded-xl shadow-card group-hover:shadow-soft transition-all"
                 />
+                <div className="absolute inset-0 bg-black/0 group-hover:bg-black/60 transition-all duration-300 rounded-xl flex items-end">
+                  <div className="p-4 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                    <p className="text-sm font-medium">Award ceremony recognition</p>
+                  </div>
+                </div>
               </div>
-              <div className="relative group">
+              <div className="relative group cursor-pointer">
                 <img 
                   src={hrSummit3} 
                   alt="HR Innovation Summit 2025 - Wiselook presentation" 
                   className="w-full h-48 object-cover rounded-xl shadow-card group-hover:shadow-soft transition-all"
                 />
+                <div className="absolute inset-0 bg-black/0 group-hover:bg-black/60 transition-all duration-300 rounded-xl flex items-end">
+                  <div className="p-4 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                    <p className="text-sm font-medium">Presenting Wiselook's vision</p>
+                  </div>
+                </div>
               </div>
-              <div className="relative group">
+              <div className="relative group cursor-pointer">
                 <img 
                   src={hrSummit4} 
                   alt="HR Innovation Summit 2025 - Team celebration" 
                   className="w-full h-48 object-cover rounded-xl shadow-card group-hover:shadow-soft transition-all"
                 />
+                <div className="absolute inset-0 bg-black/0 group-hover:bg-black/60 transition-all duration-300 rounded-xl flex items-end">
+                  <div className="p-4 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                    <p className="text-sm font-medium">Celebrating with the team</p>
+                  </div>
+                </div>
               </div>
             </div>
 
@@ -220,7 +272,7 @@ const Index = () => {
                   </div>
                   <h3 className="font-heading font-semibold text-2xl text-foreground">The Problem</h3>
                   <p className="text-lg text-muted-foreground">
-                    Talent potential is hard to see. Traditional tools are slow and detached from daily work.
+                    Your best talent is invisible. Traditional assessments are slow, self-reported, and disconnected from daily work—missing the people ready to lead.
                 </p>
               </div>
             </div>
@@ -232,7 +284,7 @@ const Index = () => {
                   </div>
                   <h3 className="font-heading font-semibold text-2xl text-foreground">Our Solution</h3>
                   <p className="text-lg text-muted-foreground">
-                    Short, adaptive competency "bloques" in Teams. Clear strengths, blind spots, and next steps—where work already happens.
+                    Wiselook reveals behavioral potential in real-time with science-backed, conversational "bloques" delivered right in Teams. Clear succession signals and mobility insights, where work already happens.
                   </p>
                 </div>
               </div>
@@ -303,16 +355,16 @@ const Index = () => {
                 <div className="h-12 w-12 rounded-lg bg-primary/10 flex items-center justify-center">
                   <Users className="h-6 w-6 text-primary" />
                 </div>
-                <h3 className="font-heading font-semibold text-xl text-foreground">Close to the user</h3>
-                <p className="text-muted-foreground">Native in Microsoft Teams</p>
+                <h3 className="font-heading font-semibold text-xl text-foreground">Frictionless scale</h3>
+                <p className="text-muted-foreground">Native in Microsoft Teams drives higher completion and faster time-to-value vs. separate-platform tools</p>
               </div>
 
               <div className="space-y-4 p-6 rounded-xl bg-background shadow-card">
                 <div className="h-12 w-12 rounded-lg bg-secondary/20 flex items-center justify-center">
                   <Brain className="h-6 w-6 text-primary" />
                 </div>
-                <h3 className="font-heading font-semibold text-xl text-foreground">Scalable, informed HR decisions</h3>
-                <p className="text-muted-foreground">AI-powered insights for better outcomes</p>
+                <h3 className="font-heading font-semibold text-xl text-foreground">Predictive intelligence</h3>
+                <p className="text-muted-foreground">Conversational SJT with psychometric rigor uncovers what people can actually do, not what they self-report</p>
               </div>
 
               <div className="space-y-4 p-6 rounded-xl bg-background shadow-card">
@@ -321,8 +373,8 @@ const Index = () => {
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" />
                   </svg>
                 </div>
-                <h3 className="font-heading font-semibold text-xl text-foreground">Focus on potential</h3>
-                <p className="text-muted-foreground">Not just CV history</p>
+                <h3 className="font-heading font-semibold text-xl text-foreground">Decision-ready insights</h3>
+                <p className="text-muted-foreground">Behavioral levels and readiness signals for succession and mobility, not just skills tags</p>
               </div>
 
               <div className="space-y-4 p-6 rounded-xl bg-background shadow-card">
@@ -478,7 +530,7 @@ const Index = () => {
               className="group"
               onClick={() => window.open('https://calendar.app.google/NvJxzr9aQzB77DeHA', '_blank')}
             >
-              Contact us to know more
+              Get your pilot plan
               <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
             </Button>
           </div>
@@ -515,7 +567,7 @@ const Index = () => {
               className="group min-h-[44px]"
               onClick={() => window.open('https://calendar.app.google/NvJxzr9aQzB77DeHA', '_blank')}
             >
-              Contact us to know more
+              Book your demo now
                 <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
               </Button>
           </div>
@@ -596,7 +648,7 @@ const Index = () => {
           className="w-full group min-h-[44px]"
           onClick={() => window.open('https://calendar.app.google/NvJxzr9aQzB77DeHA', '_blank')}
         >
-          Contact us to know more
+          See a 5-minute demo
           <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
         </Button>
       </div>
