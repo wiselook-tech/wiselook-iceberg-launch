@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import { ArrowRight, CheckCircle2, Shield, Award, Users, Brain, Lock, Linkedin } from "lucide-react";
+import { ArrowRight, CheckCircle2, Shield, Award, Users, Brain, Lock, Linkedin, Globe, Database, Search, Eye, UserCheck, FileText, ShieldCheck, Key } from "lucide-react";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import CompetitorQuadrant from "@/components/CompetitorQuadrant";
 import heroIceberg from "@/assets/landing-bg-grey.png";
@@ -12,6 +12,10 @@ import hrSummit4 from "@/assets/hr_summit/IMG_8293.JPG?url";
 import jaimePhoto from "@/assets/profiles/jaime.jpg";
 import rocioPhoto from "@/assets/profiles/rocio.png";
 import rafaPhoto from "@/assets/profiles/rafa.png";
+import soc2Logo from "@/assets/soc2-logo.svg";
+import gdprLogo from "@/assets/gdpr-logo.svg";
+import iso27001Logo from "@/assets/iso27001-logo.svg";
+import euAiActLogo from "@/assets/eu-ai-act-logo.svg";
 
 const Index = () => {
   const scrollToSection = (sectionId: string) => {
@@ -216,76 +220,65 @@ const Index = () => {
               {/* Problem Content */}
               <div className="space-y-6">
                 <h2 className="font-heading font-bold text-3xl md:text-4xl text-foreground">
-                  Go beyond multiple‑choice tests
+                  Go beyond multiple‑choice tests or expensive in-person assessments
                 </h2>
                 <p className="text-lg text-muted-foreground">
                   Most assessments only capture the obvious. The real skills, judgment, and potential stay invisible. It's time to see the whole picture.
                 </p>
               </div>
 
-              {/* Invisible Talent Pyramid Visual */}
+              {/* Interactive Pyramid Card Stack */}
               <div className="flex justify-center lg:justify-end">
-                <div className="relative w-80 h-80">
-                  <svg viewBox="0 0 400 300" className="w-full h-full">
-                    <defs>
-                      {/* Clipping paths for each layer */}
-                      <clipPath id="bottomClip">
-                        <polygon points="50,250 350,250 200,180" />
-                      </clipPath>
-                      <clipPath id="middleClip">
-                        <polygon points="100,180 300,180 200,120" />
-                      </clipPath>
-                      <clipPath id="topClip">
-                        <polygon points="150,120 250,120 200,80" />
-                      </clipPath>
-                    </defs>
-                    
-                    {/* Complete pyramid shape as background */}
-                    <polygon 
-                      points="50,250 350,250 200,80" 
-                      fill="#e5e7eb" 
-                      stroke="#d1d5db" 
-                      strokeWidth="2"
-                    />
-                    
-                    {/* Bottom Layer - Line Workers */}
-                    <polygon 
-                      points="50,250 350,250 200,180" 
-                      fill="#e5e7eb" 
-                      clipPath="url(#bottomClip)"
-                    />
-                    <text x="200" y="220" textAnchor="middle" className="text-sm font-medium fill-gray-700">
-                      Line Workers
-                    </text>
-                    
-                    {/* Middle Layer - Best of Workforce */}
-                    <polygon 
-                      points="100,180 300,180 200,120" 
-                      fill="#fb923c" 
-                      clipPath="url(#middleClip)"
-                    />
-                    <text x="200" y="155" textAnchor="middle" className="text-sm font-medium fill-white">
-                      Best of Workforce
-                    </text>
-                    
-                    {/* Top Layer - Execs */}
-                    <polygon 
-                      points="150,120 250,120 200,80" 
-                      fill="#93c5fd" 
-                      clipPath="url(#topClip)"
-                    />
-                    <text x="200" y="105" textAnchor="middle" className="text-sm font-medium fill-white">
-                      Execs
-                    </text>
-                    
-                    {/* Labels */}
-                    <text x="260" y="105" className="text-xs fill-blue-600 font-medium">
-                      Human Skills get tested
-                    </text>
-                    <text x="310" y="155" className="text-xs fill-orange-600 font-medium">
-                      Human Skills get debated
-                    </text>
-                  </svg>
+                <div className="relative w-80 h-80 sm:w-96 sm:h-96 flex items-end justify-center group/pyramid">
+                  {/* Bottom Card - Line Workers */}
+                  <div 
+                    className="absolute bottom-0 w-80 h-24 sm:w-96 sm:h-28 bg-gradient-to-r from-gray-100 to-gray-200 rounded-lg shadow-lg transform transition-all duration-500 hover:scale-110 hover:shadow-2xl hover:-translate-y-4 cursor-pointer animate-slide-up group focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 group-hover/pyramid:scale-105 group-hover/pyramid:shadow-xl group-hover/pyramid:-translate-y-2"
+                    role="button"
+                    tabIndex={0}
+                    aria-label="Line Workers - Foundation of the workforce where potential begins"
+                  >
+                    <div className="p-3 sm:p-4 h-full flex flex-col justify-center">
+                      <h3 className="text-lg sm:text-xl font-semibold text-gray-800 text-center mb-1 group-hover:text-gray-900 transition-colors">Line Workers</h3>
+                      <div className="opacity-0 group-hover:opacity-100 transition-all duration-300 transform translate-y-2 group-hover:translate-y-0">
+                        <p className="text-sm sm:text-base text-gray-600 text-center group-hover:text-gray-700 transition-colors">Foundation of the workforce</p>
+                        <p className="text-xs sm:text-sm text-gray-500 text-center mt-1">Where potential begins</p>
+                      </div>
+                    </div>
+                  </div>
+
+                  {/* Middle Card - Best of Workforce */}
+                  <div 
+                    className="absolute bottom-16 sm:bottom-20 w-56 h-20 sm:w-64 sm:h-24 bg-gradient-to-r from-orange-400 to-orange-500 rounded-lg shadow-lg transform transition-all duration-500 hover:scale-110 hover:shadow-2xl hover:-translate-y-4 cursor-pointer animate-slide-in-left group focus:outline-none focus:ring-2 focus:ring-orange-500 focus:ring-offset-2 group-hover/pyramid:scale-105 group-hover/pyramid:shadow-xl group-hover/pyramid:-translate-y-2" 
+                    style={{ animationDelay: '300ms' }}
+                    role="button"
+                    tabIndex={0}
+                    aria-label="Best of Workforce - Rising talent where human skills get debated"
+                  >
+                    <div className="p-2 sm:p-3 h-full flex flex-col justify-center">
+                      <h3 className="text-base sm:text-lg font-semibold text-white text-center mb-1 group-hover:text-orange-100 transition-colors">Best of Workforce</h3>
+                      <div className="opacity-0 group-hover:opacity-100 transition-all duration-300 transform translate-y-2 group-hover:translate-y-0">
+                        <p className="text-sm text-orange-100 text-center group-hover:text-orange-50 transition-colors">Human Skills get debated</p>
+                        <p className="text-xs text-orange-200 text-center mt-1">Rising talent</p>
+                      </div>
+                    </div>
+                  </div>
+
+                  {/* Top Card - Execs */}
+                  <div 
+                    className="absolute bottom-32 sm:bottom-36 w-32 h-16 sm:w-36 sm:h-20 bg-gradient-to-r from-blue-400 to-blue-500 rounded-lg shadow-lg transform transition-all duration-500 hover:scale-110 hover:shadow-2xl hover:-translate-y-4 cursor-pointer animate-slide-down group focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 group-hover/pyramid:scale-105 group-hover/pyramid:shadow-xl group-hover/pyramid:-translate-y-2" 
+                    style={{ animationDelay: '600ms' }}
+                    role="button"
+                    tabIndex={0}
+                    aria-label="Executives - Leadership level where human skills get tested"
+                  >
+                    <div className="p-2 sm:p-3 h-full flex flex-col justify-center">
+                      <h3 className="text-sm sm:text-base font-semibold text-white text-center mb-1 group-hover:text-blue-100 transition-colors">Execs</h3>
+                      <div className="opacity-0 group-hover:opacity-100 transition-all duration-300 transform translate-y-2 group-hover:translate-y-0">
+                        <p className="text-xs sm:text-sm text-blue-100 text-center group-hover:text-blue-50 transition-colors">Human Skills get tested</p>
+                        <p className="text-xs text-blue-200 text-center mt-1">Leadership level</p>
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
@@ -302,7 +295,7 @@ const Index = () => {
                 How we solve it
               </h2>
               <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-                A short, conversational flow that captures real evidence and turns it into action.
+                A short, AI-native conversational flow that captures real evidence and turns it into action.
               </p>
             </div>
             
@@ -316,7 +309,7 @@ const Index = () => {
                 </div>
                 <h3 className="font-heading font-semibold text-xl text-foreground">Assess</h3>
                 <p className="text-muted-foreground">
-                  People answer brief, open‑ended prompts in their own words where they already work.
+                  Team answers an open‑ended interview following a scientifically validated methodology.
                 </p>
               </div>
 
@@ -423,89 +416,6 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Security and Privacy */}
-      <section id="security" className="py-20 md:py-28 bg-muted/30">
-        <div className="container mx-auto px-6">
-          <div className="max-w-4xl mx-auto space-y-12">
-            <div className="text-center space-y-4">
-              <h2 className="font-heading font-bold text-3xl md:text-4xl text-foreground">
-                Security and Privacy
-              </h2>
-              <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-                Privacy‑first design with consent, RGPD controls, and Azure security
-              </p>
-            </div>
-
-            <div className="grid md:grid-cols-3 gap-8">
-              <div className="text-center space-y-4 p-6 rounded-xl bg-background shadow-card">
-                <div className="h-12 w-12 rounded-lg bg-primary/10 flex items-center justify-center mx-auto">
-                  <Shield className="h-6 w-6 text-primary" />
-                </div>
-                <h3 className="font-heading font-semibold text-lg text-foreground">SOC 2 Ready</h3>
-                <p className="text-sm text-muted-foreground">Enterprise-grade security standards</p>
-              </div>
-
-              <div className="text-center space-y-4 p-6 rounded-xl bg-background shadow-card">
-                <div className="h-12 w-12 rounded-lg bg-primary/10 flex items-center justify-center mx-auto">
-                  <Lock className="h-6 w-6 text-primary" />
-                </div>
-                <h3 className="font-heading font-semibold text-lg text-foreground">GDPR Compliant</h3>
-                <p className="text-sm text-muted-foreground">Full data protection compliance</p>
-              </div>
-
-              <div className="text-center space-y-4 p-6 rounded-xl bg-background shadow-card">
-                <div className="h-12 w-12 rounded-lg bg-primary/10 flex items-center justify-center mx-auto">
-                  <svg className="h-6 w-6 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
-                  </svg>
-                </div>
-                <h3 className="font-heading font-semibold text-lg text-foreground">Azure Security</h3>
-                <p className="text-sm text-muted-foreground">Microsoft's enterprise cloud security</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* FAQ */}
-      <section className="py-16 md:py-20 bg-background">
-        <div className="container mx-auto px-6">
-          <div className="max-w-3xl mx-auto">
-            <h2 className="font-heading font-bold text-2xl md:text-3xl text-center text-foreground mb-8">
-              Frequently Asked Questions
-            </h2>
-            <Accordion type="single" collapsible className="w-full space-y-4">
-              <AccordionItem value="teams" className="bg-card rounded-lg px-6 border-none shadow-card">
-                <AccordionTrigger className="text-left hover:no-underline py-6 min-h-[44px]">
-                  <span className="font-heading font-semibold text-foreground">Do we need Microsoft Teams?</span>
-                </AccordionTrigger>
-                <AccordionContent className="text-muted-foreground pb-6">
-                  Yes, Wiselook runs inside Teams.
-                </AccordionContent>
-              </AccordionItem>
-
-              <AccordionItem value="time" className="bg-card rounded-lg px-6 border-none shadow-card">
-                <AccordionTrigger className="text-left hover:no-underline py-6 min-h-[44px]">
-                  <span className="font-heading font-semibold text-foreground">How long does it take to complete?</span>
-                </AccordionTrigger>
-                <AccordionContent className="text-muted-foreground pb-6">
-                  Most flows finish in under 10 minutes.
-                </AccordionContent>
-              </AccordionItem>
-
-              <AccordionItem value="validated" className="bg-card rounded-lg px-6 border-none shadow-card">
-                <AccordionTrigger className="text-left hover:no-underline py-6 min-h-[44px]">
-                  <span className="font-heading font-semibold text-foreground">Is it validated?</span>
-                </AccordionTrigger>
-                <AccordionContent className="text-muted-foreground pb-6">
-                  Yes. Methods are developed with Universidad Autónoma de Madrid and calibrated over time.
-                </AccordionContent>
-              </AccordionItem>
-            </Accordion>
-          </div>
-        </div>
-      </section>
-
       {/* LinkedIn Follow Section */}
       <section className="py-20 md:py-28 bg-background">
         <div className="container mx-auto px-6">
@@ -527,6 +437,187 @@ const Index = () => {
                 <Linkedin className="h-6 w-6" />
                 Follow us on LinkedIn
               </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Security and Privacy */}
+      <section id="security" className="py-20 md:py-28 bg-muted/30">
+        <div className="container mx-auto px-6">
+          <div className="max-w-6xl mx-auto space-y-12">
+            <div className="text-center space-y-8">
+              <h2 className="font-heading font-bold text-3xl md:text-4xl text-foreground">
+                Enterprise‑grade security and privacy
+              </h2>
+              <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+                Built with security and privacy by design, ensuring your data is protected at every step
+              </p>
+              
+              {/* Certification Logos */}
+              <div className="flex items-center justify-center gap-8 flex-wrap pt-4">
+                <img src={soc2Logo} alt="SOC 2 Type II" className="h-20 opacity-60 hover:opacity-100 transition-opacity" />
+                <img src={gdprLogo} alt="GDPR Compliant" className="h-20 opacity-60 hover:opacity-100 transition-opacity" />
+                <img src={iso27001Logo} alt="ISO 27001 Certified" className="h-20 opacity-60 hover:opacity-100 transition-opacity" />
+                <img src={euAiActLogo} alt="EU AI Act Compliant" className="h-20 opacity-60 hover:opacity-100 transition-opacity" />
+              </div>
+            </div>
+
+            {/* Three-Column Security Features */}
+            <div className="grid lg:grid-cols-3 gap-8">
+              {/* Column 1: Data Protection & Privacy */}
+              <div className="space-y-6">
+                <h3 className="font-heading font-bold text-xl text-foreground text-center lg:text-left">
+                  Data Protection & Privacy
+                </h3>
+                
+                <div className="space-y-4">
+                  <div className="bg-background rounded-xl p-6 shadow-card">
+                    <div className="flex items-start gap-4">
+                      <div className="h-10 w-10 rounded-lg bg-primary/10 flex items-center justify-center flex-shrink-0">
+                        <Key className="h-5 w-5 text-primary" />
+                      </div>
+                      <div>
+                        <h4 className="font-heading font-semibold text-foreground mb-2">Privacy by Design</h4>
+                        <p className="text-sm text-muted-foreground">
+                          <strong>Data minimization</strong>, user consent management, transparency, and compliance with <strong>GDPR</strong> and other regional privacy laws.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div className="bg-background rounded-xl p-6 shadow-card">
+                    <div className="flex items-start gap-4">
+                      <div className="h-10 w-10 rounded-lg bg-primary/10 flex items-center justify-center flex-shrink-0">
+                        <Shield className="h-5 w-5 text-primary" />
+                      </div>
+                      <div>
+                        <h4 className="font-heading font-semibold text-foreground mb-2">Zero Training Guarantee</h4>
+                        <p className="text-sm text-muted-foreground">
+                          Your data is <strong>never used to train AI models</strong>—contractually enforced and technically protected on every step of the process.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div className="bg-background rounded-xl p-6 shadow-card">
+                    <div className="flex items-start gap-4">
+                      <div className="h-10 w-10 rounded-lg bg-primary/10 flex items-center justify-center flex-shrink-0">
+                        <Globe className="h-5 w-5 text-primary" />
+                      </div>
+                      <div>
+                        <h4 className="font-heading font-semibold text-foreground mb-2">Localized AI Inference</h4>
+                        <p className="text-sm text-muted-foreground">
+                          LLM inference occurs within the <strong>EU for EU clients</strong> and follows data sovereignty compliance for clients based in the Americas.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+
+                </div>
+              </div>
+
+              {/* Column 2: Infrastructure & Security */}
+              <div className="space-y-6">
+                <h3 className="font-heading font-bold text-xl text-foreground text-center lg:text-left">
+                  Infrastructure & Security
+                </h3>
+                
+                <div className="space-y-4">
+                  <div className="bg-background rounded-xl p-6 shadow-card">
+                    <div className="flex items-start gap-4">
+                      <div className="h-10 w-10 rounded-lg bg-primary/10 flex items-center justify-center flex-shrink-0">
+                        <Database className="h-5 w-5 text-primary" />
+                      </div>
+                      <div>
+                        <h4 className="font-heading font-semibold text-foreground mb-2">Robust Infrastructure Security</h4>
+                        <p className="text-sm text-muted-foreground">
+                          <strong>Environment isolation</strong>, <strong>end-to-end encryption</strong> at rest and in transit, continuous vulnerability monitoring, and proactive threat detection.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div className="bg-background rounded-xl p-6 shadow-card">
+                    <div className="flex items-start gap-4">
+                      <div className="h-10 w-10 rounded-lg bg-primary/10 flex items-center justify-center flex-shrink-0">
+                        <Search className="h-5 w-5 text-primary" />
+                      </div>
+                      <div>
+                        <h4 className="font-heading font-semibold text-foreground mb-2">Strict Access & Audit Controls</h4>
+                        <p className="text-sm text-muted-foreground">
+                          <strong>Role-based access</strong>, behavioral analysis, and a comprehensive, immutable audit trail capturing all user actions and AI interactions.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div className="bg-background rounded-xl p-6 shadow-card">
+                    <div className="flex items-start gap-4">
+                      <div className="h-10 w-10 rounded-lg bg-primary/10 flex items-center justify-center flex-shrink-0">
+                        <ShieldCheck className="h-5 w-5 text-primary" />
+                      </div>
+                      <div>
+                        <h4 className="font-heading font-semibold text-foreground mb-2">Prompt Security</h4>
+                        <p className="text-sm text-muted-foreground">
+                          Defenses against <strong>prompt injection</strong>, prompt tampering, and output filtering prevent model misuse or leakage of sensitive info.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              {/* Column 3: AI Governance */}
+              <div className="space-y-6">
+                <h3 className="font-heading font-bold text-xl text-foreground text-center lg:text-left">
+                  AI Governance
+                </h3>
+                
+                <div className="space-y-4">
+                  <div className="bg-background rounded-xl p-6 shadow-card">
+                    <div className="flex items-start gap-4">
+                      <div className="h-10 w-10 rounded-lg bg-primary/10 flex items-center justify-center flex-shrink-0">
+                        <Eye className="h-5 w-5 text-primary" />
+                      </div>
+                      <div>
+                        <h4 className="font-heading font-semibold text-foreground mb-2">AI Observability & Management</h4>
+                        <p className="text-sm text-muted-foreground">
+                          AI monitoring with <strong>full input/output logging</strong>, continuous response evaluations, and prompt versioning for secure, controlled AI interactions.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div className="bg-background rounded-xl p-6 shadow-card">
+                    <div className="flex items-start gap-4">
+                      <div className="h-10 w-10 rounded-lg bg-primary/10 flex items-center justify-center flex-shrink-0">
+                        <UserCheck className="h-5 w-5 text-primary" />
+                      </div>
+                      <div>
+                        <h4 className="font-heading font-semibold text-foreground mb-2">AI & Human-in-the-Loop Controls</h4>
+                        <p className="text-sm text-muted-foreground">
+                          AI management aligned with <strong>responsible AI principles</strong>, ensuring critical HR decisions require mandatory human validation and oversight.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div className="bg-background rounded-xl p-6 shadow-card">
+                    <div className="flex items-start gap-4">
+                      <div className="h-10 w-10 rounded-lg bg-primary/10 flex items-center justify-center flex-shrink-0">
+                        <FileText className="h-5 w-5 text-primary" />
+                      </div>
+                      <div>
+                        <h4 className="font-heading font-semibold text-foreground mb-2">Explainable AI Outputs</h4>
+                        <p className="text-sm text-muted-foreground">
+                          <strong>Transparent reasoning</strong>, source references, and confidence scoring accompany every AI-generated response.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -561,12 +652,12 @@ const Index = () => {
                     <h3 className="font-heading font-bold text-2xl text-foreground min-h-[3.5rem] flex items-center justify-center">
                       Jaime Oliver Huidobro, PhD
                     </h3>
-                    <p className="text-lg text-primary font-medium">
+                    <p className="text-lg text-primary font-medium min-h-[3rem] flex items-center justify-center">
                       Co-Founder, Chief Product & Science Officer
                     </p>
                   </div>
-
-                  <p className="text-muted-foreground text-sm leading-relaxed flex-grow">
+                  
+                  <p className="text-muted-foreground text-sm leading-relaxed flex-grow min-h-[8rem] flex items-center justify-center text-justify">
                     Applied scientist and product leader with a PhD in Mathematical Engineering, specializing in AI and data-driven sustainability. Former Lead Data Scientist at Clarity AI and Assistant Professor at leading Spanish universities; recognized for integrating advanced technology with business strategy to empower organizations and unlock human potential.
                   </p>
 
@@ -594,12 +685,12 @@ const Index = () => {
                     <h3 className="font-heading font-bold text-2xl text-foreground min-h-[3.5rem] flex items-center justify-center">
                       Rocío Fernández-Rubíes Aguirre
                     </h3>
-                    <p className="text-lg text-primary font-medium">
+                    <p className="text-lg text-primary font-medium min-h-[3rem] flex items-center justify-center">
                       Co-Founder, Chief Executive Officer
                     </p>
                   </div>
-
-                  <p className="text-muted-foreground text-sm leading-relaxed flex-grow">
+                  
+                  <p className="text-muted-foreground text-sm leading-relaxed flex-grow min-h-[8rem] flex items-center justify-center text-justify">
                     Entrepreneur and executive leader in customer experience, business design, and organizational intelligence. CXO at Restaurant Brands Iberia, business connector at Klarna, and former startup founder; expert in leading strategic digital transformation and acclaimed for her innovative approaches to talent and workforce management.
                   </p>
 
@@ -627,12 +718,12 @@ const Index = () => {
                     <h3 className="font-heading font-bold text-2xl text-foreground min-h-[3.5rem] flex items-center justify-center">
                       Rafael Sarandeses
                     </h3>
-                    <p className="text-lg text-primary font-medium">
-                      Co-Founder, Chairman
+                    <p className="text-lg text-primary font-medium min-h-[3rem] flex items-center justify-center">
+                      Co-Founder, Non-Executive Chairman
                     </p>
                   </div>
 
-                  <p className="text-muted-foreground text-sm leading-relaxed flex-grow">
+                  <p className="text-muted-foreground text-sm leading-relaxed flex-grow min-h-[8rem] flex items-center justify-center text-justify">
                     Multidisciplinary leader with over 25 years of experience in investment banking, entrepreneurship, and motorsports. CEO and Partner at Talengo, advisor and coach, former Goldman Sachs executive, and author; highly regarded for his expertise in leadership development, talent strategy, and organizational transformation across world-class institutions and ventures.
                   </p>
 
@@ -661,6 +752,72 @@ const Index = () => {
                 <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
               </Button>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* FAQ */}
+      <section className="py-16 md:py-20 bg-background">
+        <div className="container mx-auto px-6">
+          <div className="max-w-3xl mx-auto">
+            <h2 className="font-heading font-bold text-2xl md:text-3xl text-center text-foreground mb-8">
+              Frequently Asked Questions
+            </h2>
+            <Accordion type="single" collapsible className="w-full space-y-4">
+              <AccordionItem value="problem" className="bg-card rounded-lg px-6 border-none shadow-card">
+                <AccordionTrigger className="text-left hover:no-underline py-6 min-h-[44px]">
+                  <span className="font-heading font-semibold text-foreground">What problem does Wiselook solve?</span>
+                </AccordionTrigger>
+                <AccordionContent className="text-muted-foreground pb-6">
+                  Most organizations only see a small part of their talent. Wiselook reveals skills and potential through short, conversational "bloques" that go beyond multiple-choice tests.
+                </AccordionContent>
+              </AccordionItem>
+
+              <AccordionItem value="different" className="bg-card rounded-lg px-6 border-none shadow-card">
+                <AccordionTrigger className="text-left hover:no-underline py-6 min-h-[44px]">
+                  <span className="font-heading font-semibold text-foreground">How is this different from traditional assessments?</span>
+                </AccordionTrigger>
+                <AccordionContent className="text-muted-foreground pb-6">
+                  We use open-ended, inclusive prompts and validated scoring to capture richer signals. You get the nuance of human conversation with the scalability and consistency of AI.
+                </AccordionContent>
+              </AccordionItem>
+
+              <AccordionItem value="competency" className="bg-card rounded-lg px-6 border-none shadow-card">
+                <AccordionTrigger className="text-left hover:no-underline py-6 min-h-[44px]">
+                  <span className="font-heading font-semibold text-foreground">Will it fit our competency model and culture?</span>
+                </AccordionTrigger>
+                <AccordionContent className="text-muted-foreground pb-6">
+                  Yes. Wiselook adapts to your competency model, language, culture, and values using modular "Lego-like" building blocks, so you don't have to change how you evaluate talent.
+                </AccordionContent>
+              </AccordionItem>
+
+              <AccordionItem value="practice" className="bg-card rounded-lg px-6 border-none shadow-card">
+                <AccordionTrigger className="text-left hover:no-underline py-6 min-h-[44px]">
+                  <span className="font-heading font-semibold text-foreground">How does it work in practice?</span>
+                </AccordionTrigger>
+                <AccordionContent className="text-muted-foreground pb-6">
+                  People complete brief, guided "bloques" where they already work, asynchronously. Responses are evaluated against validated rubrics to produce reliable insights for managers and HR.
+                </AccordionContent>
+              </AccordionItem>
+
+              <AccordionItem value="security" className="bg-card rounded-lg px-6 border-none shadow-card">
+                <AccordionTrigger className="text-left hover:no-underline py-6 min-h-[44px]">
+                  <span className="font-heading font-semibold text-foreground">Is it enterprise-ready for security and privacy?</span>
+                </AccordionTrigger>
+                <AccordionContent className="text-muted-foreground pb-6">
+                  Yes. We follow privacy by design, least-privilege access, and auditability. Current posture aligns to GDPR and ISO controls, with a published Trust Center and subprocessors list as it evolves.
+                </AccordionContent>
+              </AccordionItem>
+
+              <AccordionItem value="outcomes" className="bg-card rounded-lg px-6 border-none shadow-card">
+                <AccordionTrigger className="text-left hover:no-underline py-6 min-h-[44px]">
+                  <span className="font-heading font-semibold text-foreground">What outcomes can we expect and how do we start?</span>
+                </AccordionTrigger>
+                <AccordionContent className="text-muted-foreground pb-6">
+                  Faster, evidence-based decisions, higher completion vs. long tests, and clearer signals on strengths and mobility. Start with a short pilot using your model and a small cohort, then scale via a simple form-based intake and SSO when needed.
+                </AccordionContent>
+              </AccordionItem>
+            </Accordion>
           </div>
         </div>
       </section>
@@ -698,6 +855,10 @@ const Index = () => {
             </div>
             <span className="text-border">•</span>
             <span>GDPR compliant</span>
+            <span className="text-border">•</span>
+            <span>ISO 27001 certified</span>
+            <span className="text-border">•</span>
+            <span>EU AI Act compliant</span>
             <span className="text-border">•</span>
             <span>Enterprise-grade security</span>
           </div>

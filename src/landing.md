@@ -23,10 +23,10 @@
     - Competitor landscape
     - Follow us on LinkedIn
     - Security and privacy
-    - FAQ
     - About Us
     - Team
     - Contact
+    - FAQ
 
 ---
 
@@ -128,13 +128,11 @@
 - How it works in Teams (4-step process)
 - Approach and value (6 key benefits)
 - Competitor landscape (interactive 2×2 quadrant)
-- Science and partners section
+- Follow us on LinkedIn section (positioned as last section of product section)
 - Security and privacy (SOC 2, GDPR, Azure)
-- FAQ section (3 questions)
-- Product section
-- Pricing section
-- About section
+- About section with team profiles
 - Contact section with calendar booking
+- FAQ section (3 questions, positioned at end of website)
 - Navigation header with smooth scrolling
 - Mobile-responsive design
 - Footer with security badges
