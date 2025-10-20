@@ -42,24 +42,28 @@ const Index = () => {
               <button 
                 onClick={() => scrollToSection('problem')}
                 className="text-muted-foreground hover:text-foreground transition-colors"
+                aria-label="Learn about our talent assessment solutions"
               >
                 Product
               </button>
               <button 
                 onClick={() => scrollToSection('security')}
                 className="text-muted-foreground hover:text-foreground transition-colors"
+                aria-label="View our security and compliance features"
               >
                 Security
               </button>
               <button 
                 onClick={() => scrollToSection('about')}
                 className="text-muted-foreground hover:text-foreground transition-colors"
+                aria-label="Meet our team and learn about Wiselook"
               >
                 About Us
               </button>
               <button 
                 onClick={() => scrollToSection('contact')}
                 className="text-muted-foreground hover:text-foreground transition-colors"
+                aria-label="Get in touch with our team"
               >
                 Contact
               </button>
@@ -164,6 +168,7 @@ const Index = () => {
                   src={hrSummit1} 
                   alt="HR Innovation Summit 2025 - Wiselook team receiving award" 
                   className="w-full h-48 object-cover rounded-xl shadow-card group-hover:shadow-soft transition-all"
+                  loading="lazy"
                 />
                 <div className="absolute inset-0 bg-black/0 group-hover:bg-black/60 transition-all duration-300 rounded-xl flex items-end">
                   <div className="p-4 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
@@ -181,6 +186,7 @@ const Index = () => {
                   src={hrSummit3} 
                   alt="HR Innovation Summit 2025 - Wiselook presentation" 
                   className="w-full h-48 object-cover rounded-xl shadow-card group-hover:shadow-soft transition-all"
+                  loading="lazy"
                 />
                 <div className="absolute inset-0 bg-black/0 group-hover:bg-black/60 transition-all duration-300 rounded-xl flex items-end">
                   <div className="p-4 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
@@ -649,6 +655,7 @@ const Index = () => {
                     src={jaimePhoto} 
                     alt="Jaime Oliver Huidobro, PhD" 
                     className="w-32 h-32 rounded-full mx-auto object-cover shadow-soft"
+                    loading="lazy"
                   />
                   <div className="space-y-2">
                     <h3 className="font-heading font-bold text-2xl text-foreground min-h-[3.5rem] flex items-center justify-center">
@@ -682,6 +689,7 @@ const Index = () => {
                     src={rocioPhoto} 
                     alt="Rocío Fernández-Rubíes Aguirre" 
                     className="w-32 h-32 rounded-full mx-auto object-cover shadow-soft"
+                    loading="lazy"
                   />
                   <div className="space-y-2">
                     <h3 className="font-heading font-bold text-2xl text-foreground min-h-[3.5rem] flex items-center justify-center">
@@ -715,6 +723,7 @@ const Index = () => {
                     src={rafaPhoto} 
                     alt="Rafael Sarandeses" 
                     className="w-32 h-32 rounded-full mx-auto object-cover shadow-soft"
+                    loading="lazy"
                   />
                   <div className="space-y-2">
                     <h3 className="font-heading font-bold text-2xl text-foreground min-h-[3.5rem] flex items-center justify-center">
