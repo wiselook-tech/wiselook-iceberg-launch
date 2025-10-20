@@ -86,10 +86,12 @@ const Index = () => {
             {/* Hero Content */}
             <div className="space-y-8 animate-fade-up">
               <h1 className="font-heading font-bold text-4xl md:text-5xl lg:text-6xl leading-tight text-foreground">
-                Discover your talent in minutes, not weeks
+                Map your talent. <p></p>
+                In minutes. 
               </h1>
               <p className="text-lg md:text-xl text-muted-foreground max-w-xl">
-                Uncover hidden potential with science-backed, conversational assessments delivered natively in your system, ready to deploy and scale. Predictive soft-skills intelligence for succession planning, mobility, and workforce decisions.
+                Uncover the hidden potential in your organization with science-backed, conversational assessments. 
+                Our AI is scales natively in your system, unlocking soft-skills intelligence for succession planning, mobility, and workforce decisions.
               </p>
               <div className="pt-4 flex flex-col gap-4">
                 <Button 
@@ -196,14 +198,14 @@ const Index = () => {
                     <div className="h-8 w-8 rounded-full bg-primary/10 flex items-center justify-center">
                       <Brain className="h-4 w-4 text-primary" />
                     </div>
-                    <span className="text-sm font-medium text-foreground">Academic collaboration and validation</span>
+                    <span className="text-sm font-medium text-foreground">Built by scientists</span>
                   </div>
                   <div className="h-4 w-px bg-border"></div>
                   <div className="flex items-center gap-3">
                     <div className="h-8 w-8 rounded-full bg-primary/10 flex items-center justify-center">
                       <Users className="h-4 w-4 text-primary" />
                     </div>
-                    <span className="text-sm font-medium text-foreground">Industry expertise and implementation</span>
+                    <span className="text-sm font-medium text-foreground">Scaled by industry experts</span>
                   </div>
                 </div>
               </div>
@@ -220,10 +222,10 @@ const Index = () => {
               {/* Problem Content */}
               <div className="space-y-6">
                 <h2 className="font-heading font-bold text-3xl md:text-4xl text-foreground">
-                  Go beyond multiple‑choice tests or expensive in-person assessments
+                  Go beyond multiple‑choice tests and expensive executive assessments
                 </h2>
                 <p className="text-lg text-muted-foreground">
-                  Most assessments only capture the obvious. The real skills, judgment, and potential stay invisible. It's time to see the whole picture.
+                  We unlock real measurement of talent across your organization. It's time to see the whole picture.
                 </p>
               </div>
 
@@ -292,7 +294,7 @@ const Index = () => {
           <div className="max-w-6xl mx-auto space-y-12">
             <div className="text-center space-y-4">
               <h2 className="font-heading font-bold text-3xl md:text-4xl text-foreground">
-                How we solve it
+                How? 
               </h2>
               <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
                 A short, AI-native conversational flow that captures real evidence and turns it into action.
@@ -309,7 +311,7 @@ const Index = () => {
                 </div>
                 <h3 className="font-heading font-semibold text-xl text-foreground">Assess</h3>
                 <p className="text-muted-foreground">
-                  Team answers an open‑ended interview following a scientifically validated methodology.
+                  Teams go through open‑ended conversations or Situaltional Judement Tests (SJT). At scale.
                 </p>
               </div>
 
@@ -320,7 +322,7 @@ const Index = () => {
                 </div>
                 <h3 className="font-heading font-semibold text-xl text-foreground">Analyse</h3>
                 <p className="text-muted-foreground">
-                  Responses are evaluated against validated rubrics to surface skills, strengths, and potential.
+                  Behavioural responses are evaluated against scientifically validated rubrics to map competencies.
                 </p>
               </div>
 
@@ -331,7 +333,7 @@ const Index = () => {
                 </div>
                 <h3 className="font-heading font-semibold text-xl text-foreground">Act</h3>
                 <p className="text-muted-foreground">
-                  Managers and HR get clear, practical insights to make fair, faster talent decisions.
+                  Individuals and managers get actionalble recommendations to make fair and faster talent decisions.
                 </p>
               </div>
             </div>
@@ -376,7 +378,7 @@ const Index = () => {
                   <Users className="h-6 w-6 text-primary" />
                 </div>
                 <h3 className="font-heading font-semibold text-xl text-foreground">Frictionless scale</h3>
-                <p className="text-muted-foreground">Native in Microsoft Teams drives higher completion and faster time-to-value vs. separate-platform tools</p>
+                <p className="text-muted-foreground">Delivered natively in your messaging system for higher completion and faster time-to-value vs.</p>
               </div>
 
               <div className="space-y-4 p-6 rounded-xl bg-background shadow-card">
@@ -658,7 +660,7 @@ const Index = () => {
                   </div>
                   
                   <p className="text-muted-foreground text-sm leading-relaxed flex-grow min-h-[8rem] flex items-center justify-center text-justify">
-                    Applied scientist and product leader with a PhD in Mathematical Engineering, specializing in AI and data-driven sustainability. Former Lead Data Scientist at Clarity AI and Assistant Professor at leading Spanish universities; recognized for integrating advanced technology with business strategy to empower organizations and unlock human potential.
+                    Applied scientist and product leader. Former Founder of Epoch Metrics and Lead Data Scientist at Clarity AI. Holds a PhD in Mathematical Engineering and completed postdoctoral research at MIT. Specializing in AI and data-driven product development, he is recognized for integrating advanced technology and science with business strategy to empower organizations and unlock human potential.
                   </p>
 
                   <a 

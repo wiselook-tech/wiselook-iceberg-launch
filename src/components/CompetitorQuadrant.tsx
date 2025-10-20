@@ -72,10 +72,10 @@ const CompetitorQuadrant: React.FC = () => {
       <div className="bg-background rounded-xl p-8 shadow-card">
         <div className="text-center space-y-6 mb-8">
           <h3 className="font-heading font-bold text-2xl md:text-3xl text-foreground">
-            Competitor Landscape
+            Why Us? 
           </h3>
           <p className="text-sm text-muted-foreground max-w-2xl mx-auto">
-            Positioned for objective evidence at scale
+            Because we are born to provide objective evidence at scale
           </p>
         </div>
 
@@ -87,7 +87,7 @@ const CompetitorQuadrant: React.FC = () => {
                 Why this matters
               </h4>
               <p className="text-muted-foreground leading-relaxed">
-                Most tools either rely on subjective judgement or don't scale. We combine validated, objective evidence with automation so organisations can make fair decisions at speed.
+                Most tools either rely on subjective judgement or don't scale. We combine validated, objective evidence with AI so organisations can make fair decisions at speed.
               </p>
             </div>
           </div>
