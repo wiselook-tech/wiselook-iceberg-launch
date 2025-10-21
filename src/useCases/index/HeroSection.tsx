@@ -10,7 +10,7 @@ const HeroSection = () => {
       id="home"
       className="relative overflow-hidden bg-gradient-hero pt-[70px]"
     >
-      <div className="container mx-auto px-6 pb-32 md:pb-40">
+      <div className="max-w-6xl container mx-auto pb-32 md:pb-40">
         <div className="relative grid lg:grid-cols-2 gap-12 items-center">
           {/* Hero Content */}
           <div className="z-10 pt-28 space-y-8 animate-fade-up">
@@ -47,16 +47,17 @@ const HeroSection = () => {
               </a>
             </div>
           </div>
+        </div>
 
-          {/* Hero Image */}
-          <div className="absolute z-0 lg:block right-0 top-0 w-2/3 mix-blend-multiply animate-fade-up">
+        {/* Hero Image */}
+        <div className="absolute z-0 right-3 lg:-right-12 xl:right-12 top-[68px] w-full lg:w-2/3 xl:w-1/2 mix-blend-multiply">
             <img
               src={heroIceberg}
               alt="Wiselook iceberg visualization showing visible and hidden talent potential"
               className="w-full h-auto select-none pointer-events-none"
+              style={{ animationDelay: "300ms" }}
             />
           </div>
-        </div>
       </div>
     </section>
   );
