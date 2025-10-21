@@ -52,7 +52,7 @@ const MainNav = () => {
               className="text-muted-foreground hover:text-foreground transition-colors"
               aria-label="Have questions? Visit our FAQ section"
             >
-              FAQ
+              Faq
             </button>
             <button
               onClick={() => scrollToSection("contact")}
