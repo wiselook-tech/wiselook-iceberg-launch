@@ -1,5 +1,6 @@
 "use server";
 
+import { motion } from "motion/react";
 import { ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import heroIceberg from "@/assets/landing-bg-grey.png";
@@ -8,23 +9,23 @@ const HeroSection = () => {
   return (
     <section
       id="home"
-      className="relative overflow-hidden bg-gradient-hero pt-[70px]"
+      className="relative overflow-hidden pt-[70px]"
     >
-      <div className="max-w-6xl container mx-auto pb-32 md:pb-40">
+      <div className="max-w-6xl container mx-auto pb-32 md:pb-40 ">
         <div className="relative grid lg:grid-cols-2 gap-12 items-center">
           {/* Hero Content */}
-          <div className="z-10 pt-28 space-y-8 animate-fade-up">
-            <h1 className="font-heading font-bold text-4xl md:text-5xl lg:text-6xl leading-tight text-foreground">
-              Map your talent. <p></p>
+          <div className="z-10 pt-48 space-y-8">
+            <motion.h1 className="relative font-heading font-bold text-4xl md:text-5xl lg:text-6xl leading-tight text-foreground" initial={{ left: -50, opacity: 0 }} animate={{ left: 0, opacity: 1 }} transition={{ duration: .3, ease: "easeOut", delay: .5 }}>
+              Map your talent.<br />
               In minutes.
-            </h1>
-            <p className="text-lg md:text-xl text-muted-foreground max-w-xl">
+            </motion.h1>
+            <motion.p className="relative text-lg md:text-xl text-muted-foreground max-w-xl" initial={{ left: -50, opacity: 0 }} animate={{ left: 0, opacity: 1 }} transition={{ duration: .3, ease: "easeOut", delay: .7 }}>
               Uncover the hidden potential in your organization with
               science-backed, conversational assessments. Our AI is scales
               natively in your system, unlocking soft-skills intelligence for
               succession planning, mobility, and workforce decisions.
-            </p>
-            <div className="pt-4 flex flex-col gap-4">
+            </motion.p>
+            <motion.div className="relative pt-4 flex flex-col gap-4" initial={{ left: -50, opacity: 0 }} animate={{ left: 0, opacity: 1 }} transition={{ duration: .3, ease: "easeOut", delay: .9 }}>
               <Button
                 variant="hero"
                 size="xl"
@@ -32,7 +33,7 @@ const HeroSection = () => {
                 onClick={() =>
                   window.open(
                     "https://calendar.app.google/NvJxzr9aQzB77DeHA",
-                    "_blank",
+                    "_blank"
                   )
                 }
               >
@@ -45,20 +46,24 @@ const HeroSection = () => {
               >
                 Jump to how it works
               </a>
-            </div>
+            </motion.div>
           </div>
         </div>
 
         {/* Hero Image */}
-        <div className="absolute z-0 right-3 lg:-right-12 xl:right-12 top-[68px] w-full lg:w-2/3 xl:w-1/2 mix-blend-multiply">
-            <img
-              src={heroIceberg}
-              alt="Wiselook iceberg visualization showing visible and hidden talent potential"
-              className="w-full h-auto select-none pointer-events-none"
-              style={{ animationDelay: "300ms" }}
-            />
-          </div>
-      </div>
+        </div>
+
+        <motion.div className="absolute w-2/3 -right-12"  initial={{ top: 400, opacity: 0 }} animate={{ top: 68, opacity: 1 }} transition={{ duration: .5, ease: "easeOut" }}>
+          <motion.img
+            src={heroIceberg}
+            alt="Wiselook iceberg visualization showing visible and hidden talent potential"
+            className="w-full h-auto select-none pointer-events-none"
+            style={{
+              filter: "hue-rotate(350deg) brightness(100%) saturate(1050%)",
+            }}
+            initial={{ filter: "hue-rotate(350deg) brightness(100%) saturate(1050%)" }} animate={{ filter: "hue-rotate(350deg) brightness(100%) saturate(0%)" }} transition={{ duration: 3, repeat: Infinity, repeatType: "reverse" }}
+          />
+        </motion.div>
     </section>
   );
 };
