@@ -99,9 +99,8 @@ const ContactSection = () => {
                   name="name"
                   render={({ field }) => (
                     <FormItem>
-                      <FormLabel>Name</FormLabel>
                       <FormControl>
-                        <Input placeholder="Type your name" {...field} />
+                        <Input placeholder="Name" {...field} />
                       </FormControl>
                       <FormMessage />
                     </FormItem>
@@ -112,9 +111,8 @@ const ContactSection = () => {
                   name="email"
                   render={({ field }) => (
                     <FormItem>
-                      <FormLabel>Email</FormLabel>
                       <FormControl>
-                        <Input placeholder="Enter your email" {...field} />
+                        <Input placeholder="Email" {...field} />
                       </FormControl>
                       <FormMessage />
                     </FormItem>
@@ -125,9 +123,8 @@ const ContactSection = () => {
                   name="company"
                   render={({ field }) => (
                     <FormItem>
-                      <FormLabel>Company (Optional)</FormLabel>
                       <FormControl>
-                        <Input placeholder="Enter your company" {...field} />
+                        <Input placeholder="Company" {...field} />
                       </FormControl>
                       <FormMessage />
                     </FormItem>
@@ -138,10 +135,9 @@ const ContactSection = () => {
                   name="phone"
                   render={({ field }) => (
                     <FormItem>
-                      <FormLabel>Phone Number (Optional)</FormLabel>
                       <FormControl>
                         <Input
-                          placeholder="Enter your phone number"
+                          placeholder="Telephone"
                           {...field}
                         />
                       </FormControl>

@@ -4,6 +4,10 @@ import { Award, Brain, Users } from "lucide-react";
 import hrSummit1 from "@/assets/hr_summit/WhatsApp Image 2025-10-06 at 11.24.31.jpeg";
 import hrSummit3 from "@/assets/hr_summit/1759481576972.jpeg";
 
+const FULL_ARTICLE_URL = "https://www.rrhhdigital.com/secciones/eventos-rrhhdigital/781586/hr-innovation-summit-2025-mas-talento-mas-ideas-y-una-asistencia-record/";
+
+
+
 const AwardsSection = () => {
   return (
     <section className="py-20 md:py-28 bg-gradient-card">
@@ -24,7 +28,7 @@ const AwardsSection = () => {
               intelligence
             </p>
             <a
-              href="https://www.rrhhdigital.com/secciones/eventos-rrhhdigital/781586/hr-innovation-summit-2025-mas-talento-mas-ideas-y-una-asistencia-record/"
+              href={FULL_ARTICLE_URL}
               target="_blank"
               rel="noopener noreferrer"
               className="inline-block text-sm text-primary hover:text-primary/80 transition-colors underline-offset-4 hover:underline mt-4"
@@ -35,11 +39,8 @@ const AwardsSection = () => {
 
           {/* Award Photos Grid */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-2xl mx-auto">
-            <a
-              href="https://www.linkedin.com/company/wiselook"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="relative group cursor-pointer block"
+            <div
+              className="relative group block"
             >
               <img
                 src={hrSummit1}
@@ -54,12 +55,9 @@ const AwardsSection = () => {
                   </p>
                 </div>
               </div>
-            </a>
-            <a
-              href="https://www.linkedin.com/company/wiselook"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="relative group cursor-pointer block"
+            </div>
+            <div
+              className="relative group block"
             >
               <img
                 src={hrSummit3}
@@ -74,7 +72,7 @@ const AwardsSection = () => {
                   </p>
                 </div>
               </div>
-            </a>
+            </div>
           </div>
 
           {/* Partners */}
