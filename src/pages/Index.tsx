@@ -73,7 +73,7 @@ const Index = () => {
                 variant="hero" 
                 size="sm"
                 className="group"
-                onClick={() => window.open('https://calendar.app.google/NvJxzr9aQzB77DeHA', '_blank')}
+                onClick={() => window.open('https://calendar.app.google/ixXmzeviCe26CbWP9', '_blank')}
               >
                 Let's talk
                 <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
@@ -102,7 +102,7 @@ const Index = () => {
                   variant="hero" 
                   size="xl" 
                   className="group w-fit animate-pulse-glow"
-                  onClick={() => window.open('https://calendar.app.google/NvJxzr9aQzB77DeHA', '_blank')}
+                  onClick={() => window.open('https://calendar.app.google/ixXmzeviCe26CbWP9', '_blank')}
                 >
                   Let's talk
                   <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
@@ -847,7 +847,7 @@ const Index = () => {
               variant="hero" 
               size="xl" 
               className="group min-h-[44px]"
-              onClick={() => window.open('https://calendar.app.google/NvJxzr9aQzB77DeHA', '_blank')}
+              onClick={() => window.open('https://calendar.app.google/ixXmzeviCe26CbWP9', '_blank')}
             >
               Let's talk
                 <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
@@ -926,7 +926,7 @@ const Index = () => {
           variant="hero" 
           size="lg" 
           className="w-full group min-h-[44px]"
-          onClick={() => window.open('https://calendar.app.google/NvJxzr9aQzB77DeHA', '_blank')}
+          onClick={() => window.open('https://calendar.app.google/ixXmzeviCe26CbWP9', '_blank')}
         >
           Let's talk
           <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
