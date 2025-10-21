@@ -1,11 +1,82 @@
 "use server";
 
-import { ArrowRight } from "lucide-react";
+import {
+  FormField,
+  FormItem,
+  FormLabel,
+  FormControl,
+  FormMessage,
+} from "@/components/ui/form";
+import { zodResolver } from "@hookform/resolvers/zod";
+import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
+import { useForm } from "react-hook-form";
+import { Form } from "@/components/ui/form";
+import z from "zod";
+import { createContact } from "@/lib/actions/contacts";
+import { useState } from "react";
+
+type FormState = "idle" | "submitting" | "success" | "error";
 
 const CALENDAR_URL = "https://calendar.app.google/NvJxzr9aQzB77DeHA";
 
+const formSchema = z.object({
+  name: z.string().min(2, {
+    message: "Name must be at least 2 characters.",
+  }),
+  email: z
+    .string()
+    .email({
+      message: "Invalid email address.",
+    })
+    .min(2, {
+      message: "Email must be at least 2 characters.",
+    }),
+  company: z.string().optional(),
+  phone: z
+    .string()
+    .optional()
+    .refine(
+      (val) => {
+        if (!val || val === "") return true;
+        const phoneRegex = /^[\+]?[1-9][\d]{0,15}$/;
+        return phoneRegex.test(val.replace(/[\s\-\(\)]/g, ""));
+      },
+      {
+        message: "Please enter a valid phone number",
+      }
+    ),
+});
+
 const ContactSection = () => {
+  const [formState, setFormState] = useState<FormState>('idle');
+
+  const form = useForm<z.infer<typeof formSchema>>({
+    resolver: zodResolver(formSchema),
+    defaultValues: {
+      name: "",
+      email: "",
+      company: "",
+      phone: "",
+    },
+  });
+
+  const onSubmit = async (values: z.infer<typeof formSchema>) => {
+    const contact = await createContact({
+      name: values.name,
+      email: values.email,
+      company: values.company,
+      phone: values.phone,
+    });
+    if(contact && contact.length > 0) {
+      setFormState("success");
+      form.reset();
+    } else {
+      setFormState("error");
+      form.setError("root.serverError", { message: "Failed to create contact" });
+    }
+  }
+  
   return (
     <section id="contact" className="py-20 md:py-28 bg-gradient-hero">
       <div className="container mx-auto px-6">
@@ -17,15 +88,72 @@ const ContactSection = () => {
             Ready to transform your talent assessment process? Let's discuss how
             Wiselook can help your organization.
           </p>
-          <Button
-            variant="hero"
-            size="xl"
-            className="group min-h-[44px]"
-            onClick={() => window.open(CALENDAR_URL, "_blank")}
-          >
-            Let's talk
-            <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
-          </Button>
+          {(formState === "idle" || formState === "submitting") && (
+          <Form {...form}>
+            <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-8">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <FormField
+                  control={form.control}
+                  name="name"
+                  render={({ field }) => (
+                    <FormItem>
+                      <FormLabel>Name</FormLabel>
+                      <FormControl>
+                        <Input placeholder="Type your name" {...field} />
+                      </FormControl>
+                      <FormMessage />
+                    </FormItem>
+                  )}
+                />
+                <FormField
+                  control={form.control}
+                  name="email"
+                  render={({ field }) => (
+                    <FormItem>
+                      <FormLabel>Email</FormLabel>
+                      <FormControl>
+                        <Input placeholder="Enter your email" {...field} />
+                      </FormControl>
+                      <FormMessage />
+                    </FormItem>
+                  )}
+                />
+                <FormField
+                  control={form.control}
+                  name="company"
+                  render={({ field }) => (
+                    <FormItem>
+                      <FormLabel>Company (Optional)</FormLabel>
+                      <FormControl>
+                        <Input placeholder="Enter your company" {...field} />
+                      </FormControl>
+                      <FormMessage />
+                    </FormItem>
+                  )}
+                />
+                <FormField
+                  control={form.control}
+                  name="phone"
+                  render={({ field }) => (
+                    <FormItem>
+                      <FormLabel>Phone Number (Optional)</FormLabel>
+                      <FormControl>
+                        <Input
+                          placeholder="Enter your phone number"
+                          {...field}
+                        />
+                      </FormControl>
+                      <FormMessage />
+                    </FormItem>
+                  )}
+                />
+              </div>
+              <Button type="submit" disabled={formState === "submitting"}>{formState === "submitting" ? "Submitting..." : "Submit"}</Button>
+            </form>
+          </Form>)}
+
+          {formState === "success" && <p className="text-primary">Thank you for contacting us! We will get in touch with you soon.</p>}
+          {formState === "error" && <p className="text-red-500">Failed to create contact. Please try again.</p>}
         </div>
       </div>
     </section>

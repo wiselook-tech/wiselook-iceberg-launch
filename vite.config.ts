@@ -16,5 +16,8 @@ export default defineConfig(({ mode }) => ({
       "@": path.resolve(__dirname, "./src"),
     },
   },
+  define: {
+    global: 'globalThis',
+  },
   assetsInclude: ["**/*.JPG", "**/*.jpg", "**/*.jpeg", "**/*.JPEG", "**/*.PNG", "**/*.png"],
 }));
