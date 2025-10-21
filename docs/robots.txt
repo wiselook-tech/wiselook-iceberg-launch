@@ -12,3 +12,9 @@ Allow: /
 
 User-agent: *
 Allow: /
+Disallow: /node_modules/
+Disallow: /src/
+Disallow: /.git/
+Disallow: /dist/
+
+Sitemap: https://wiselook-tech.github.io/wiselook-iceberg-launch/sitemap.xml
