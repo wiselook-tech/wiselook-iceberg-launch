@@ -9,7 +9,7 @@ import {
 
 const FAQSection = () => {
   return (
-    <section className="py-16 md:py-20 bg-background">
+    <section id="FAQ" className="py-16 md:py-20 bg-background">
         <div className="container mx-auto px-6">
           <div className="max-w-3xl mx-auto">
             <h2 className="font-heading font-bold text-2xl md:text-3xl text-center text-foreground mb-8">

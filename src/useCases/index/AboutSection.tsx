@@ -36,7 +36,7 @@ const AboutSection = () => {
 
           <div className="grid md:grid-cols-3 gap-8 lg:gap-12">
             {/* Jaime Oliver Huidobro */}
-            <div className="bg-background rounded-xl p-8 shadow-card flex flex-col h-full">
+            <div className="bg-background rounded-xl p-8 shadow-card flex flex-col h-full transition-all duration-300 hover:shadow-xl hover:scale-105 ">
               <div className="text-center space-y-6 flex flex-col h-full">
                 <img
                   src={jaimePhoto}
@@ -76,7 +76,7 @@ const AboutSection = () => {
             </div>
 
             {/* Rocío Fernández-Rubíes Aguirre */}
-            <div className="bg-background rounded-xl p-8 shadow-card flex flex-col h-full">
+            <div className="bg-background rounded-xl p-8 shadow-card flex flex-col h-full transition-all duration-300 hover:shadow-xl hover:scale-105 ">
               <div className="text-center space-y-6 flex flex-col h-full">
                 <img
                   src={rocioPhoto}
@@ -115,7 +115,7 @@ const AboutSection = () => {
             </div>
 
             {/* Rafael Sarandeses */}
-            <div className="bg-background rounded-xl p-8 shadow-card flex flex-col h-full">
+            <div className="bg-background rounded-xl p-8 shadow-card flex flex-col h-full transition-all duration-300 hover:shadow-xl hover:scale-105 ">
               <div className="text-center space-y-6 flex flex-col h-full">
                 <img
                   src={rafaPhoto}

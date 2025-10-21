@@ -35,6 +35,12 @@ const MainFooter = () => {
                 Security
               </button>
               <button 
+                onClick={() => scrollToSection('FAQ')}
+                className="hover:text-foreground transition-colors min-h-[44px] min-w-[44px] flex items-center focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 rounded"
+              >
+                FAQ
+              </button>
+              <button 
                 onClick={() => scrollToSection('about')}
                 className="hover:text-foreground transition-colors min-h-[44px] min-w-[44px] flex items-center focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 rounded"
               >
