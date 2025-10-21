@@ -1,4 +1,4 @@
-"use server";
+"use client";
 
 import {
   FormField,
@@ -68,12 +68,13 @@ const ContactSection = () => {
       company: values.company,
       phone: values.phone,
     });
+
     if(contact && contact.length > 0) {
       setFormState("success");
       form.reset();
     } else {
       setFormState("error");
-      form.setError("root.serverError", { message: "Failed to create contact" });
+      form.setError("root.serverError", { message: "Failed to submit the form. Please try again." });
     }
   }
   
@@ -88,6 +89,7 @@ const ContactSection = () => {
             Ready to transform your talent assessment process? Let's discuss how
             Wiselook can help your organization.
           </p>
+
           {(formState === "idle" || formState === "submitting") && (
           <Form {...form}>
             <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-8">
@@ -153,7 +155,7 @@ const ContactSection = () => {
           </Form>)}
 
           {formState === "success" && <p className="text-primary">Thank you for contacting us! We will get in touch with you soon.</p>}
-          {formState === "error" && <p className="text-red-500">Failed to create contact. Please try again.</p>}
+          {formState === "error" && <p className="text-red-500">Failed to submit the form. Please try again.</p>}
         </div>
       </div>
     </section>
