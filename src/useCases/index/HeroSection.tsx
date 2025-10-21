@@ -8,12 +8,12 @@ const HeroSection = () => {
   return (
     <section
       id="home"
-      className="relative overflow-hidden bg-gradient-hero pt-20"
+      className="relative overflow-hidden bg-gradient-hero pt-[70px]"
     >
-      <div className="container mx-auto px-6 pt-20 pb-32 md:pt-28 md:pb-40">
-        <div className="grid lg:grid-cols-2 gap-12 items-center">
+      <div className="container mx-auto px-6 pb-32 md:pb-40">
+        <div className="relative grid lg:grid-cols-2 gap-12 items-center">
           {/* Hero Content */}
-          <div className="space-y-8 animate-fade-up">
+          <div className="z-10 pt-28 space-y-8 animate-fade-up">
             <h1 className="font-heading font-bold text-4xl md:text-5xl lg:text-6xl leading-tight text-foreground">
               Map your talent. <p></p>
               In minutes.
@@ -49,11 +49,11 @@ const HeroSection = () => {
           </div>
 
           {/* Hero Image */}
-          <div className="relative lg:block animate-reveal">
+          <div className="absolute z-0 lg:block right-0 top-0 w-2/3 mix-blend-multiply animate-fade-up">
             <img
               src={heroIceberg}
               alt="Wiselook iceberg visualization showing visible and hidden talent potential"
-              className="w-full h-auto rounded-2xl shadow-soft hover:shadow-soft transition-all duration-300"
+              className="w-full h-auto select-none pointer-events-none"
             />
           </div>
         </div>
