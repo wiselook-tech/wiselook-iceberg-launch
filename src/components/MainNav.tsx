@@ -48,13 +48,6 @@ const MainNav = () => {
               About Us
             </button>
             <button
-              onClick={() => scrollToSection("FAQ")}
-              className="text-muted-foreground hover:text-foreground transition-colors"
-              aria-label="Have questions? Visit our FAQ section"
-            >
-              Faq
-            </button>
-            <button
               onClick={() => scrollToSection("contact")}
               className="text-muted-foreground hover:text-foreground transition-colors"
               aria-label="Get in touch with our team"
