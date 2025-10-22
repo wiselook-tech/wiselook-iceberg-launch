@@ -917,9 +917,9 @@ const Index = () => {
           <div className="mt-8 pt-8 border-t border-border text-center text-sm text-muted-foreground">
             <p>© 2025 Wiselook Talent Lab S.L. All rights reserved.</p>
             <div className="mt-2 flex justify-center gap-4">
-              <a href="/privacy.html" className="hover:text-foreground transition-colors">Privacy Policy</a>
+              <a href="/#/privacy" className="hover:text-foreground transition-colors">Privacy Policy</a>
               <span>•</span>
-              <a href="/terms.html" className="hover:text-foreground transition-colors">Terms and Conditions</a>
+              <a href="/#/terms" className="hover:text-foreground transition-colors">Terms and Conditions</a>
             </div>
           </div>
         </div>

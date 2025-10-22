@@ -5,18 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Wiselook - Strategic Workforce Intelligence</title>
     <script>
-        // GitHub Pages SPA redirect - redirect to the correct URL
-        var path = window.location.pathname;
-        
-        // If we're on a route that should exist, redirect to the full URL
-        if (path === '/privacy' || path === '/terms') {
-            // Just redirect to the same URL - this will trigger the 404 again
-            // but with the correct URL structure
-            window.location.replace(window.location.href);
-        } else {
-            // For other paths, redirect to home
-            window.location.replace(window.location.origin + '/');
-        }
+        // Simple redirect to index.html for HashRouter
+        // HashRouter handles all routing client-side, so we just need to serve the main app
+        window.location.replace(window.location.origin + '/index.html');
     </script>
 </head>
 <body>
