@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { ArrowLeft } from "lucide-react";
-import wiselookIcon from "@/assets/favicon.png";
+import wiselookIcon from "@/assets/favicon.ico";
 
 const PrivacyPolicy = () => {
   return (

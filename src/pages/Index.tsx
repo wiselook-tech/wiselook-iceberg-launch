@@ -4,7 +4,7 @@ import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/
 import CompetitorQuadrant from "@/components/CompetitorQuadrant";
 import heroIceberg from "@/assets/landing-bg-grey.png";
 import wiselookLogo from "@/assets/wiselook-logo.svg";
-import wiselookIcon from "@/assets/favicon.png";
+import wiselookIcon from "@/assets/Wiselook_RGB_Iso_Positive_Color.svg";
 import hrSummit1 from "@/assets/hr_summit/WhatsApp Image 2025-10-06 at 11.24.31.jpeg";
 import hrSummit2 from "@/assets/hr_summit/HR-584.jpg";
 import hrSummit3 from "@/assets/hr_summit/1759481576972.jpeg";
@@ -95,7 +95,7 @@ const Index = () => {
               </h1>
               <p className="text-lg md:text-xl text-muted-foreground max-w-xl">
                 Uncover the hidden potential in your organization with science-backed, conversational assessments. 
-                Our AI is scales natively in your system, unlocking soft-skills intelligence for succession planning, mobility, and workforce decisions.
+                Our AI scales natively in your system, unlocking soft-skills intelligence for succession planning, mobility, and workforce decisions.
               </p>
               <div className="pt-4 flex flex-col gap-4">
                 <Button 
@@ -117,7 +117,7 @@ const Index = () => {
             </div>
 
             {/* Hero Image */}
-            <div className="relative lg:block animate-reveal">
+            <div className="relative lg:block">
               <img 
                 src={heroIceberg} 
                 alt="Wiselook iceberg visualization showing visible and hidden talent potential" 
@@ -240,51 +240,51 @@ const Index = () => {
                 <div className="relative w-80 h-80 sm:w-96 sm:h-96 flex items-end justify-center group/pyramid">
                   {/* Bottom Card - Line Workers */}
                   <div 
-                    className="absolute bottom-0 w-80 h-24 sm:w-96 sm:h-28 bg-gradient-to-r from-gray-100 to-gray-200 rounded-lg shadow-lg transform transition-all duration-500 hover:scale-110 hover:shadow-2xl hover:-translate-y-4 cursor-pointer animate-slide-up group focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 group-hover/pyramid:scale-105 group-hover/pyramid:shadow-xl group-hover/pyramid:-translate-y-2"
+                    className="absolute bottom-0 w-80 h-24 sm:w-96 sm:h-28 bg-gradient-to-r from-gray-100 to-gray-200 rounded-lg shadow-lg transform transition-all duration-500 hover:scale-110 hover:shadow-2xl hover:-translate-y-4 cursor-pointer animate-slide-up group focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 group-hover/pyramid:scale-105 group-hover/pyramid:shadow-xl group-hover/pyramid:-translate-y-2 hover:z-20"
                     role="button"
                     tabIndex={0}
                     aria-label="Line Workers - Foundation of the workforce where potential begins"
                   >
-                    <div className="p-3 sm:p-4 h-full flex flex-col justify-center">
-                      <h3 className="text-lg sm:text-xl font-semibold text-gray-800 text-center mb-1 group-hover:text-gray-900 transition-colors">Line Workers</h3>
+                    <div className="p-3 sm:p-4 h-full flex flex-col justify-between">
                       <div className="opacity-0 group-hover:opacity-100 transition-all duration-300 transform translate-y-2 group-hover:translate-y-0">
                         <p className="text-sm sm:text-base text-gray-600 text-center group-hover:text-gray-700 transition-colors">Foundation of the workforce</p>
                         <p className="text-xs sm:text-sm text-gray-500 text-center mt-1">Where potential begins</p>
                       </div>
+                      <h3 className="text-lg sm:text-xl font-semibold text-gray-800 text-center mb-1 group-hover:text-gray-900 transition-colors">Line Workers</h3>
                     </div>
                   </div>
 
                   {/* Middle Card - Best of Workforce */}
                   <div 
-                    className="absolute bottom-16 sm:bottom-20 w-56 h-20 sm:w-64 sm:h-24 bg-gradient-to-r from-orange-400 to-orange-500 rounded-lg shadow-lg transform transition-all duration-500 hover:scale-110 hover:shadow-2xl hover:-translate-y-4 cursor-pointer animate-slide-in-left group focus:outline-none focus:ring-2 focus:ring-orange-500 focus:ring-offset-2 group-hover/pyramid:scale-105 group-hover/pyramid:shadow-xl group-hover/pyramid:-translate-y-2" 
+                    className="absolute bottom-16 sm:bottom-20 w-56 h-20 sm:w-64 sm:h-24 bg-gradient-to-r from-orange-400 to-orange-500 rounded-lg shadow-lg transform transition-all duration-500 hover:scale-110 hover:shadow-2xl hover:-translate-y-4 cursor-pointer animate-slide-in-left group focus:outline-none focus:ring-2 focus:ring-orange-500 focus:ring-offset-2 group-hover/pyramid:scale-105 group-hover/pyramid:shadow-xl group-hover/pyramid:-translate-y-2 hover:z-20" 
                     style={{ animationDelay: '300ms' }}
                     role="button"
                     tabIndex={0}
                     aria-label="Best of Workforce - Rising talent where human skills get debated"
                   >
-                    <div className="p-2 sm:p-3 h-full flex flex-col justify-center">
-                      <h3 className="text-base sm:text-lg font-semibold text-white text-center mb-1 group-hover:text-orange-100 transition-colors">Best of Workforce</h3>
+                    <div className="p-2 sm:p-3 h-full flex flex-col justify-between">
                       <div className="opacity-0 group-hover:opacity-100 transition-all duration-300 transform translate-y-2 group-hover:translate-y-0">
                         <p className="text-sm text-orange-100 text-center group-hover:text-orange-50 transition-colors">Human Skills get debated</p>
                         <p className="text-xs text-orange-200 text-center mt-1">Rising talent</p>
                       </div>
+                      <h3 className="text-base sm:text-lg font-semibold text-white text-center mb-1 group-hover:text-orange-100 transition-colors">Best of Workforce</h3>
                     </div>
                   </div>
 
                   {/* Top Card - Execs */}
                   <div 
-                    className="absolute bottom-32 sm:bottom-36 w-32 h-16 sm:w-36 sm:h-20 bg-gradient-to-r from-blue-400 to-blue-500 rounded-lg shadow-lg transform transition-all duration-500 hover:scale-110 hover:shadow-2xl hover:-translate-y-4 cursor-pointer animate-slide-down group focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 group-hover/pyramid:scale-105 group-hover/pyramid:shadow-xl group-hover/pyramid:-translate-y-2" 
+                    className="absolute bottom-32 sm:bottom-36 w-32 h-16 sm:w-36 sm:h-20 bg-gradient-to-r from-blue-400 to-blue-500 rounded-lg shadow-lg transform transition-all duration-500 hover:scale-110 hover:shadow-2xl hover:-translate-y-4 cursor-pointer animate-slide-down group focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 group-hover/pyramid:scale-105 group-hover/pyramid:shadow-xl group-hover/pyramid:-translate-y-2 hover:z-20" 
                     style={{ animationDelay: '600ms' }}
                     role="button"
                     tabIndex={0}
                     aria-label="Executives - Leadership level where human skills get tested"
                   >
-                    <div className="p-2 sm:p-3 h-full flex flex-col justify-center">
-                      <h3 className="text-sm sm:text-base font-semibold text-white text-center mb-1 group-hover:text-blue-100 transition-colors">Execs</h3>
+                    <div className="p-2 sm:p-3 h-full flex flex-col justify-between">
                       <div className="opacity-0 group-hover:opacity-100 transition-all duration-300 transform translate-y-2 group-hover:translate-y-0">
                         <p className="text-xs sm:text-sm text-blue-100 text-center group-hover:text-blue-50 transition-colors">Human Skills get tested</p>
                         <p className="text-xs text-blue-200 text-center mt-1">Leadership level</p>
                       </div>
+                      <h3 className="text-sm sm:text-base font-semibold text-white text-center mb-1 group-hover:text-blue-100 transition-colors">Execs</h3>
                     </div>
                   </div>
                 </div>
@@ -317,7 +317,7 @@ const Index = () => {
                 </div>
                 <h3 className="font-heading font-semibold text-xl text-foreground">Assess</h3>
                 <p className="text-muted-foreground">
-                  Teams go through open‑ended conversations or Situaltional Judement Tests (SJT). At scale.
+                  Teams go through open‑ended conversations or Situational Judgement Tests (SJT). At scale.
                 </p>
               </div>
 
@@ -384,7 +384,7 @@ const Index = () => {
                   <Users className="h-6 w-6 text-primary" />
                 </div>
                 <h3 className="font-heading font-semibold text-xl text-foreground">Frictionless scale</h3>
-                <p className="text-muted-foreground">Delivered natively in your messaging system for higher completion and faster time-to-value vs.</p>
+                <p className="text-muted-foreground">Delivered natively in your messaging system for higher completion and faster time-to-value.</p>
               </div>
 
               <div className="space-y-4 p-6 rounded-xl bg-background shadow-card">
@@ -666,7 +666,7 @@ const Index = () => {
                     </p>
                   </div>
                   
-                  <p className="text-muted-foreground text-sm leading-relaxed flex-grow min-h-[8rem] flex items-center justify-center text-justify">
+                  <p className="text-muted-foreground text-sm leading-relaxed flex-grow min-h-[8rem] text-center">
                     Applied scientist and product leader. Former Founder of Epoch Metrics and Lead Data Scientist at Clarity AI. Holds a PhD in Mathematical Engineering and completed postdoctoral research at MIT. Specializing in AI and data-driven product development, he is recognized for integrating advanced technology and science with business strategy to empower organizations and unlock human potential.
                   </p>
 
@@ -700,7 +700,7 @@ const Index = () => {
                     </p>
                   </div>
                   
-                  <p className="text-muted-foreground text-sm leading-relaxed flex-grow min-h-[8rem] flex items-center justify-center text-justify">
+                  <p className="text-muted-foreground text-sm leading-relaxed flex-grow min-h-[8rem] text-center">
                     Entrepreneur and executive leader in customer experience, business design, and organizational intelligence. CXO at Restaurant Brands Iberia, business connector at Klarna, and former startup founder; expert in leading strategic digital transformation and acclaimed for her innovative approaches to talent and workforce management.
                   </p>
 
@@ -734,7 +734,7 @@ const Index = () => {
                     </p>
                   </div>
 
-                  <p className="text-muted-foreground text-sm leading-relaxed flex-grow min-h-[8rem] flex items-center justify-center text-justify">
+                  <p className="text-muted-foreground text-sm leading-relaxed flex-grow min-h-[8rem] text-center">
                     Multidisciplinary leader with over 25 years of experience in investment banking, entrepreneurship, and motorsports. CEO and Partner at Talengo, advisor and coach, former Goldman Sachs executive, and author; highly regarded for his expertise in leadership development, talent strategy, and organizational transformation across world-class institutions and ventures.
                   </p>
 
@@ -780,7 +780,7 @@ const Index = () => {
                   <span className="font-heading font-semibold text-foreground">What problem does Wiselook solve?</span>
                 </AccordionTrigger>
                 <AccordionContent className="text-muted-foreground pb-6">
-                  Most organizations only see a small part of their talent. Wiselook reveals skills and potential through short, conversational "bloques" that go beyond multiple-choice tests.
+                  Most organizations only see a small part of their talent. Wiselook reveals skills and potential through short, conversational blocks that go beyond multiple-choice tests.
                 </AccordionContent>
               </AccordionItem>
 
@@ -807,7 +807,7 @@ const Index = () => {
                   <span className="font-heading font-semibold text-foreground">How does it work in practice?</span>
                 </AccordionTrigger>
                 <AccordionContent className="text-muted-foreground pb-6">
-                  People complete brief, guided "bloques" where they already work, asynchronously. Responses are evaluated against validated rubrics to produce reliable insights for managers and HR.
+                  People complete brief, guided blocks where they already work, asynchronously. Responses are evaluated against validated rubrics to produce reliable insights for managers and HR.
                 </AccordionContent>
               </AccordionItem>
 
@@ -884,7 +884,7 @@ const Index = () => {
               <img src={wiselookIcon} alt="Wiselook" className="h-10 w-10" />
               <div>
                 <p className="font-heading font-bold text-xl text-foreground">Wiselook</p>
-                <p className="text-sm text-muted-foreground mt-1">Strategic Workforce Intelligence</p>
+                <p className="text-sm text-muted-foreground mt-1">Unlocking human potential. At scale.</p>
               </div>
             </div>
             <div className="flex gap-6 text-sm text-muted-foreground">

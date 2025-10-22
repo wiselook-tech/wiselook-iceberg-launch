@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useCallback, useRef, useEffect } from 'react';
 
 interface CompetitorData {
   id: string;
@@ -57,6 +57,7 @@ const competitors: CompetitorData[] = [
 
 const CompetitorQuadrant: React.FC = () => {
   const [hoveredItem, setHoveredItem] = useState<string | null>(null);
+  const hoverTimeoutRef = useRef<NodeJS.Timeout | null>(null);
 
   const svgWidth = 800;
   const svgHeight = 600;
@@ -66,6 +67,28 @@ const CompetitorQuadrant: React.FC = () => {
 
   const getX = (x: number) => margin + x * chartWidth;
   const getY = (y: number) => margin + (1 - y) * chartHeight; // Flip Y axis
+
+  const handleMouseEnter = useCallback((competitorId: string) => {
+    if (hoverTimeoutRef.current) {
+      clearTimeout(hoverTimeoutRef.current);
+    }
+    setHoveredItem(competitorId);
+  }, []);
+
+  const handleMouseLeave = useCallback(() => {
+    hoverTimeoutRef.current = setTimeout(() => {
+      setHoveredItem(null);
+    }, 100); // Small delay to prevent flicker
+  }, []);
+
+  // Cleanup timeout on unmount
+  useEffect(() => {
+    return () => {
+      if (hoverTimeoutRef.current) {
+        clearTimeout(hoverTimeoutRef.current);
+      }
+    };
+  }, []);
 
   return (
     <div className="w-full max-w-6xl mx-auto">
@@ -169,6 +192,17 @@ const CompetitorQuadrant: React.FC = () => {
                       />
                     )}
                     
+                    {/* Invisible larger hover area */}
+                    <circle
+                      cx={x}
+                      cy={y}
+                      r="20"
+                      fill="transparent"
+                      className="cursor-pointer"
+                      onMouseEnter={() => handleMouseEnter(competitor.id)}
+                      onMouseLeave={handleMouseLeave}
+                    />
+                    
                     {/* Marker circle */}
                     <circle
                       cx={x}
@@ -177,13 +211,7 @@ const CompetitorQuadrant: React.FC = () => {
                       fill={isWiselook ? "hsl(var(--primary))" : "#6b7280"}
                       stroke={isWiselook ? "hsl(var(--primary))" : "#374151"}
                       strokeWidth={isWiselook ? "2" : "1"}
-                      className="cursor-pointer transition-all duration-200"
-                      style={{
-                        transform: isHovered ? 'scale(1.2)' : 'scale(1)',
-                        filter: isHovered ? 'drop-shadow(0 4px 8px rgba(0,0,0,0.1))' : 'none'
-                      }}
-                      onMouseEnter={() => setHoveredItem(competitor.id)}
-                      onMouseLeave={() => setHoveredItem(null)}
+                      className={`transition-all duration-200 ${isHovered ? 'scale-125' : 'scale-100'}`}
                     />
 
                     {/* Label */}
@@ -193,9 +221,8 @@ const CompetitorQuadrant: React.FC = () => {
                       textAnchor="middle"
                       className={`text-xs font-medium transition-all duration-200 ${
                         isWiselook ? 'fill-primary' : 'fill-gray-700'
-                      }`}
+                      } ${isHovered ? 'font-semibold' : 'font-medium'}`}
                       style={{
-                        fontWeight: isWiselook ? '600' : '500',
                         fontSize: isWiselook ? '13px' : '12px'
                       }}
                     >
