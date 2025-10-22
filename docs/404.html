@@ -5,17 +5,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Wiselook - Strategic Workforce Intelligence</title>
     <script>
-        // Simple SPA redirect for GitHub Pages
-        // This script redirects to index.html and lets React Router handle the routing
+        // GitHub Pages SPA redirect - redirect to the correct URL
         var path = window.location.pathname;
-        var search = window.location.search;
-        var hash = window.location.hash;
         
-        // Build the redirect URL
-        var redirectUrl = window.location.origin + '/index.html' + search + hash;
-        
-        // Use replace to avoid adding to browser history
-        window.location.replace(redirectUrl);
+        // If we're on a route that should exist, redirect to the full URL
+        if (path === '/privacy' || path === '/terms') {
+            // Just redirect to the same URL - this will trigger the 404 again
+            // but with the correct URL structure
+            window.location.replace(window.location.href);
+        } else {
+            // For other paths, redirect to home
+            window.location.replace(window.location.origin + '/');
+        }
     </script>
 </head>
 <body>
