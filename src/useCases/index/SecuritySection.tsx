@@ -35,42 +35,38 @@ const SecuritySection = () => {
 
             {/* Certification Logos */}
             <div className="flex items-center justify-center gap-8 flex-wrap pt-4">
-              <motion.img
-                src={soc2Logo}
-                alt="SOC 2 Type II"
-                className="h-20 opacity-60 hover:opacity-100 transition-opacity"
+              <motion.div className="flex flex-col justify-center items-center border border-gray-200 rounded-lg h-20 w-40 opacity-60 hover:opacity-100 transition-opacity"
                 initial={{ opacity: 0, y: 50 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, margin: "0px 0px -200px 0px" }}
-                transition={{ duration: 0.4, ease: "easeOut" }}
-              />
-              <motion.img
-                src={gdprLogo}
-                alt="GDPR Compliant"
-                className="h-20 opacity-60 hover:opacity-100 transition-opacity"
+                transition={{ duration: 0.4, ease: "easeOut" }}>
+                <span className="font-bold">SOC 2</span>
+                <span className="text-xs">Type II</span>
+              </motion.div>
+              <motion.div className="flex flex-col justify-center items-center border border-gray-200 rounded-lg h-20 w-40 opacity-60 hover:opacity-100 transition-opacity"
                 initial={{ opacity: 0, y: 50 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, margin: "0px 0px -200px 0px" }}
-                transition={{ duration: 0.4, ease: "easeOut", delay: 0.2 }}
-              />
-              <motion.img
-                src={iso27001Logo}
-                alt="ISO 27001 Certified"
-                className="h-20 opacity-60 hover:opacity-100 transition-opacity"
+                transition={{ duration: 0.4, ease: "easeOut", delay: .2 }}>
+                <span className="font-bold">GDPR</span>
+                <span className="text-xs">Compliant</span>
+              </motion.div>
+              <motion.div className="flex flex-col justify-center items-center border border-gray-200 rounded-lg h-20 w-40 opacity-60 hover:opacity-100 transition-opacity"
                 initial={{ opacity: 0, y: 50 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, margin: "0px 0px -200px 0px" }}
-                transition={{ duration: 0.4, ease: "easeOut", delay: 0.4 }}
-              />
-              <motion.img
-                src={euAiActLogo}
-                alt="EU AI Act Compliant"
-                className="h-20 opacity-60 hover:opacity-100 transition-opacity"
+                transition={{ duration: 0.4, ease: "easeOut", delay: .4 }}>
+                <span className="font-bold">ISO 27001</span>
+                <span className="text-xs">Certified</span>
+              </motion.div>
+              <motion.div className="flex flex-col justify-center items-center border border-gray-200 rounded-lg h-20 w-40 opacity-60 hover:opacity-100 transition-opacity"
                 initial={{ opacity: 0, y: 50 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, margin: "0px 0px -200px 0px" }}
-                transition={{ duration: 0.4, ease: "easeOut", delay: 0.6 }}
-              />
+                transition={{ duration: 0.4, ease: "easeOut", delay: .6 }}>
+                <span className="font-bold">EU AI Act</span>
+                <span className="text-xs">Compliant</span>
+              </motion.div>
             </div>
           </div>
 

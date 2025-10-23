@@ -5,6 +5,7 @@ import { Button } from "@/components/ui/button";
 import jaimePhoto from "@/assets/profiles/jaime.jpg";
 import rocioPhoto from "@/assets/profiles/rocio.png";
 import rafaPhoto from "@/assets/profiles/rafa.png";
+import { motion } from "motion/react";
 
 const JAIME_LINKEDIN_URL = "https://www.linkedin.com/in/jaime-oliver-huidobro/";
 const ROCIO_LINKEDIN_URL =
@@ -19,9 +20,15 @@ const AboutSection = () => {
       <div className="container mx-auto px-6">
         <div className="max-w-6xl mx-auto space-y-12">
           <div className="text-center space-y-4">
-            <h2 className="font-heading font-bold text-3xl md:text-4xl text-foreground">
+            <motion.h2
+              className="font-heading font-bold text-5xl text-foreground"
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
+              viewport={{ once: true, margin: "0px 0px -200px 0px" }}
+              transition={{ duration: 0.8, ease: "easeOut" }}
+            >
               About Us
-            </h2>
+              </motion.h2>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
               Wiselook is a science-based talent intelligence platform that
               helps organizations recognize and develop their workforce
