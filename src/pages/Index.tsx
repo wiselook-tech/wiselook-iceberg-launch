@@ -2,7 +2,7 @@
 
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
-import CompetitorQuadrant from "@/components/CompetitorQuadrant";
+import CompetitorQuadrant from "@/useCases/index/CompetitorQuadrant";
 import { MainNav } from "@/components/MainNav";
 import { HeroSection } from "@/useCases/index/HeroSection";
 import { AwardsSection } from "@/useCases/index/AwardsSection";
@@ -28,12 +28,7 @@ const Index = () => {
       <SolutionSection />
       <ApproachSection />
 
-      {/* Competitor Landscape */}
-      <section className="py-20 md:py-28 bg-background">
-        <div className="container mx-auto px-6">
-          <CompetitorQuadrant />
-        </div>
-      </section>
+      <CompetitorQuadrant />
 
       <LinkedinSection />
       <SecuritySection />
