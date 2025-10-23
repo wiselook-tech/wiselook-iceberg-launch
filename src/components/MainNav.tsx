@@ -56,16 +56,16 @@ const MainNav = () => {
             >
               Contact
             </button>
-          </div>
-          <div className="hidden md:flex items-center gap-6">
-          <a
+            <a
               href={WISELOOK_LINKEDIN_URL}
               target="_blank"
               rel="noopener noreferrer"
-              className="text-primary rounded-lg hover:text-primary/60 transition-colors font-medium text-lg"
+              className="text-primary hover:text-foreground transition-colors"
             >
-              <Linkedin className="h-6 w-6" />
+              Linkedin
             </a>
+          </div>
+          <div className="hidden md:flex items-center gap-6">
             <Button
               variant="hero"
               size="sm"
