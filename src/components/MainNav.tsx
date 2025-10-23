@@ -1,8 +1,10 @@
 "use server";
 
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, Linkedin } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import wiselookIcon from "@/assets/favicon.png";
+
+const WISELOOK_LINKEDIN_URL = "https://www.linkedin.com/company/wiselook";
 
 const MainNav = () => {
   const scrollToSection = (sectionId: string) => {
@@ -55,7 +57,15 @@ const MainNav = () => {
               Contact
             </button>
           </div>
-          <div className="hidden md:flex items-center gap-3">
+          <div className="hidden md:flex items-center gap-6">
+          <a
+              href={WISELOOK_LINKEDIN_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-primary rounded-lg hover:text-primary/60 transition-colors font-medium text-lg"
+            >
+              <Linkedin className="h-6 w-6" />
+            </a>
             <Button
               variant="hero"
               size="sm"
@@ -63,7 +73,7 @@ const MainNav = () => {
               onClick={() =>
                 window.open(
                   "https://calendar.app.google/NvJxzr9aQzB77DeHA",
-                  "_blank",
+                  "_blank"
                 )
               }
             >

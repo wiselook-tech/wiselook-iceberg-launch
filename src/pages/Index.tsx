@@ -9,7 +9,6 @@ import { AwardsSection } from "@/useCases/index/AwardsSection";
 import { ProblemSection } from "@/useCases/index/ProblemSection";
 import { SolutionSection } from "@/useCases/index/SolutionSection";
 import { ApproachSection } from "@/useCases/index/ApproachSection";
-import { LinkedinSection } from "@/useCases/index/LinkedinSection";
 import { SecuritySection } from "@/useCases/index/SecuritySection";
 import { AboutSection } from "@/useCases/index/AboutSection";
 import { FAQSection } from "@/useCases/index/FAQSection";
@@ -30,7 +29,6 @@ const Index = () => {
 
       <CompetitorQuadrant />
 
-      <LinkedinSection />
       <SecuritySection />
       <AboutSection />
       <FAQSection />
