@@ -51,7 +51,7 @@ const AboutSection = () => {
 
           <div className="grid md:grid-cols-3 gap-8 lg:gap-12">
             {/* Jaime Oliver Huidobro */}
-            <motion.div className="bg-background rounded-xl p-8 shadow-card flex flex-col h-full transition-all duration-300 hover:shadow-xl hover:scale-105"
+            <motion.div className="bg-background rounded-xl p-8 shadow-card flex flex-col h-full"
               initial={{ opacity: 0, x: -150 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true, margin: "0px 0px -200px 0px" }}
@@ -95,7 +95,7 @@ const AboutSection = () => {
             </motion.div>
 
             {/* Rocío Fernández-Rubíes Aguirre */}
-            <motion.div className="bg-background rounded-xl p-8 shadow-card flex flex-col h-full transition-all duration-300 hover:shadow-xl hover:scale-105"
+            <motion.div className="bg-background rounded-xl p-8 shadow-card flex flex-col h-full"
               initial={{ opacity: 0, y: 150 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "0px 0px -200px 0px" }}
@@ -138,7 +138,7 @@ const AboutSection = () => {
             </motion.div>
 
             {/* Rafael Sarandeses */}
-            <motion.div className="bg-background rounded-xl p-8 shadow-card flex flex-col h-full transition-all duration-300 hover:shadow-xl hover:scale-105"
+            <motion.div className="bg-background rounded-xl p-8 shadow-card flex flex-col h-full"
               initial={{ opacity: 0, x: 150 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true, margin: "0px 0px -200px 0px" }}
