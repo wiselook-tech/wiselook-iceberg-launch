@@ -28,22 +28,34 @@ const AboutSection = () => {
               transition={{ duration: 0.8, ease: "easeOut" }}
             >
               About Us
-              </motion.h2>
-            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+            </motion.h2>
+            <motion.p className="text-lg text-muted-foreground max-w-2xl mx-auto"
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
+              viewport={{ once: true, margin: "0px 0px -200px 0px" }}
+              transition={{ duration: 0.8, ease: "easeOut" }}>
               Wiselook is a science-based talent intelligence platform that
               helps organizations recognize and develop their workforce
               potential through AI-powered assessments integrated directly into
               Microsoft Teams.
-            </p>
-            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+            </motion.p>
+            <motion.p className="text-lg text-muted-foreground max-w-2xl mx-auto"
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
+              viewport={{ once: true, margin: "0px 0px -200px 0px" }}
+              transition={{ duration: 0.8, ease: "easeOut" }}>
               Visionary leaders combining deep expertise in AI, data science,
               and customer experience to revolutionize workforce intelligence.
-            </p>
+            </motion.p>
           </div>
 
           <div className="grid md:grid-cols-3 gap-8 lg:gap-12">
             {/* Jaime Oliver Huidobro */}
-            <div className="bg-background rounded-xl p-8 shadow-card flex flex-col h-full transition-all duration-300 hover:shadow-xl hover:scale-105 ">
+            <motion.div className="bg-background rounded-xl p-8 shadow-card flex flex-col h-full transition-all duration-300 hover:shadow-xl hover:scale-105"
+              initial={{ opacity: 0, x: -150 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true, margin: "0px 0px -200px 0px" }}
+              transition={{ duration: 0.3, ease: "easeOut" }}>
               <div className="text-center space-y-6 flex flex-col h-full">
                 <img
                   src={jaimePhoto}
@@ -80,10 +92,14 @@ const AboutSection = () => {
                   Connect on LinkedIn
                 </a>
               </div>
-            </div>
+            </motion.div>
 
             {/* Rocío Fernández-Rubíes Aguirre */}
-            <div className="bg-background rounded-xl p-8 shadow-card flex flex-col h-full transition-all duration-300 hover:shadow-xl hover:scale-105 ">
+            <motion.div className="bg-background rounded-xl p-8 shadow-card flex flex-col h-full transition-all duration-300 hover:shadow-xl hover:scale-105"
+              initial={{ opacity: 0, y: 150 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, margin: "0px 0px -200px 0px" }}
+              transition={{ duration: 0.3, ease: "easeOut", delay: 0.2 }}>  
               <div className="text-center space-y-6 flex flex-col h-full">
                 <img
                   src={rocioPhoto}
@@ -119,10 +135,14 @@ const AboutSection = () => {
                   Connect on LinkedIn
                 </a>
               </div>
-            </div>
+            </motion.div>
 
             {/* Rafael Sarandeses */}
-            <div className="bg-background rounded-xl p-8 shadow-card flex flex-col h-full transition-all duration-300 hover:shadow-xl hover:scale-105 ">
+            <motion.div className="bg-background rounded-xl p-8 shadow-card flex flex-col h-full transition-all duration-300 hover:shadow-xl hover:scale-105"
+              initial={{ opacity: 0, x: 150 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true, margin: "0px 0px -200px 0px" }}
+              transition={{ duration: 0.3, ease: "easeOut", delay: 0.4 }}>
               <div className="text-center space-y-6 flex flex-col h-full">
                 <img
                   src={rafaPhoto}
@@ -158,11 +178,15 @@ const AboutSection = () => {
                   Connect on LinkedIn
                 </a>
               </div>
-            </div>
+            </motion.div>
           </div>
 
           {/* Join the Team CTA */}
-          <div className="text-center pt-8">
+          <motion.div className="text-center pt-8"
+              initial={{ opacity: 0, y: 150 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, margin: "0px 0px -200px 0px" }}
+              transition={{ duration: 0.3, ease: "easeOut" }}>
             <Button
               variant="hero"
               size="lg"
@@ -172,7 +196,7 @@ const AboutSection = () => {
               Join the Team
               <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
             </Button>
-          </div>
+          </motion.div>
         </div>
       </div>
     </section>
