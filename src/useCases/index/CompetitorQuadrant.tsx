@@ -88,7 +88,7 @@ const CompetitorQuadrant: React.FC = () => {
           </motion.p>
         </div>
 
-        <div className="grid lg:grid-cols-2 gap-8 items-center">
+        <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* Left column - Context */}
           <div className="space-y-6">
             <div>
