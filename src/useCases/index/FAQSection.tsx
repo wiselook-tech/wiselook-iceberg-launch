@@ -19,7 +19,7 @@ const FAQSection = () => {
           <Accordion type="single" collapsible className="w-full">
             <AccordionItem
               value="problem"
-              className="border-t border-b border-gray-400"
+              className="border-t border-b border-gray-300"
             >
               <AccordionTrigger className="text-left overflow-hidden p-0">
                 <motion.div
@@ -40,7 +40,7 @@ const FAQSection = () => {
 
             <AccordionItem
               value="different"
-              className="border-b border-gray-400"
+              className="border-b border-gray-300"
             >
               <AccordionTrigger className="text-left overflow-hidden p-0">
                 <motion.div
@@ -61,7 +61,7 @@ const FAQSection = () => {
 
             <AccordionItem
               value="competency"
-              className="border-b border-gray-400"
+              className="border-b border-gray-300"
             >
               <AccordionTrigger className="text-left overflow-hidden p-0">
                 <motion.div
@@ -82,7 +82,7 @@ const FAQSection = () => {
 
             <AccordionItem
               value="practice"
-              className="border-b border-gray-400"
+              className="border-b border-gray-300"
             >
               <AccordionTrigger className="text-left overflow-hidden p-0">
                 <motion.div
@@ -103,7 +103,7 @@ const FAQSection = () => {
 
             <AccordionItem
               value="security"
-              className="border-b border-gray-400"
+              className="border-b border-gray-300"
             >
               <AccordionTrigger className="text-left overflow-hidden p-0">
                 <motion.div
@@ -125,7 +125,7 @@ const FAQSection = () => {
 
             <AccordionItem
               value="outcomes"
-              className="border-b border-gray-400"
+              className="border-b border-gray-300"
             >
               <AccordionTrigger className="text-left overflow-hidden p-0">
                 <motion.div

@@ -39,7 +39,7 @@ const ProblemSection = () => {
             <div className="w-80 flex flex-col justify-center text-center mx-auto">
               {/* Top Card - Execs */}
               <motion.div
-                className="relative bg-secondary/5 border-t border-b border-r border-l rounded-t-lg border-gray-400 px-6 py-8"
+                className="relative bg-secondary/5 border-t border-b border-r border-l rounded-t-lg border-gray-300 px-6 py-8"
                 initial={{ bottom: -150, opacity: 0 }}
                 whileInView={{ bottom: 0, opacity: 1 }}
                 viewport={{ once: true, margin: "0px 0px -200px 0px" }}
@@ -60,7 +60,7 @@ const ProblemSection = () => {
 
               {/* Middle Card - Best of Workforce */}
               <motion.div
-                className="relative bg-secondary/15 border-b border-r border-l border-gray-400 px-6 py-8"
+                className="relative bg-secondary/15 border-b border-r border-l border-gray-300 px-6 py-8"
                 initial={{ bottom: -150, opacity: 0 }}
                 whileInView={{ bottom: 0, opacity: 1 }}
                 viewport={{ once: true, margin: "0px 0px -200px 0px" }}
@@ -81,7 +81,7 @@ const ProblemSection = () => {
 
               {/* Bottom Card - Line Workers */}
               <motion.div
-                className="relative bg-secondary/25 border-b border-r border-l rounded-b-lg border-gray-400 px-6 py-8"
+                className="relative bg-secondary/25 border-b border-r border-l rounded-b-lg border-gray-300 px-6 py-8"
                 initial={{ bottom: -150, opacity: 0 }}
                 whileInView={{ bottom: 0, opacity: 1 }}
                 viewport={{ once: true, margin: "0px 0px -200px 0px" }}

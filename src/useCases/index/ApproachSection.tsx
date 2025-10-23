@@ -21,7 +21,7 @@ const ApproachSection = () => {
           <div className="grid grid-cols-2 gap-x-12">
             {/* Lego Building Blocks - New */}
             <motion.div
-              className="py-12 border-t border-b border-gray-400 flex flex-col gap-10"
+              className="py-12 border-t border-b border-gray-300 flex flex-col gap-10"
               initial={{ opacity: 0 }}
               whileInView={{ opacity: 1 }}
               viewport={{ once: true, margin: "0px 0px -200px 0px" }}
@@ -51,7 +51,7 @@ const ApproachSection = () => {
 
             {/* Conversational Assessment - New */}
             <motion.div
-              className="py-12 border-t border-b border-gray-400 flex flex-col gap-10"
+              className="py-12 border-t border-b border-gray-300 flex flex-col gap-10"
               initial={{ opacity: 0 }}
               whileInView={{ opacity: 1 }}
               viewport={{ once: true, margin: "0px 0px -200px 0px" }}
@@ -80,7 +80,7 @@ const ApproachSection = () => {
             </motion.div>
 
             <motion.div
-              className="py-12 border-b border-gray-400 flex flex-col gap-10"
+              className="py-12 border-b border-gray-300 flex flex-col gap-10"
               initial={{ opacity: 0 }}
               whileInView={{ opacity: 1 }}
               viewport={{ once: true, margin: "0px 0px -200px 0px" }}
@@ -97,7 +97,7 @@ const ApproachSection = () => {
             </motion.div>
 
             <motion.div
-              className="py-12 border-b border-gray-400 flex flex-col gap-10"
+              className="py-12 border-b border-gray-300 flex flex-col gap-10"
               initial={{ opacity: 0 }}
               whileInView={{ opacity: 1 }}
               viewport={{ once: true, margin: "0px 0px -200px 0px" }}
@@ -113,7 +113,7 @@ const ApproachSection = () => {
             </motion.div>
 
             <motion.div
-              className="py-12 border-b border-gray-400 flex flex-col gap-10"
+              className="py-12 border-b border-gray-300 flex flex-col gap-10"
               initial={{ opacity: 0 }}
               whileInView={{ opacity: 1 }}
               viewport={{ once: true, margin: "0px 0px -200px 0px" }}
@@ -142,7 +142,7 @@ const ApproachSection = () => {
             </motion.div>
 
             <motion.div
-              className="py-12 border-b border-gray-400 flex flex-col gap-10"
+              className="py-12 border-b border-gray-300 flex flex-col gap-10"
               initial={{ opacity: 0 }}
               whileInView={{ opacity: 1 }}
               viewport={{ once: true, margin: "0px 0px -200px 0px" }}

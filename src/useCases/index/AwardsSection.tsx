@@ -159,8 +159,8 @@ const AwardsSection = () => {
                 </div>
               </div>
               <div className="bg-primary/10 rounded-xl p-8 shadow-card text-center flex flex-col items-start justify-between gap-5 row-start-1 col-start-3">
-                <div className="inline-flex items-center gap-2 py-2 rounded-full">
-                  <Trophy className="h-10 w-10 text-primary" />
+                <div className="h-10 w-10 animate-scale">
+                  <Trophy className="h-full w-full text-primary" />
                 </div>
                 <span className="text-4xl font-heading font-medium text-primary uppercase tracking-wider">
                   Award Winner

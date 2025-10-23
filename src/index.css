@@ -162,3 +162,19 @@ All colors MUST be HSL.
   animation: slide-down 0.6s ease-out forwards;
   opacity: 0;
 }
+
+
+
+.animate-scale {
+  animation: scale-animation 2s ease-in-out reverse infinite;
+}
+
+  @keyframes scale-animation {
+    0%,
+    100% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.2);
+    }
+  }
