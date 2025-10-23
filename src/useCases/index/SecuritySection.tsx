@@ -1,10 +1,6 @@
 "use server";
 
 import { Shield, Database, Eye } from "lucide-react";
-import soc2Logo from "@/assets/soc2-logo.svg";
-import gdprLogo from "@/assets/gdpr-logo.svg";
-import iso27001Logo from "@/assets/iso27001-logo.svg";
-import euAiActLogo from "@/assets/eu-ai-act-logo.svg";
 import { motion } from "motion/react";
 
 const SecuritySection = () => {
