@@ -82,10 +82,10 @@ const ContactSection = () => {
     <section id="contact" className="py-20 md:py-28 bg-gradient-hero">
       <div className="container mx-auto px-6">
         <div className="max-w-3xl mx-auto text-center space-y-8">
-          <h2 className="font-heading font-bold text-3xl md:text-5xl text-foreground">
+          <h2 className="font-heading font-bold text-5xl text-foreground">
             Contact us to know more
           </h2>
-          <p className="text-lg text-muted-foreground">
+          <p className="text-xl text-muted-foreground">
             Ready to transform your talent assessment process? Let's discuss how
             Wiselook can help your organization.
           </p>
