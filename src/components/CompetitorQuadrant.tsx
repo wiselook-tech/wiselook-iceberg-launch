@@ -203,6 +203,18 @@ const CompetitorQuadrant: React.FC = () => {
                       onMouseLeave={handleMouseLeave}
                     />
                     
+                    {/* Original position indicator for competitors when hovered */}
+                    {isHovered && !isWiselook && (
+                      <circle
+                        cx={x}
+                        cy={y}
+                        r="6"
+                        fill="#6b7280"
+                        opacity="0.3"
+                        className="transition-all duration-200"
+                      />
+                    )}
+                    
                     {/* Marker circle */}
                     <circle
                       cx={x}
@@ -211,7 +223,7 @@ const CompetitorQuadrant: React.FC = () => {
                       fill={isWiselook ? "hsl(var(--primary))" : "#6b7280"}
                       stroke={isWiselook ? "hsl(var(--primary))" : "#374151"}
                       strokeWidth={isWiselook ? "2" : "1"}
-                      className={`transition-all duration-200 ${isHovered ? 'scale-125' : 'scale-100'}`}
+                      className={`transition-all duration-200 ${isHovered ? 'scale-110' : 'scale-100'}`}
                     />
 
                     {/* Label */}

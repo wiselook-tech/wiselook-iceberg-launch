@@ -254,20 +254,20 @@ const Index = () => {
                     </div>
                   </div>
 
-                  {/* Middle Card - Best of Workforce */}
+                  {/* Middle Card - Rest of Workforce */}
                   <div 
                     className="absolute bottom-16 sm:bottom-20 w-56 h-20 sm:w-64 sm:h-24 bg-gradient-to-r from-orange-400 to-orange-500 rounded-lg shadow-lg transform transition-all duration-500 hover:scale-110 hover:shadow-2xl hover:-translate-y-4 cursor-pointer animate-slide-in-left group focus:outline-none focus:ring-2 focus:ring-orange-500 focus:ring-offset-2 group-hover/pyramid:scale-105 group-hover/pyramid:shadow-xl group-hover/pyramid:-translate-y-2 hover:z-20" 
                     style={{ animationDelay: '300ms' }}
                     role="button"
                     tabIndex={0}
-                    aria-label="Best of Workforce - Rising talent where human skills get debated"
+                    aria-label="Rest of Workforce - Rising talent where human skills get debated"
                   >
                     <div className="p-2 sm:p-3 h-full flex flex-col justify-between">
                       <div className="opacity-0 group-hover:opacity-100 transition-all duration-300 transform translate-y-2 group-hover:translate-y-0">
                         <p className="text-sm text-orange-100 text-center group-hover:text-orange-50 transition-colors">Human Skills get debated</p>
                         <p className="text-xs text-orange-200 text-center mt-1">Rising talent</p>
                       </div>
-                      <h3 className="text-base sm:text-lg font-semibold text-white text-center mb-1 group-hover:text-orange-100 transition-colors">Best of Workforce</h3>
+                      <h3 className="text-base sm:text-lg font-semibold text-white text-center mb-1 group-hover:text-orange-100 transition-colors">Rest of Workforce</h3>
                     </div>
                   </div>
 
@@ -279,12 +279,12 @@ const Index = () => {
                     tabIndex={0}
                     aria-label="Executives - Leadership level where human skills get tested"
                   >
-                    <div className="p-2 sm:p-3 h-full flex flex-col justify-between">
-                      <div className="opacity-0 group-hover:opacity-100 transition-all duration-300 transform translate-y-2 group-hover:translate-y-0">
-                        <p className="text-xs sm:text-sm text-blue-100 text-center group-hover:text-blue-50 transition-colors">Human Skills get tested</p>
-                        <p className="text-xs text-blue-200 text-center mt-1">Leadership level</p>
+                    <div className="p-1 sm:p-2 h-full flex flex-col justify-center items-center">
+                      <div className="opacity-0 group-hover:opacity-100 transition-all duration-300 transform translate-y-1 group-hover:translate-y-0 mb-1">
+                        <p className="text-xs text-blue-100 text-center group-hover:text-blue-50 transition-colors">Human Skills get tested</p>
+                        <p className="text-xs text-blue-200 text-center">Leadership level</p>
                       </div>
-                      <h3 className="text-sm sm:text-base font-semibold text-white text-center mb-1 group-hover:text-blue-100 transition-colors">Execs</h3>
+                      <h3 className="text-xs sm:text-sm font-semibold text-white text-center group-hover:text-blue-100 transition-colors">Execs</h3>
                     </div>
                   </div>
                 </div>
