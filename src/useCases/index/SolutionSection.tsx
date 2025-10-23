@@ -1,5 +1,7 @@
 "use server";
 
+import { Subtitle } from "@/components/Subtitle";
+import { Title } from "@/components/Title";
 import { CheckCircle2, ArrowRight } from "lucide-react";
 import { motion } from "motion/react";
 
@@ -8,21 +10,13 @@ const SolutionSection = () => {
     <section className="py-20 md:py-28">
       <div className="container mx-auto px-6">
         <div className="max-w-6xl mx-auto pb-24 h-[2000px]">
-          <motion.div
-            className="sticky top-32 text-center space-y-4 mb-[300px]"
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            viewport={{ once: true, margin: "0px 0px -200px 0px" }}
-            transition={{ duration: 0.5, ease: "easeOut" }}
-          >
-            <h2 className="font-heading font-bold text-5xl text-foreground">
-              How?
-            </h2>
-            <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-              A short, AI-native conversational flow that captures real evidence
-              and turns it into action.
-            </p>
-          </motion.div>
+          <div className="sticky top-32 text-center space-y-4 mb-[300px]">
+            <Title text="How?" />
+            <Subtitle
+              text="A short, AI-native conversational flow that captures real evidence
+              and turns it into action."
+            />
+          </div>
 
           <div className="sticky h-[1600px] grid grid-cols-3 gap-8 ">
             {/* Assess Block */}

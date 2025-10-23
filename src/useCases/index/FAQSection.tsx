@@ -1,5 +1,6 @@
 "use server";
 
+import { Title } from "@/components/Title";
 import {
   Accordion,
   AccordionContent,
@@ -12,14 +13,9 @@ const FAQSection = () => {
   return (
     <section id="FAQ" className="py-16 md:py-20 bg-background">
       <div className="container mx-auto px-6">
-        <div className="max-w-5xl mx-auto">
-          <motion.h2 className="font-heading font-bold text-5xl text-center text-foreground mb-12"
-              initial={{ opacity: 0 }}
-              whileInView={{ opacity: 1 }}
-              viewport={{ once: true, margin: "0px 0px -200px 0px" }}
-              transition={{ duration: 0.4, ease: "easeOut" }}>
-            Frequently Asked Questions
-          </motion.h2>
+        <div className="max-w-5xl mx-auto flex flex-col gap-12">
+          <Title text="Frequently Asked Questions" />
+          
           <Accordion type="single" collapsible className="w-full">
             <motion.div
               initial={{ opacity: 0, y: 150 }}

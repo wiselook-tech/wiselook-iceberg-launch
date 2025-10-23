@@ -3,7 +3,6 @@
 import {
   FormField,
   FormItem,
-  FormLabel,
   FormControl,
   FormMessage,
 } from "@/components/ui/form";
@@ -16,6 +15,8 @@ import z from "zod";
 import { createContact } from "@/lib/actions/contacts";
 import { useState } from "react";
 import { motion } from "motion/react";
+import { Subtitle } from "@/components/Subtitle";
+import { Title } from "@/components/Title";
 
 type FormState = "idle" | "submitting" | "success" | "error";
 
@@ -85,25 +86,10 @@ const ContactSection = () => {
     <section id="contact" className="py-20 md:py-28 bg-gradient-hero">
       <div className="container mx-auto px-6">
         <div className="max-w-3xl mx-auto text-center space-y-8">
-          <motion.h2
-            className="font-heading font-bold text-5xl text-center text-foreground mb-12"
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            viewport={{ once: true, margin: "0px 0px -200px 0px" }}
-            transition={{ duration: 0.4, ease: "easeOut" }}
-          >
-            Contact us to know more
-          </motion.h2>
-          <motion.p
-            className="text-xl text-muted-foreground max-w-2xl mx-auto"
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            viewport={{ once: true, margin: "0px 0px -200px 0px" }}
-            transition={{ duration: 0.8, ease: "easeOut" }}
-          >
-            Ready to transform your talent assessment process? Let's discuss how
-            Wiselook can help your organization.
-          </motion.p>
+          <Title text="Contact us to know more" />
+          <Subtitle text="Ready to transform your talent assessment process? Let's discuss how
+            Wiselook can help your organization." />
+          
 
           {(formState === "idle" || formState === "submitting") && (
             <motion.div

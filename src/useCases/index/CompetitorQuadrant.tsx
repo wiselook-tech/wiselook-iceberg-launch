@@ -1,3 +1,5 @@
+import { Subtitle } from "@/components/Subtitle";
+import { Title } from "@/components/Title";
 import { motion } from "motion/react";
 import React, { useState } from "react";
 
@@ -72,38 +74,30 @@ const CompetitorQuadrant: React.FC = () => {
     <section className="py-20 md:py-28 bg-background">
       <div className="w-full max-w-6xl mx-auto">
         <div className="text-center space-y-6 mb-12">
-          <motion.h3 className="font-heading font-bold text-5xl text-foreground"
-              initial={{ opacity: 0 }}
-              whileInView={{ opacity: 1 }}
-              viewport={{ once: true, margin: "0px 0px -200px 0px" }}
-              transition={{ duration: 0.8, ease: "easeOut" }}>
-            Why Us?
-          </motion.h3>
-          <motion.p className="text-xl text-muted-foreground max-w-2xl mx-auto"
-              initial={{ opacity: 0 }}
-              whileInView={{ opacity: 1 }}
-              viewport={{ once: true, margin: "0px 0px -200px 0px" }}
-              transition={{ duration: 0.8, ease: "easeOut" }}>
-            Because we are born to provide objective evidence at scale
-          </motion.p>
+          <Title text="Why Us?" />
+          <Subtitle text="Because we are born to provide objective evidence at scale" />
         </div>
 
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* Left column - Context */}
           <div className="space-y-6">
             <div>
-              <motion.h4 className="relative font-heading font-semibold text-2xl text-foreground mb-4"
-              initial={{ opacity: 0, x: -150 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true, margin: "0px 0px -200px 0px" }}
-              transition={{ duration: 0.5, ease: "easeOut" }}>
+              <motion.h4
+                className="relative font-heading font-semibold text-2xl text-foreground mb-4"
+                initial={{ opacity: 0, x: -150 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true, margin: "0px 0px -200px 0px" }}
+                transition={{ duration: 0.5, ease: "easeOut" }}
+              >
                 Why this matters
               </motion.h4>
-              <motion.p className="text-lg text-muted-foreground leading-relaxed"
-              initial={{ opacity: 0, x: -150 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true, margin: "0px 0px -200px 0px" }}
-              transition={{ duration: 0.5, ease: "easeOut" }}>
+              <motion.p
+                className="text-lg text-muted-foreground leading-relaxed"
+                initial={{ opacity: 0, x: -150 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true, margin: "0px 0px -200px 0px" }}
+                transition={{ duration: 0.5, ease: "easeOut" }}
+              >
                 Most tools either rely on subjective judgement or don't scale.
                 We combine validated, objective evidence with AI so
                 organizations can make fair decisions at speed.
@@ -112,11 +106,13 @@ const CompetitorQuadrant: React.FC = () => {
           </div>
 
           {/* Right column - Graph */}
-          <motion.div className="flex justify-center lg:justify-end"
-              initial={{ opacity: 0, x: 150 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true, margin: "0px 0px -200px 0px" }}
-              transition={{ duration: 0.5, ease: "easeOut" }}>
+          <motion.div
+            className="flex justify-center lg:justify-end"
+            initial={{ opacity: 0, x: 150 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true, margin: "0px 0px -200px 0px" }}
+            transition={{ duration: 0.5, ease: "easeOut" }}
+          >
             <div className="relative border border-gray-200 rounded-lg p-4 bg-white">
               <svg
                 width={svgWidth}

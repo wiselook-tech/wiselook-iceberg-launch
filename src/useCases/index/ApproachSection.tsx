@@ -1,5 +1,6 @@
 "use server";
 
+import { Title } from "@/components/Title";
 import { Users, Brain, Lock } from "lucide-react";
 import { motion } from "motion/react";
 
@@ -8,15 +9,7 @@ const ApproachSection = () => {
     <section className="py-20 md:py-28 bg-[#fafafa]">
       <div className="container mx-auto px-6">
         <div className="max-w-6xl mx-auto space-y-12">
-          <motion.h2
-            className="font-heading font-bold text-5xl text-foreground"
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            viewport={{ once: true, margin: "0px 0px -200px 0px" }}
-            transition={{ duration: 0.5, ease: "easeOut" }}
-          >
-            Approach and Value
-          </motion.h2>
+          <Title text="Approach and Value" />
 
           <div className="grid grid-cols-2 gap-x-12">
             {/* Lego Building Blocks - New */}

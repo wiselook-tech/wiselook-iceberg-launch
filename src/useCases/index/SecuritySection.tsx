@@ -1,5 +1,7 @@
 "use server";
 
+import { Subtitle } from "@/components/Subtitle";
+import { Title } from "@/components/Title";
 import { Shield, Database, Eye } from "lucide-react";
 import { motion } from "motion/react";
 
@@ -9,57 +11,51 @@ const SecuritySection = () => {
       <div className="container mx-auto px-6">
         <div className="max-w-6xl mx-auto space-y-12">
           <div className="text-center space-y-8">
-            <motion.h2
-              className="font-heading font-bold text-5xl text-foreground"
-              initial={{ opacity: 0 }}
-              whileInView={{ opacity: 1 }}
-              viewport={{ once: true, margin: "0px 0px -200px 0px" }}
-              transition={{ duration: 0.8, ease: "easeOut" }}
-            >
-              Enterprise‑grade security and privacy
-            </motion.h2>
-            <motion.p
-              className="text-xl text-muted-foreground max-w-2xl mx-auto"
-              initial={{ opacity: 0 }}
-              whileInView={{ opacity: 1 }}
-              viewport={{ once: true, margin: "0px 0px -200px 0px" }}
-              transition={{ duration: 0.8, ease: "easeOut" }}
-            >
-              Built with security and privacy by design, ensuring your data is
-              protected at every step
-            </motion.p>
+            <Title text="Enterprise‑grade security and privacy" />
+            <Subtitle
+              text="Built with security and privacy by design, ensuring your data is
+              protected at every step"
+            />
 
             {/* Certification Logos */}
             <div className="flex items-center justify-center gap-8 flex-wrap pt-4">
-              <motion.div className="flex flex-col justify-center items-center border border-gray-200 rounded-lg h-20 w-40"
+              <motion.div
+                className="flex flex-col justify-center items-center border border-gray-200 rounded-lg h-20 w-40"
                 initial={{ opacity: 0, y: 50 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, margin: "0px 0px -200px 0px" }}
-                transition={{ duration: 0.4, ease: "easeOut" }}>
+                transition={{ duration: 0.4, ease: "easeOut" }}
+              >
                 <span className="font-bold">SOC 2</span>
                 <span className="text-xs">Type II</span>
               </motion.div>
-              <motion.div className="flex flex-col justify-center items-center border border-gray-200 rounded-lg h-20 w-40"
+              <motion.div
+                className="flex flex-col justify-center items-center border border-gray-200 rounded-lg h-20 w-40"
                 initial={{ opacity: 0, y: 50 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, margin: "0px 0px -200px 0px" }}
-                transition={{ duration: 0.4, ease: "easeOut", delay: .2 }}>
+                transition={{ duration: 0.4, ease: "easeOut", delay: 0.2 }}
+              >
                 <span className="font-bold">GDPR</span>
                 <span className="text-xs">Compliant</span>
               </motion.div>
-              <motion.div className="flex flex-col justify-center items-center border border-gray-200 rounded-lg h-20 w-40"
+              <motion.div
+                className="flex flex-col justify-center items-center border border-gray-200 rounded-lg h-20 w-40"
                 initial={{ opacity: 0, y: 50 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, margin: "0px 0px -200px 0px" }}
-                transition={{ duration: 0.4, ease: "easeOut", delay: .4 }}>
+                transition={{ duration: 0.4, ease: "easeOut", delay: 0.4 }}
+              >
                 <span className="font-bold">ISO 27001</span>
                 <span className="text-xs">Certified</span>
               </motion.div>
-              <motion.div className="flex flex-col justify-center items-center border border-gray-200 rounded-lg h-20 w-40"
+              <motion.div
+                className="flex flex-col justify-center items-center border border-gray-200 rounded-lg h-20 w-40"
                 initial={{ opacity: 0, y: 50 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, margin: "0px 0px -200px 0px" }}
-                transition={{ duration: 0.4, ease: "easeOut", delay: .6 }}>
+                transition={{ duration: 0.4, ease: "easeOut", delay: 0.6 }}
+              >
                 <span className="font-bold">EU AI Act</span>
                 <span className="text-xs">Compliant</span>
               </motion.div>
