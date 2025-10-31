@@ -155,6 +155,17 @@
 
   <body>
     <div id="root"></div>
+    <!-- GitHub Pages SPA redirect handler - must run before React Router -->
+    <script>
+      // Handle redirect from 404.html
+      (function() {
+        var redirect = new URLSearchParams(window.location.search).get('redirect');
+        if (redirect) {
+          // Rewrite URL without query parameter and without page reload
+          window.history.replaceState(null, null, redirect);
+        }
+      })();
+    </script>
     <script type="module" src="/src/main.tsx"></script>
   </body>
 </html>
