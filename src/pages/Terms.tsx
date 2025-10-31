@@ -1,18 +1,24 @@
 import { Button } from "@/components/ui/button";
 import { ArrowLeft } from "lucide-react";
+import { useNavigate } from "react-router-dom";
 import wiselookIcon from "@/assets/favicon.ico";
 
 const Terms = () => {
+  const navigate = useNavigate();
+
   return (
     <div className="min-h-screen bg-background font-body">
       {/* Navigation Header */}
       <nav className="fixed top-0 left-0 right-0 z-50 bg-background/95 backdrop-blur-sm border-b border-border">
         <div className="container mx-auto px-6 py-4">
           <div className="flex items-center justify-between">
-            <div className="flex items-center gap-3">
+            <button 
+              onClick={() => navigate("/")}
+              className="flex items-center gap-3 hover:opacity-80 transition-opacity"
+            >
               <img src={wiselookIcon} alt="Wiselook" className="h-8 w-8" />
               <span className="font-heading font-bold text-xl text-foreground">Wiselook</span>
-            </div>
+            </button>
             <Button 
               variant="ghost" 
               size="sm"
