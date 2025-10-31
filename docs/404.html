@@ -5,9 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Wiselook - Strategic Workforce Intelligence</title>
     <script>
-        // Simple redirect to index.html for HashRouter
-        // HashRouter handles all routing client-side, so we just need to serve the main app
-        window.location.replace(window.location.origin + '/index.html');
+        // Redirect to index.html with the path preserved for BrowserRouter
+        // This allows GitHub Pages to serve the React app for all routes
+        var path = window.location.pathname;
+        var search = window.location.search;
+        var hash = window.location.hash;
+        window.location.replace('/index.html' + path + search + hash);
     </script>
 </head>
 <body>
