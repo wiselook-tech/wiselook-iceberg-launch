@@ -15,7 +15,7 @@ on:
 
 # Sets permissions of the GITHUB_TOKEN to allow deployment to GitHub Pages
 permissions:
-  contents: write  # Changed from read to write to allow committing built files
+  contents: read
   pages: write
   id-token: write
 
@@ -47,19 +47,6 @@ jobs:
         
       - name: Build
         run: npm run build
-        
-      - name: Commit built files
-        run: |
-          git config --local user.email "action@github.com"
-          git config --local user.name "GitHub Action"
-          git add docs/
-          # Only commit if there are changes
-          if git diff --staged --quiet; then
-            echo "No changes to commit"
-          else
-            git commit -m "chore: build [skip actions]" || exit 0
-            git push
-          fi
       
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
