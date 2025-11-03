@@ -47,6 +47,15 @@ const Support = () => {
               </section>
 
               <section>
+                <h2 className="font-heading font-semibold text-2xl text-foreground mb-4">You need to agree to the following responsibilities before continuing:</h2>
+                <ul className="list-disc pl-6 text-muted-foreground space-y-2">
+                  <li>I will take this assessment honestly and without any assistance from others.</li>
+                  <li>I will not copy or distribute information from this assessment in any form.</li>
+                  <li>If requested, I agree to complete a further supervised assessment to verify my results from this assessment.</li>
+                </ul>
+              </section>
+
+              <section>
                 <h2 className="font-heading font-semibold text-2xl text-foreground mb-4">Getting Started</h2>
                 <p className="text-muted-foreground leading-relaxed mb-4">
                   Follow these steps to install Wiselook in Microsoft Teams:
