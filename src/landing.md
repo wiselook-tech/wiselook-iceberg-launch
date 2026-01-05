@@ -165,6 +165,6 @@
 - All images optimized and responsive
 
 **🔗 EXTERNAL LINKS:**
-- Calendar booking: https://calendar.app.google/ixXmzeviCe26CbWP9
+- Calendar booking: https://calendar.app.google/EHMazdi37bBkGuwZ8
 - HR Innovation Summit announcement: https://www.rrhhdigital.com/secciones/eventos-rrhhdigital/781586/hr-innovation-summit-2025-mas-talento-mas-ideas-y-una-asistencia-record/
 - LinkedIn company page: https://www.linkedin.com/company/wiselook
