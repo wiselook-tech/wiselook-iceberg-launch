@@ -90,8 +90,8 @@ const Index = () => {
             {/* Hero Content */}
             <div className="space-y-8 animate-fade-up">
               <h1 className="font-heading font-bold text-4xl md:text-5xl lg:text-6xl leading-tight text-foreground">
-                Map your talent. <p></p>
-                In minutes. 
+                Map your talent. <br />
+                In minutes.
               </h1>
               <p className="text-lg md:text-xl text-muted-foreground max-w-xl">
                 Uncover the hidden potential in your organization with science-backed, conversational assessments. 
@@ -300,7 +300,7 @@ const Index = () => {
           <div className="max-w-6xl mx-auto space-y-12">
             <div className="text-center space-y-4">
               <h2 className="font-heading font-bold text-3xl md:text-4xl text-foreground">
-                How? 
+                How it works
               </h2>
               <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
                 A short, AI-native conversational flow that captures real evidence and turns it into action.
@@ -339,7 +339,7 @@ const Index = () => {
                 </div>
                 <h3 className="font-heading font-semibold text-xl text-foreground">Act</h3>
                 <p className="text-muted-foreground">
-                  Individuals and managers get actionalble recommendations to make fair and faster talent decisions.
+                  Individuals and managers get actionable recommendations to make fair and faster talent decisions.
                 </p>
               </div>
             </div>
@@ -862,7 +862,7 @@ const Index = () => {
           <div className="flex items-center justify-center gap-6 flex-wrap text-sm text-muted-foreground">
             <div className="flex items-center gap-2">
               <Shield className="h-4 w-4" />
-              <span>SOC 2 ready</span>
+              <span>SOC 2 Type II</span>
             </div>
             <span className="text-border">•</span>
             <span>GDPR compliant</span>
