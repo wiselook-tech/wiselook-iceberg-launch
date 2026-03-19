@@ -16,6 +16,9 @@ import soc2Logo from "@/assets/soc2-logo.svg";
 import gdprLogo from "@/assets/gdpr-logo.svg";
 import iso27001Logo from "@/assets/iso27001-logo.svg";
 import euAiActLogo from "@/assets/eu-ai-act-logo.svg";
+import enisaCertificada from "@/assets/enisa-certificada.png";
+import fueLogo from "@/assets/fue-logo.png";
+import celeraLogo from "@/assets/celera-logo.svg";
 
 const Index = () => {
   const scrollToSection = (sectionId: string) => {
@@ -846,6 +849,24 @@ const Index = () => {
             <span>EU AI Act compliant</span>
             <span className="text-border">•</span>
             <span>Enterprise-grade security</span>
+          </div>
+        </div>
+      </section>
+
+      {/* Recognized By */}
+      <section className="py-12 bg-muted/30 border-t border-border">
+        <div className="container mx-auto px-6">
+          <p className="text-center text-sm text-muted-foreground mb-8 uppercase tracking-widest">Recognized by</p>
+          <div className="flex items-center justify-center gap-12 flex-wrap">
+            <a href="https://www.enisa.es/" target="_blank" rel="noopener noreferrer">
+              <img src={enisaCertificada} alt="Empresa Emergente Certificada por ENISA" title="Empresa Emergente Certificada por ENISA (Ley 28/2022)" className="h-12 w-auto opacity-50 grayscale hover:opacity-80 hover:grayscale-[50%] transition-all duration-200" />
+            </a>
+            <a href="https://fundacionuniversidadempresa.es/" target="_blank" rel="noopener noreferrer">
+              <img src={fueLogo} alt="Fundación Universidad Empresa" title="Fundación Universidad Empresa" className="h-12 w-auto opacity-50 grayscale hover:opacity-80 hover:grayscale-[50%] transition-all duration-200" />
+            </a>
+            <a href="https://acelerame.org/" target="_blank" rel="noopener noreferrer">
+              <img src={celeraLogo} alt="Fundación Celera" title="Fundación Celera" className="h-12 w-auto opacity-50 grayscale hover:opacity-80 hover:grayscale-[50%] transition-all duration-200" />
+            </a>
           </div>
         </div>
       </section>
