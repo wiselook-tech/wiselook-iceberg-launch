@@ -295,7 +295,7 @@ const Index = () => {
       </section>
 
       {/* Solution Section */}
-      <section className="py-20 md:py-28 bg-gradient-card">
+      <section id="how-it-works" className="py-20 md:py-28 bg-gradient-card scroll-mt-20">
         <div className="container mx-auto px-6">
           <div className="max-w-6xl mx-auto space-y-12">
             <div className="text-center space-y-4">
@@ -349,7 +349,7 @@ const Index = () => {
 
 
       {/* Approach and Value */}
-      <section className="py-20 md:py-28 bg-gradient-card">
+      <section className="py-20 md:py-28 bg-background">
         <div className="container mx-auto px-6">
           <div className="max-w-4xl mx-auto space-y-12">
             <h2 className="font-heading font-bold text-3xl md:text-4xl text-center text-foreground">
@@ -418,35 +418,9 @@ const Index = () => {
       </section>
 
       {/* Competitor Landscape */}
-      <section className="py-20 md:py-28 bg-background">
+      <section className="py-20 md:py-28 bg-gradient-card">
         <div className="container mx-auto px-6">
           <CompetitorQuadrant />
-        </div>
-      </section>
-
-      {/* LinkedIn Follow Section */}
-      <section className="py-20 md:py-28 bg-background">
-        <div className="container mx-auto px-6">
-          <div className="max-w-4xl mx-auto text-center space-y-8">
-            <h2 className="font-heading font-bold text-3xl md:text-4xl text-foreground">
-              Follow us on LinkedIn
-            </h2>
-            <p className="text-lg text-muted-foreground">
-              Stay updated with our latest insights on workforce intelligence and talent assessment.
-            </p>
-            
-            <div className="pt-4">
-              <a 
-                href="https://www.linkedin.com/company/wiselook" 
-                target="_blank" 
-                rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 px-8 py-4 bg-primary text-primary-foreground rounded-lg hover:bg-primary/90 transition-colors font-medium text-lg"
-              >
-                <Linkedin className="h-6 w-6" />
-                Follow us on LinkedIn
-              </a>
-            </div>
-          </div>
         </div>
       </section>
 
@@ -887,31 +861,41 @@ const Index = () => {
                 <p className="text-sm text-muted-foreground mt-1">Unlocking human potential. At scale.</p>
               </div>
             </div>
-            <div className="flex gap-6 text-sm text-muted-foreground">
-              <button 
+            <div className="flex gap-6 text-sm text-muted-foreground items-center">
+              <button
                 onClick={() => scrollToSection('problem')}
                 className="hover:text-foreground transition-colors min-h-[44px] min-w-[44px] flex items-center focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 rounded"
               >
                 Product
               </button>
-              <button 
+              <button
                 onClick={() => scrollToSection('security')}
                 className="hover:text-foreground transition-colors min-h-[44px] min-w-[44px] flex items-center focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 rounded"
               >
                 Security
               </button>
-              <button 
+              <button
                 onClick={() => scrollToSection('about')}
                 className="hover:text-foreground transition-colors min-h-[44px] min-w-[44px] flex items-center focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 rounded"
               >
                 About Us
               </button>
-              <button 
+              <button
                 onClick={() => scrollToSection('contact')}
                 className="hover:text-foreground transition-colors min-h-[44px] min-w-[44px] flex items-center focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 rounded"
               >
                 Contact
               </button>
+              <a
+                href="https://www.linkedin.com/company/wiselook"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:text-foreground transition-colors min-h-[44px] flex items-center gap-1.5 focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 rounded"
+                aria-label="Follow Wiselook on LinkedIn"
+              >
+                <Linkedin className="h-4 w-4" />
+                LinkedIn
+              </a>
             </div>
           </div>
           <div className="mt-8 pt-8 border-t border-border text-center text-sm text-muted-foreground">
