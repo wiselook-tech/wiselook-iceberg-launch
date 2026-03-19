@@ -2,6 +2,7 @@ import { Button } from "@/components/ui/button";
 import { ArrowRight, CheckCircle2, Shield, Award, Users, Brain, Lock, Linkedin, Globe, Database, Search, Eye, UserCheck, FileText, ShieldCheck, Key } from "lucide-react";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import CompetitorQuadrant from "@/components/CompetitorQuadrant";
+import { useRevealOnScroll } from "@/hooks/use-reveal-on-scroll";
 import heroIceberg from "@/assets/landing-bg-grey.png";
 import wiselookLogo from "@/assets/wiselook-logo.svg";
 import wiselookIcon from "@/assets/Wiselook_RGB_Iso_Positive_Color.svg";
@@ -21,6 +22,8 @@ import fueLogo from "@/assets/fue-logo.png";
 import celeraLogo from "@/assets/celera-logo.svg";
 
 const Index = () => {
+  useRevealOnScroll();
+
   const scrollToSection = (sectionId: string) => {
     const element = document.getElementById(sectionId);
     if (element) {
@@ -298,7 +301,7 @@ const Index = () => {
       </section>
 
       {/* Solution Section */}
-      <section id="how-it-works" className="py-20 md:py-28 bg-gradient-card scroll-mt-20">
+      <section id="how-it-works" className="py-20 md:py-28 bg-gradient-card scroll-reveal scroll-mt-20">
         <div className="container mx-auto px-6">
           <div className="max-w-6xl mx-auto space-y-12">
             <div className="text-center space-y-4">
@@ -428,7 +431,7 @@ const Index = () => {
       </section>
 
       {/* Security and Privacy */}
-      <section id="security" className="py-20 md:py-28 bg-muted/30">
+      <section id="security" className="py-20 md:py-28 bg-muted/30 scroll-reveal">
         <div className="container mx-auto px-6">
           <div className="max-w-6xl mx-auto space-y-12">
             <div className="text-center space-y-8">
@@ -609,7 +612,7 @@ const Index = () => {
       </section>
 
       {/* About & Team Section */}
-      <section id="about" className="py-20 md:py-28 bg-gradient-card">
+      <section id="about" className="py-20 md:py-28 bg-gradient-card scroll-reveal">
         <div className="container mx-auto px-6">
           <div className="max-w-6xl mx-auto space-y-12">
             <div className="text-center space-y-4">
