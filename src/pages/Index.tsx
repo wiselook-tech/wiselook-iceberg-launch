@@ -20,6 +20,7 @@ import euAiActLogo from "@/assets/eu-ai-act-logo.svg";
 import enisaCertificada from "@/assets/enisa-certificada.png";
 import fueLogo from "@/assets/fue-logo.png";
 import celeraLogo from "@/assets/celera-logo.svg";
+import incibeEmprendeLogo from "@/assets/incibe-emprende-logo.png";
 
 const Index = () => {
   useRevealOnScroll();
@@ -869,6 +870,9 @@ const Index = () => {
             </a>
             <a href="https://acelerame.org/" target="_blank" rel="noopener noreferrer">
               <img src={celeraLogo} alt="Fundación Celera" title="Fundación Celera" className="h-12 w-auto opacity-50 grayscale hover:opacity-80 hover:grayscale-[50%] transition-all duration-200" />
+            </a>
+            <a href="https://www.incibe.es/incibe-emprende" target="_blank" rel="noopener noreferrer">
+              <img src={incibeEmprendeLogo} alt="INCIBE Emprende Ventures" title="Sello Ventures INCIBE Emprende" className="h-12 w-auto opacity-50 grayscale hover:opacity-80 hover:grayscale-[50%] transition-all duration-200" />
             </a>
           </div>
         </div>
