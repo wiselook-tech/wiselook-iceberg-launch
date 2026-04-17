@@ -2,6 +2,7 @@ import { Button } from "@/components/ui/button";
 import { ArrowRight, CheckCircle2, Shield, Award, Users, Brain, Lock, Linkedin, Globe, Database, Search, Eye, UserCheck, FileText, ShieldCheck, Key } from "lucide-react";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import CompetitorQuadrant from "@/components/CompetitorQuadrant";
+import { useRevealOnScroll } from "@/hooks/use-reveal-on-scroll";
 import heroIceberg from "@/assets/landing-bg-grey.png";
 import wiselookLogo from "@/assets/wiselook-logo.svg";
 import wiselookIcon from "@/assets/Wiselook_RGB_Iso_Positive_Color.svg";
@@ -16,8 +17,14 @@ import soc2Logo from "@/assets/soc2-logo.svg";
 import gdprLogo from "@/assets/gdpr-logo.svg";
 import iso27001Logo from "@/assets/iso27001-logo.svg";
 import euAiActLogo from "@/assets/eu-ai-act-logo.svg";
+import enisaCertificada from "@/assets/enisa-certificada.png";
+import fueLogo from "@/assets/fue-logo.png";
+import celeraLogo from "@/assets/celera-logo.svg";
+import incibeEmprendeLogo from "@/assets/incibe-emprende-logo.png";
 
 const Index = () => {
+  useRevealOnScroll();
+
   const scrollToSection = (sectionId: string) => {
     const element = document.getElementById(sectionId);
     if (element) {
@@ -90,8 +97,8 @@ const Index = () => {
             {/* Hero Content */}
             <div className="space-y-8 animate-fade-up">
               <h1 className="font-heading font-bold text-4xl md:text-5xl lg:text-6xl leading-tight text-foreground">
-                Map your talent. <p></p>
-                In minutes. 
+                Map your talent. <br />
+                In minutes.
               </h1>
               <p className="text-lg md:text-xl text-muted-foreground max-w-xl">
                 Uncover the hidden potential in your organization with science-backed, conversational assessments. 
@@ -295,12 +302,12 @@ const Index = () => {
       </section>
 
       {/* Solution Section */}
-      <section className="py-20 md:py-28 bg-gradient-card">
+      <section id="how-it-works" className="py-20 md:py-28 bg-gradient-card scroll-reveal scroll-mt-20">
         <div className="container mx-auto px-6">
           <div className="max-w-6xl mx-auto space-y-12">
             <div className="text-center space-y-4">
               <h2 className="font-heading font-bold text-3xl md:text-4xl text-foreground">
-                How? 
+                How it works
               </h2>
               <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
                 A short, AI-native conversational flow that captures real evidence and turns it into action.
@@ -339,7 +346,7 @@ const Index = () => {
                 </div>
                 <h3 className="font-heading font-semibold text-xl text-foreground">Act</h3>
                 <p className="text-muted-foreground">
-                  Individuals and managers get actionalble recommendations to make fair and faster talent decisions.
+                  Individuals and managers get actionable recommendations to make fair and faster talent decisions.
                 </p>
               </div>
             </div>
@@ -349,7 +356,7 @@ const Index = () => {
 
 
       {/* Approach and Value */}
-      <section className="py-20 md:py-28 bg-gradient-card">
+      <section className="py-20 md:py-28 bg-background">
         <div className="container mx-auto px-6">
           <div className="max-w-4xl mx-auto space-y-12">
             <h2 className="font-heading font-bold text-3xl md:text-4xl text-center text-foreground">
@@ -418,40 +425,14 @@ const Index = () => {
       </section>
 
       {/* Competitor Landscape */}
-      <section className="py-20 md:py-28 bg-background">
+      <section className="py-20 md:py-28 bg-gradient-card">
         <div className="container mx-auto px-6">
           <CompetitorQuadrant />
         </div>
       </section>
 
-      {/* LinkedIn Follow Section */}
-      <section className="py-20 md:py-28 bg-background">
-        <div className="container mx-auto px-6">
-          <div className="max-w-4xl mx-auto text-center space-y-8">
-            <h2 className="font-heading font-bold text-3xl md:text-4xl text-foreground">
-              Follow us on LinkedIn
-            </h2>
-            <p className="text-lg text-muted-foreground">
-              Stay updated with our latest insights on workforce intelligence and talent assessment.
-            </p>
-            
-            <div className="pt-4">
-              <a 
-                href="https://www.linkedin.com/company/wiselook" 
-                target="_blank" 
-                rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 px-8 py-4 bg-primary text-primary-foreground rounded-lg hover:bg-primary/90 transition-colors font-medium text-lg"
-              >
-                <Linkedin className="h-6 w-6" />
-                Follow us on LinkedIn
-              </a>
-            </div>
-          </div>
-        </div>
-      </section>
-
       {/* Security and Privacy */}
-      <section id="security" className="py-20 md:py-28 bg-muted/30">
+      <section id="security" className="py-20 md:py-28 bg-muted/30 scroll-reveal">
         <div className="container mx-auto px-6">
           <div className="max-w-6xl mx-auto space-y-12">
             <div className="text-center space-y-8">
@@ -632,7 +613,7 @@ const Index = () => {
       </section>
 
       {/* About & Team Section */}
-      <section id="about" className="py-20 md:py-28 bg-gradient-card">
+      <section id="about" className="py-20 md:py-28 bg-gradient-card scroll-reveal">
         <div className="container mx-auto px-6">
           <div className="max-w-6xl mx-auto space-y-12">
             <div className="text-center space-y-4">
@@ -862,7 +843,7 @@ const Index = () => {
           <div className="flex items-center justify-center gap-6 flex-wrap text-sm text-muted-foreground">
             <div className="flex items-center gap-2">
               <Shield className="h-4 w-4" />
-              <span>SOC 2 ready</span>
+              <span>SOC 2 Type II</span>
             </div>
             <span className="text-border">•</span>
             <span>GDPR compliant</span>
@@ -872,6 +853,27 @@ const Index = () => {
             <span>EU AI Act compliant</span>
             <span className="text-border">•</span>
             <span>Enterprise-grade security</span>
+          </div>
+        </div>
+      </section>
+
+      {/* Recognized By */}
+      <section className="py-12 bg-muted/30 border-t border-border">
+        <div className="container mx-auto px-6">
+          <p className="text-center text-sm text-muted-foreground mb-8 uppercase tracking-widest">Recognized by</p>
+          <div className="flex items-center justify-center gap-12 flex-wrap">
+            <a href="https://www.enisa.es/" target="_blank" rel="noopener noreferrer">
+              <img src={enisaCertificada} alt="Empresa Emergente Certificada por ENISA" title="Empresa Emergente Certificada por ENISA (Ley 28/2022)" className="h-12 w-auto opacity-50 grayscale hover:opacity-80 hover:grayscale-[50%] transition-all duration-200" />
+            </a>
+            <a href="https://fundacionuniversidadempresa.es/" target="_blank" rel="noopener noreferrer">
+              <img src={fueLogo} alt="Fundación Universidad Empresa" title="Fundación Universidad Empresa" className="h-12 w-auto opacity-50 grayscale hover:opacity-80 hover:grayscale-[50%] transition-all duration-200" />
+            </a>
+            <a href="https://acelerame.org/" target="_blank" rel="noopener noreferrer">
+              <img src={celeraLogo} alt="Fundación Celera" title="Fundación Celera" className="h-12 w-auto opacity-50 grayscale hover:opacity-80 hover:grayscale-[50%] transition-all duration-200" />
+            </a>
+            <a href="https://www.incibe.es/incibe-emprende" target="_blank" rel="noopener noreferrer">
+              <img src={incibeEmprendeLogo} alt="INCIBE Emprende Ventures" title="Sello Ventures INCIBE Emprende" className="h-12 w-auto opacity-50 grayscale hover:opacity-80 hover:grayscale-[50%] transition-all duration-200" />
+            </a>
           </div>
         </div>
       </section>
@@ -887,31 +889,41 @@ const Index = () => {
                 <p className="text-sm text-muted-foreground mt-1">Unlocking human potential. At scale.</p>
               </div>
             </div>
-            <div className="flex gap-6 text-sm text-muted-foreground">
-              <button 
+            <div className="flex gap-6 text-sm text-muted-foreground items-center">
+              <button
                 onClick={() => scrollToSection('problem')}
                 className="hover:text-foreground transition-colors min-h-[44px] min-w-[44px] flex items-center focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 rounded"
               >
                 Product
               </button>
-              <button 
+              <button
                 onClick={() => scrollToSection('security')}
                 className="hover:text-foreground transition-colors min-h-[44px] min-w-[44px] flex items-center focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 rounded"
               >
                 Security
               </button>
-              <button 
+              <button
                 onClick={() => scrollToSection('about')}
                 className="hover:text-foreground transition-colors min-h-[44px] min-w-[44px] flex items-center focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 rounded"
               >
                 About Us
               </button>
-              <button 
+              <button
                 onClick={() => scrollToSection('contact')}
                 className="hover:text-foreground transition-colors min-h-[44px] min-w-[44px] flex items-center focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 rounded"
               >
                 Contact
               </button>
+              <a
+                href="https://www.linkedin.com/company/wiselook"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:text-foreground transition-colors min-h-[44px] flex items-center gap-1.5 focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 rounded"
+                aria-label="Follow Wiselook on LinkedIn"
+              >
+                <Linkedin className="h-4 w-4" />
+                LinkedIn
+              </a>
             </div>
           </div>
           <div className="mt-8 pt-8 border-t border-border text-center text-sm text-muted-foreground">
