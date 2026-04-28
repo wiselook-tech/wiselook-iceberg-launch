@@ -130,8 +130,8 @@ const Support = () => {
               <section>
                 <h2 className="font-heading font-semibold text-2xl text-foreground mb-4">Additional Resources</h2>
                 <ul className="list-disc pl-6 text-muted-foreground space-y-2">
-                  <li><a href="https://wiselook.ai/privacy" className="text-primary hover:underline">Privacy Policy</a></li>
-                  <li><a href="https://wiselook.ai/terms" className="text-primary hover:underline">Terms of Service</a></li>
+                  <li><a href="https://wiselook.ai/privacy.html" className="text-primary hover:underline">Privacy Policy</a></li>
+                  <li><a href="https://wiselook.ai/terms.html" className="text-primary hover:underline">Terms of Service</a></li>
                 </ul>
               </section>
             </div>
