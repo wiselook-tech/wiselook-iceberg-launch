@@ -124,6 +124,14 @@
         color: var(--foreground);
       }
 
+      h3 {
+        font-weight: 600;
+        font-size: 1.2rem;
+        margin-top: 1.5rem;
+        margin-bottom: 0.75rem;
+        color: var(--foreground);
+      }
+
       p {
         color: var(--muted-foreground);
         line-height: 1.75;
@@ -145,8 +153,53 @@
         margin-bottom: 0.5rem;
       }
 
+      ol {
+        padding-left: 1.5rem;
+        color: var(--muted-foreground);
+        margin-bottom: 1rem;
+      }
+
+      ol li {
+        margin-bottom: 0.5rem;
+      }
+
       section {
         margin-bottom: 2rem;
+      }
+
+      .table-wrap {
+        overflow-x: auto;
+        margin-bottom: 1.5rem;
+      }
+
+      table {
+        width: 100%;
+        border-collapse: collapse;
+        font-size: 0.95rem;
+      }
+
+      th,
+      td {
+        padding: 0.75rem 1rem;
+        text-align: left;
+        border: 1px solid var(--border);
+        vertical-align: top;
+        color: var(--muted-foreground);
+        line-height: 1.6;
+      }
+
+      th {
+        background-color: var(--muted);
+        font-weight: 600;
+        color: var(--foreground);
+      }
+
+      td strong {
+        color: var(--foreground);
+      }
+
+      .kv-table th {
+        width: 35%;
       }
 
       .contact-box {
@@ -218,134 +271,845 @@
         <h1>Privacy Policy</h1>
 
         <p class="last-updated">
-          <strong>Last Updated:</strong> October 22, 2025
+          <strong>Last Updated:</strong> April 28, 2026 &middot; <strong>Version:</strong> 2.0
         </p>
 
         <div class="content">
           <section>
-            <h2>1. Introduction</h2>
+            <h2>At-a-glance summary</h2>
+            <div class="table-wrap">
+              <table class="kv-table">
+                <tbody>
+                  <tr>
+                    <th>Data Controller</th>
+                    <td>
+                      WISELOOK TALENT LAB, S.L. (Tax ID B22539084), Paseo de la
+                      Castellana 42, 1st floor, 28046 Madrid, Spain.
+                    </td>
+                  </tr>
+                  <tr>
+                    <th>Privacy contact</th>
+                    <td>
+                      <a href="mailto:privacy@wiselook.ai">privacy@wiselook.ai</a>
+                    </td>
+                  </tr>
+                  <tr>
+                    <th>What we do with your data</th>
+                    <td>
+                      We run AI-assisted conversational psychometric and competency
+                      assessments and make the results available to you and, where
+                      applicable, to the organisation that invited you to take the
+                      assessment.
+                    </td>
+                  </tr>
+                  <tr>
+                    <th>Legal bases</th>
+                    <td>
+                      Consent, performance of a contract, legitimate interests and
+                      legal obligations (see Section 4).
+                    </td>
+                  </tr>
+                  <tr>
+                    <th>Retention</th>
+                    <td>
+                      Up to 3 years from your last meaningful interaction, unless a
+                      longer period is legally required (see Section 7).
+                    </td>
+                  </tr>
+                  <tr>
+                    <th>Recipients</th>
+                    <td>
+                      The organisation that invited you (where applicable), our
+                      processors (technology providers) and competent authorities
+                      when legally required (see Section 6).
+                    </td>
+                  </tr>
+                  <tr>
+                    <th>Your rights</th>
+                    <td>
+                      Access, rectification, erasure, objection, restriction,
+                      portability, the right not to be subject to solely automated
+                      decisions, and the right to withdraw consent. You can exercise
+                      them at
+                      <a href="mailto:privacy@wiselook.ai">privacy@wiselook.ai</a>
+                      and lodge a complaint with the Spanish Data Protection Agency
+                      (<a href="http://www.aepd.es" target="_blank" rel="noopener noreferrer">www.aepd.es</a>).
+                    </td>
+                  </tr>
+                  <tr>
+                    <th>Automated decisions</th>
+                    <td>
+                      Our system supports decision-making but does not replace it.
+                      Qualified human review is in place, and you have the right to
+                      an explanation and to challenge any outcome (see Section 5).
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
             <p>
-              Wiselook Talent Lab S.L. ("Wiselook", "we", "our", or "us")
-              respects your privacy and is committed to protecting your personal
-              information. This Privacy Policy explains how we collect, use, and
-              safeguard your information when you use our services, including
-              our Microsoft Teams application and related services.
+              This is a layered notice consistent with the guidance issued by the
+              Spanish Data Protection Agency. We strongly recommend reading the
+              detailed information that follows.
             </p>
           </section>
 
           <section>
-            <h2>2. Information We Collect</h2>
-            <p>We may collect the following types of information:</p>
+            <h2>Our key commitments to you</h2>
             <ul>
               <li>
-                <strong>Personal Information:</strong> Name, email address, and
-                other contact details you provide
+                <strong>We do not train models on your data.</strong> Wiselook does
+                not use your personal data to train third-party language models or
+                any other AI systems beyond the operation of the Service.
               </li>
               <li>
-                <strong>Microsoft Teams Data:</strong> User profile information
-                (name, email, tenant ID) as permitted by Microsoft
+                <strong>We do not sell your personal data.</strong> Wiselook does not
+                sell, rent or trade your personal data, under any circumstance.
               </li>
               <li>
-                <strong>Usage Data:</strong> Information about how you interact
-                with our services
-              </li>
-              <li>
-                <strong>Technical Data:</strong> Device information, IP address,
-                and browser data
+                <strong>We minimise the data we collect.</strong> The only directly
+                identifying information required is your email address (for login)
+                and, optionally, your name. See Section 4.
               </li>
             </ul>
           </section>
 
           <section>
-            <h2>3. How We Use Your Information</h2>
-            <p>We use the collected information to:</p>
-            <ul>
-              <li>Provide, operate, and maintain our services</li>
-              <li>Improve, personalize, and expand our services</li>
-              <li>Communicate with you about our services</li>
-              <li>Ensure security and prevent misuse</li>
-              <li>Comply with legal obligations</li>
-            </ul>
-          </section>
-
-          <section>
-            <h2>4. Information Sharing</h2>
+            <h2>1. Who we are and who this policy applies to</h2>
             <p>
-              We do not sell, trade, or otherwise transfer your personal
-              information to third parties, except as required by law or to
-              protect our rights. We may share information with trusted service
-              providers who help us operate our service, subject to appropriate
-              confidentiality agreements.
+              <strong>Wiselook Talent Lab, S.L.</strong> ("Wiselook", "we", "us",
+              "our") is a Spanish company that develops conversational, AI-powered
+              competency assessment technology, scientifically validated through
+              academic partnerships.
+            </p>
+            <p>
+              This Privacy Policy explains how we handle personal data in connection
+              with:
+            </p>
+            <ul>
+              <li>
+                <strong>Assessed individuals</strong> ("you"): people who take an
+                assessment through the Wiselook platform (the "Service"), whether on
+                their own initiative or because a company, educational institution or
+                other organisation ("Business Client") has invited them to do so.
+              </li>
+              <li>
+                <strong>Visitors</strong> to wiselook.ai and its sub-domains.
+              </li>
+              <li>
+                <strong>Contact persons of Business Clients, partners and suppliers</strong>,
+                and <strong>candidates</strong> applying for a position at Wiselook.
+              </li>
+            </ul>
+            <p>
+              If you have any questions about this policy, please write to
+              <a href="mailto:privacy@wiselook.ai"><strong>privacy@wiselook.ai</strong></a>.
             </p>
           </section>
 
           <section>
-            <h2>5. Data Security</h2>
+            <h2>2. Data Controller</h2>
+            <div class="table-wrap">
+              <table class="kv-table">
+                <tbody>
+                  <tr>
+                    <th>Legal name</th>
+                    <td>WISELOOK TALENT LAB, S.L.</td>
+                  </tr>
+                  <tr>
+                    <th>Tax ID (CIF)</th>
+                    <td>B22539084</td>
+                  </tr>
+                  <tr>
+                    <th>Registered address</th>
+                    <td>Paseo de la Castellana 42, 1st floor, 28046 Madrid, Spain</td>
+                  </tr>
+                  <tr>
+                    <th>Privacy contact</th>
+                    <td><a href="mailto:privacy@wiselook.ai">privacy@wiselook.ai</a></td>
+                  </tr>
+                  <tr>
+                    <th>Data Protection Officer</th>
+                    <td><a href="mailto:dpo@wiselook.ai">dpo@wiselook.ai</a></td>
+                  </tr>
+                  <tr>
+                    <th>General contact</th>
+                    <td><a href="mailto:hello@wiselook.ai">hello@wiselook.ai</a></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
             <p>
-              We implement reasonable security measures to protect your personal
-              information from unauthorized access, alteration, disclosure, or
-              destruction. However, no method of transmission over the internet
-              or electronic storage is 100% secure.
+              Unless expressly stated otherwise, Wiselook acts as the
+              <strong>Data Controller</strong> in respect of the personal data
+              described in this policy. In some scenarios Wiselook acts as a
+              <strong>Data Processor</strong> on behalf of a Business Client (see
+              Section 3).
+            </p>
+            <p>
+              Wiselook has designated a <strong>Data Protection Officer (DPO)</strong>
+              as a dedicated point of contact for any matter relating to the
+              protection of your personal data. You can reach the DPO at
+              <a href="mailto:dpo@wiselook.ai"><strong>dpo@wiselook.ai</strong></a>.
             </p>
           </section>
 
           <section>
-            <h2>6. Your Rights</h2>
-            <p>You have the right to:</p>
+            <h2>3. Roles: when we are Controller and when we are Processor</h2>
+            <p>
+              Depending on the context in which you use the Service, Wiselook may
+              act in two different capacities:
+            </p>
+
+            <h3>3.1. Wiselook as Processor (default for B2B)</h3>
+            <p>
+              Where a Business Client engages Wiselook to assess its candidates,
+              employees or students, the Business Client acts as
+              <strong>Controller</strong> and Wiselook acts as
+              <strong>Processor</strong> under Article 28 GDPR and the corresponding
+              data processing agreement.
+            </p>
+            <p>In these scenarios:</p>
             <ul>
-              <li>Access your personal information</li>
-              <li>Correct inaccurate or incomplete information</li>
-              <li>Request deletion of your personal information</li>
-              <li>Object to processing of your personal information</li>
-              <li>Data portability</li>
+              <li>
+                The Business Client determines the specific purposes of the
+                assessment process (recruitment, development, training, etc.).
+              </li>
+              <li>
+                The Business Client is responsible for informing you and, where
+                applicable, for securing the appropriate legal basis under its own
+                privacy notice.
+              </li>
+              <li>
+                Wiselook processes the data following the documented instructions of
+                the Business Client.
+              </li>
+              <li>
+                To exercise your rights regarding the specific assessment process
+                you participated in, you should first contact the Business Client.
+                If they do not respond, Wiselook will cooperate in handling your
+                request.
+              </li>
+            </ul>
+
+            <h3>3.2. Wiselook as Controller</h3>
+            <p>
+              Wiselook is the Controller &mdash; meaning that we determine the
+              purposes and means of the processing &mdash; in the following cases:
+            </p>
+            <ul>
+              <li>
+                When you access the Service directly, without an intermediating
+                Business Client (self-service or individual evaluations).
+              </li>
+              <li>
+                For purposes that are Wiselook's own &mdash; including product
+                improvement based on de-identified data, scientific research, and
+                legal compliance &mdash; even where the underlying data was
+                originally collected on behalf of a Business Client.
+              </li>
+              <li>
+                For the operation of our website and apps, marketing, and the
+                management of relationships with Business Clients, partners,
+                suppliers and job candidates.
+              </li>
             </ul>
             <p>
-              To exercise these rights, please contact us at
+              <strong>Clarity on each transaction.</strong> Before you start an
+              assessment, the Service will let you know whether a Business Client has
+              invited you and, if so, identify it. If you have any doubt about who
+              the Controller is for a given processing activity, write to
               <a href="mailto:privacy@wiselook.ai">privacy@wiselook.ai</a>.
             </p>
           </section>
 
           <section>
-            <h2>7. Data Retention</h2>
+            <h2>4. What data we process, why, and on what legal basis</h2>
             <p>
-              We retain your personal information only as long as necessary to
-              fulfill the purposes outlined in this Privacy Policy or as
-              required by law. When we no longer need your information, we will
-              securely delete or anonymize it.
+              Below we set out the categories of data, purposes and legal bases under
+              Article 13 GDPR.
+            </p>
+
+            <h3>4.1. Assessed individuals</h3>
+            <p>
+              The Service is designed around strict data minimisation. The only
+              directly identifying information we collect about you is the
+              <strong>email address</strong> used to access the Service and,
+              optionally, your <strong>name</strong>. We do not collect professional
+              or academic background data, behavioural tracking, browsing data or
+              cookies in connection with the Service.
+            </p>
+            <div class="table-wrap">
+              <table>
+                <thead>
+                  <tr>
+                    <th>Category of data</th>
+                    <th>Purpose</th>
+                    <th>Legal basis (Art. 6 GDPR)</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>
+                      Email (only when you log in by entering your email; not
+                      collected when you access the Service through a magic-link
+                      invitation) and, optionally, name
+                    </td>
+                    <td>
+                      Allow you to access the Service, communicate with you, link
+                      your responses to your account
+                    </td>
+                    <td>
+                      Performance of contract / pre-contract (Art. 6(1)(b)) and/or
+                      consent (Art. 6(1)(a))
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      Assessment responses: voice recordings, transcripts of those
+                      recordings, and/or text submitted during the dynamic
+                    </td>
+                    <td>
+                      Run the competency assessment and generate results
+                    </td>
+                    <td>
+                      Consent (Art. 6(1)(a)) and/or performance of contract (Art.
+                      6(1)(b))
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <strong>AI-inferred data</strong>: competency scores,
+                      psychometric indicators, qualitative model outputs
+                    </td>
+                    <td>
+                      Generate the assessment report that is the object of the
+                      Service
+                    </td>
+                    <td>
+                      Consent (Art. 6(1)(a)) and/or performance of contract (Art.
+                      6(1)(b))
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>De-identified / anonymised assessment data</td>
+                    <td>
+                      Internal improvement of AI and psychometric models, quality
+                      auditing
+                    </td>
+                    <td>
+                      Legitimate interest (Art. 6(1)(f)), exercised on data that has
+                      been anonymised beforehand
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>De-identified / anonymised assessment data</td>
+                    <td>
+                      Scientific research with academic institutions (see Section 8)
+                    </td>
+                    <td>
+                      Public interest in scientific research (Art. 6(1)(e) read with
+                      Art. 89 GDPR), exercised on data that has been anonymised
+                      beforehand
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+
+            <h3>4.2. Business Client, partner and supplier contacts</h3>
+            <p>
+              We do not proactively collect identification or professional data
+              (such as name, role, phone or company) from Business Client, partner
+              or supplier contacts. The only personal data processed in this
+              context is the following:
+            </p>
+            <div class="table-wrap">
+              <table>
+                <thead>
+                  <tr>
+                    <th>Category of data</th>
+                    <th>Purpose</th>
+                    <th>Legal basis</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Work email (only when you provide it at login)</td>
+                    <td>Allow you to access the Service</td>
+                    <td>
+                      Performance of contract / pre-contract (Art. 6(1)(b)) and/or
+                      consent (Art. 6(1)(a))
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+
+            <h3>4.3. Website visitors</h3>
+            <div class="table-wrap">
+              <table>
+                <thead>
+                  <tr>
+                    <th>Category of data</th>
+                    <th>Purpose</th>
+                    <th>Legal basis</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Contact data submitted via web forms</td>
+                    <td>Respond to your enquiry</td>
+                    <td>Consent (Art. 6(1)(a))</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+
+            <h3>4.4. Candidates applying to join Wiselook</h3>
+            <div class="table-wrap">
+              <table>
+                <thead>
+                  <tr>
+                    <th>Category of data</th>
+                    <th>Purpose</th>
+                    <th>Legal basis</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>
+                      CV, professional profile and information shared during the
+                      recruitment process
+                    </td>
+                    <td>Evaluate your application</td>
+                    <td>
+                      Pre-contractual measures at your request (Art. 6(1)(b)) and
+                      consent (Art. 6(1)(a))
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+
+            <p>
+              <strong>We do not process special categories of data</strong> (Art. 9
+              GDPR: health, ethnic origin, political opinions, identifying biometric
+              data, etc.) unless you voluntarily include them in your responses. We
+              expressly ask you <strong>not to include sensitive data</strong> that
+              is not strictly necessary. Voice is processed for transcription and
+              linguistic analysis of your response and
+              <strong>is not used for biometric identification</strong> within the
+              meaning of Art. 9 GDPR.
             </p>
           </section>
 
           <section>
-            <h2>8. GDPR Compliance</h2>
+            <h2>5. Human oversight and decision-making</h2>
             <p>
-              We comply with the General Data Protection Regulation (GDPR) and
-              other applicable privacy laws. We process personal data lawfully,
-              fairly, and transparently, and implement appropriate technical and
-              organizational measures to protect your data.
+              Wiselook's outputs are intended to assist, not replace, human
+              judgement. Outputs are reviewed under our internal quality-control
+              procedures.
+            </p>
+            <p>
+              Wiselook
+              <strong>does not take decisions producing legal effects on you, or similarly significantly affecting you, based solely on automated processing</strong>
+              within the meaning of Article 22 GDPR. Where a Business Client uses our
+              outputs as an input for a decision (for example, in a recruitment
+              process), the final decision rests with the Business Client, which
+              must ensure meaningful human involvement.
+            </p>
+            <p>You have the right to:</p>
+            <ul>
+              <li>
+                <strong>Request human intervention</strong> by Wiselook (where we
+                act as Controller) or by the Business Client (where we act as
+                Processor).
+              </li>
+              <li>
+                <strong>Express your point of view</strong> and provide additional
+                context.
+              </li>
+              <li>
+                <strong>Contest any outcome</strong> and request review.
+              </li>
+            </ul>
+            <p>
+              To exercise these rights:
+              <a href="mailto:privacy@wiselook.ai"><strong>privacy@wiselook.ai</strong></a>.
             </p>
           </section>
 
           <section>
-            <h2>9. Changes to This Privacy Policy</h2>
+            <h2>6. Recipients of your data</h2>
             <p>
-              We may update this Privacy Policy from time to time. Any changes
-              will be posted on this page with an updated effective date. We
-              encourage you to review this Privacy Policy periodically for any
-              changes.
+              Personal data may be disclosed to the following categories of
+              recipients.
+            </p>
+
+            <h3>6.1. The Business Client that invited you</h3>
+            <p>
+              Where the assessment is run as part of a process driven by a Business
+              Client, the results (and, depending on the configuration set by the
+              Business Client, the underlying response data) are made available to
+              that Business Client for the relevant purpose. The Business Client
+              processes this data as an independent Controller under its own privacy
+              notice.
+            </p>
+
+            <h3>6.2. Processors (technology suppliers)</h3>
+            <p>
+              Wiselook applies strict data minimisation across its supplier
+              relationships.
+              <strong>Before any assessment content is transmitted to AI model providers or third-party processing services, identifying information is filtered out through technical guardrails</strong>,
+              so that those suppliers receive only de-identified content. If you
+              happen to mention personal information during an assessment, our
+              pipelines are designed to strip that information before any external
+              processing.
+            </p>
+            <p>Categories of suppliers include:</p>
+            <ul>
+              <li>Cloud infrastructure and data hosting (in the EEA; see Section 6.5).</li>
+              <li>
+                Generative AI and natural language processing model providers (LLMs,
+                voice transcription). These suppliers process only de-identified
+                content and, under our contractual terms with them, do not use that
+                content to train their own models.
+              </li>
+              <li>Real-time voice communication infrastructure.</li>
+              <li>Transactional email, customer support and CRM tools.</li>
+              <li>Product and technical observability services.</li>
+            </ul>
+            <p>
+              All suppliers operate under data processing agreements compliant with
+              Article 28 GDPR, with safeguards equivalent to ours.
+            </p>
+            <p>
+              <strong>List of subprocessors.</strong> Wiselook maintains an
+              up-to-date list of subprocessors that we keep confidential for security
+              and commercial reasons. The list is shared with Business Clients under
+              the relevant data processing agreement. If you are an assessed
+              individual, you may request to review it under reasonable
+              confidentiality undertakings by writing to
+              <a href="mailto:privacy@wiselook.ai"><strong>privacy@wiselook.ai</strong></a>.
+            </p>
+
+            <h3>6.3. Competent authorities</h3>
+            <p>
+              Where there is a legal obligation &mdash; for example, judicial,
+              administrative or law-enforcement requests.
+            </p>
+
+            <h3>6.4. Professional advisors</h3>
+            <p>
+              Legal counsel, tax advisors and auditors bound by confidentiality,
+              strictly to the extent necessary.
+            </p>
+
+            <h3>6.5. Location of data processing</h3>
+            <p>
+              All processing of personal data takes place within the
+              <strong>European Economic Area</strong>. Wiselook does not currently
+              engage processors that process personal data outside the EEA. If this
+              changes in the future, we will update this policy and ensure that
+              <strong>appropriate safeguards</strong> under Chapter V GDPR are in
+              place before any international transfer takes place.
             </p>
           </section>
 
           <section>
-            <h2>10. Contact Us</h2>
+            <h2>7. Retention periods</h2>
             <p>
-              If you have any questions about this Privacy Policy or our data
-              practices, please contact us at:
+              We retain personal data only for as long as necessary to fulfil the
+              purposes for which it was collected:
+            </p>
+            <div class="table-wrap">
+              <table>
+                <thead>
+                  <tr>
+                    <th>Type of data</th>
+                    <th>Retention period</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>
+                      Assessment data (responses, transcripts, AI-inferred data)
+                      where Wiselook acts as Controller
+                    </td>
+                    <td>
+                      <strong>Up to 3 years</strong> from your last meaningful
+                      interaction.
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      Assessment data where Wiselook acts as Processor on behalf of
+                      a Business Client
+                    </td>
+                    <td>
+                      The period set by the Business Client in the data processing
+                      agreement, capped at 3 years unless specifically instructed
+                      otherwise in writing.
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      Contractual data of Business Clients, partners and suppliers
+                    </td>
+                    <td>
+                      For the duration of the relationship and, once terminated, for
+                      the applicable statutory limitation periods (typically up to 6
+                      years for accounting and commercial obligations under Spanish
+                      law).
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>Data of candidates applying to join Wiselook</td>
+                    <td>
+                      1 year from your last update, unless you withdraw your consent
+                      earlier.
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <p>
+              Once these periods expire, data is <strong>deleted</strong> or
+              <strong>irreversibly anonymised</strong>. Anonymisation may take place
+              earlier for product improvement and scientific research purposes (see
+              Section 8).
+            </p>
+          </section>
+
+          <section>
+            <h2>8. Scientific research and product improvement</h2>
+            <p>
+              Scientific validation and continuous improvement of the Service are
+              essential to Wiselook. To that end we may use
+              <strong>data that has been irreversibly anonymised beforehand</strong>
+              (no re-identification possible) for:
+            </p>
+            <ul>
+              <li>Internal improvement of psychometric and AI models.</li>
+              <li>
+                Validation studies with academic partners (in particular Universidad
+                Aut&oacute;noma de Madrid and other universities).
+              </li>
+              <li>Independent bias and quality audits.</li>
+            </ul>
+            <p>
+              Once data has been anonymised, it is no longer personal data within
+              the meaning of GDPR, and its further processing therefore does not
+              affect your rights as a data subject.
+            </p>
+          </section>
+
+          <section>
+            <h2>9. Your rights</h2>
+            <p>
+              Under Articles 15 to 22 GDPR, you have the following rights:
+            </p>
+            <div class="table-wrap">
+              <table>
+                <thead>
+                  <tr>
+                    <th>Right</th>
+                    <th>What it means</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><strong>Access</strong></td>
+                    <td>
+                      Find out what data we hold about you and obtain a copy.
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><strong>Rectification</strong></td>
+                    <td>Correct inaccurate or incomplete data.</td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <strong>Erasure</strong> ("right to be forgotten")
+                    </td>
+                    <td>
+                      Have your data deleted when it is no longer necessary or
+                      another ground in Art. 17 GDPR applies.
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><strong>Objection</strong></td>
+                    <td>
+                      Object to processing based on legitimate interests and to
+                      marketing communications.
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><strong>Restriction</strong></td>
+                    <td>
+                      Have processing temporarily paused while an issue is resolved.
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><strong>Portability</strong></td>
+                    <td>
+                      Receive your data in a structured, commonly used format, or
+                      have it transmitted to another controller.
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <strong>Not to be subject to solely automated decisions</strong>
+                      (Art. 22)
+                    </td>
+                    <td>See Section 5 above.</td>
+                  </tr>
+                  <tr>
+                    <td><strong>To withdraw consent</strong></td>
+                    <td>
+                      At any time, without affecting the lawfulness of processing
+                      carried out before withdrawal.
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+
+            <h3>9.1. How to exercise them</h3>
+            <p>
+              By writing to
+              <a href="mailto:privacy@wiselook.ai"><strong>privacy@wiselook.ai</strong></a>,
+              indicating which right you wish to exercise and attaching, where
+              necessary to verify your identity, a copy of an identification
+              document.
+            </p>
+            <p>
+              We will respond within <strong>one month</strong> of receiving your
+              request, extendable by a further two months where the complexity or
+              volume of requests makes it necessary.
+            </p>
+
+            <h3>9.2. Right to lodge a complaint</h3>
+            <p>
+              You have the right to lodge a complaint with the
+              <strong>Spanish Data Protection Agency (AEPD)</strong> &mdash; C/
+              Jorge Juan, 6, 28001 Madrid;
+              <a href="http://www.aepd.es" target="_blank" rel="noopener noreferrer"><strong>www.aepd.es</strong></a>
+              &mdash; particularly if you consider that we have not properly
+              addressed your rights.
+            </p>
+          </section>
+
+          <section>
+            <h2>10. Information security</h2>
+            <p>
+              Wiselook has implemented appropriate technical and organisational
+              measures to ensure a level of security suited to the risk, including:
+            </p>
+            <ul>
+              <li>Encryption of data in transit (TLS) and at rest.</li>
+              <li>
+                Access control under the principle of least privilege and strong
+                authentication.
+              </li>
+              <li>
+                Segregation of development, test and production environments.
+              </li>
+              <li>Monitoring, event logging and incident management.</li>
+              <li>Backup and business continuity procedures.</li>
+              <li>Regular staff training on data protection and security.</li>
+              <li>Periodic assessment of suppliers and subprocessors.</li>
+            </ul>
+            <p>
+              Wiselook is progressively aligning its controls with the
+              <strong>ISO/IEC 27001</strong> framework as a maturity benchmark for
+              information security.
+            </p>
+            <p>
+              In the event of a <strong>personal data breach</strong> that may pose
+              a risk to the rights and freedoms of data subjects, Wiselook will
+              notify the AEPD within 72 hours (Art. 33 GDPR) and, where the risk is
+              high, will also notify affected individuals (Art. 34 GDPR).
+            </p>
+          </section>
+
+          <section>
+            <h2>11. Children</h2>
+            <p>
+              The Service
+              <strong>is not directed to children under the age of 14</strong>.
+              Where a Business Client &mdash; for example, an educational
+              institution &mdash; uses the Service with individuals over 14 but
+              under 18, that Business Client is responsible for securing the
+              appropriate legal basis under Article 7 of Spanish Organic Law 3/2018
+              (LOPDGDD) and Article 8 GDPR, including consent of the holders of
+              parental responsibility where applicable.
+            </p>
+            <p>
+              If you become aware that a minor is using the Service without the
+              appropriate legal basis, please notify us at
+              <a href="mailto:privacy@wiselook.ai">privacy@wiselook.ai</a> so that
+              we can take appropriate action.
+            </p>
+          </section>
+
+          <section>
+            <h2>12. Applicable legal framework</h2>
+            <p>This policy is governed by:</p>
+            <ul>
+              <li>
+                <strong>Regulation (EU) 2016/679</strong> of the European Parliament
+                and of the Council of 27 April 2016 (GDPR).
+              </li>
+              <li>
+                <strong>Spanish Organic Law 3/2018</strong>, of 5 December, on the
+                Protection of Personal Data and the guarantee of digital rights
+                (LOPDGDD).
+              </li>
+              <li>
+                <strong>Regulation (EU) 2024/1689</strong> laying down harmonised
+                rules on artificial intelligence (AI Act).
+              </li>
+              <li>
+                <strong>Spanish Act 34/2002</strong>, of 11 July, on Information
+                Society Services and Electronic Commerce (LSSI).
+              </li>
+              <li>All other applicable Spanish and EU laws.</li>
+            </ul>
+          </section>
+
+          <section>
+            <h2>13. Changes to this policy</h2>
+            <p>
+              Wiselook may update this policy to reflect legal, technical or business
+              changes. Where the changes are material, we will inform you through an
+              appropriate channel (email, in-Service notice, or website notice) with
+              reasonable advance notice. The date of the latest update appears at the
+              top of this document.
+            </p>
+            <p>
+              Where changes affect processing based on your consent, we will request
+              your renewed consent.
+            </p>
+          </section>
+
+          <section>
+            <h2>14. Contact</h2>
+            <p>
+              For any matter relating to this policy or to the processing of your
+              personal data:
             </p>
             <div class="contact-box">
-              <p class="font-medium">Wiselook Talent Lab S.L.</p>
+              <p class="font-medium">WISELOOK TALENT LAB, S.L.</p>
+              <p>Paseo de la Castellana 42, 1st floor, 28046 Madrid, Spain</p>
               <p>
-                Email:
+                <strong>Privacy:</strong>
                 <a href="mailto:privacy@wiselook.ai">privacy@wiselook.ai</a>
+              </p>
+              <p>
+                <strong>Data Protection Officer:</strong>
+                <a href="mailto:dpo@wiselook.ai">dpo@wiselook.ai</a>
               </p>
             </div>
           </section>
