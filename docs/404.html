@@ -8,6 +8,16 @@
         // Single Page Apps for GitHub Pages
         // Redirects to index.html with path as query parameter, then rewrites URL
         var path = window.location.pathname;
+        var canonicalRedirects = {
+            '/privacy': '/privacy/',
+            '/privacy.html': '/privacy/',
+            '/terms': '/terms/',
+            '/terms.html': '/terms/'
+        };
+
+        if (canonicalRedirects[path]) {
+            window.location.replace(canonicalRedirects[path]);
+        }
         
         // Prevent infinite redirect loop
         if (path.indexOf('/index.html') !== -1) {

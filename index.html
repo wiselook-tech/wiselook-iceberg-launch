@@ -161,6 +161,13 @@
       (function() {
         var redirect = new URLSearchParams(window.location.search).get('redirect');
         if (redirect) {
+          var canonicalRedirects = {
+            '/privacy': '/privacy/',
+            '/privacy.html': '/privacy/',
+            '/terms': '/terms/',
+            '/terms.html': '/terms/'
+          };
+          redirect = canonicalRedirects[redirect] || redirect;
           // Rewrite URL without query parameter and without page reload
           window.history.replaceState(null, null, redirect);
         }
