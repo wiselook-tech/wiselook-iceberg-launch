@@ -13,9 +13,7 @@ import hrSummit4 from "@/assets/hr_summit/IMG_8293.JPG?url";
 import jaimePhoto from "@/assets/profiles/jaime.jpg";
 import rocioPhoto from "@/assets/profiles/rocio.png";
 import rafaPhoto from "@/assets/profiles/rafa.png";
-import soc2Logo from "@/assets/soc2-logo.svg";
 import gdprLogo from "@/assets/gdpr-logo.svg";
-import iso27001Logo from "@/assets/iso27001-logo.svg";
 import euAiActLogo from "@/assets/eu-ai-act-logo.svg";
 import enisaCertificada from "@/assets/enisa-certificada.png";
 import fueLogo from "@/assets/fue-logo.png";
@@ -445,9 +443,7 @@ const Index = () => {
               
               {/* Certification Logos */}
               <div className="flex items-center justify-center gap-8 flex-wrap pt-4">
-                <img src={soc2Logo} alt="SOC 2 Type II" className="h-20 opacity-60 hover:opacity-100 transition-opacity" />
                 <img src={gdprLogo} alt="GDPR Compliant" className="h-20 opacity-60 hover:opacity-100 transition-opacity" />
-                <img src={iso27001Logo} alt="ISO 27001 Certified" className="h-20 opacity-60 hover:opacity-100 transition-opacity" />
                 <img src={euAiActLogo} alt="EU AI Act Compliant" className="h-20 opacity-60 hover:opacity-100 transition-opacity" />
               </div>
             </div>
@@ -797,7 +793,7 @@ const Index = () => {
                   <span className="font-heading font-semibold text-foreground">Is it enterprise-ready for security and privacy?</span>
                 </AccordionTrigger>
                 <AccordionContent className="text-muted-foreground pb-6">
-                  Yes. We follow privacy by design, least-privilege access, and auditability. Current posture aligns to GDPR and ISO controls, with a published Trust Center and subprocessors list as it evolves.
+                  Yes. We follow privacy by design, least-privilege access, and auditability. Current posture aligns to GDPR controls, with a published Trust Center and subprocessors list as it evolves.
                 </AccordionContent>
               </AccordionItem>
 
@@ -843,12 +839,8 @@ const Index = () => {
           <div className="flex items-center justify-center gap-6 flex-wrap text-sm text-muted-foreground">
             <div className="flex items-center gap-2">
               <Shield className="h-4 w-4" />
-              <span>SOC 2 Type II</span>
+              <span>GDPR compliant</span>
             </div>
-            <span className="text-border">•</span>
-            <span>GDPR compliant</span>
-            <span className="text-border">•</span>
-            <span>ISO 27001 certified</span>
             <span className="text-border">•</span>
             <span>EU AI Act compliant</span>
             <span className="text-border">•</span>
