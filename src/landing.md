@@ -129,7 +129,7 @@
 - Approach and value (6 key benefits)
 - Competitor landscape (interactive 2×2 quadrant)
 - Follow us on LinkedIn section (positioned as last section of product section)
-- Security and privacy (SOC 2, GDPR, Azure)
+- Security and privacy (GDPR, Azure)
 - About section with team profiles
 - Contact section with calendar booking
 - FAQ section (3 questions, positioned at end of website)
