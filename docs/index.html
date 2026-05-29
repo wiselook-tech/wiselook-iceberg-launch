@@ -151,11 +151,29 @@
       ]
     }
     </script>
-    <script type="module" crossorigin src="/assets/index-CByq3ymy.js"></script>
-    <link rel="stylesheet" crossorigin href="/assets/index-qphSwsQW.css">
+    <script type="module" crossorigin src="/assets/index-CKy1V873.js"></script>
+    <link rel="stylesheet" crossorigin href="/assets/index-CiPZZPWV.css">
   </head>
 
   <body>
     <div id="root"></div>
+    <!-- GitHub Pages SPA redirect handler - must run before React Router -->
+    <script>
+      // Handle redirect from 404.html
+      (function() {
+        var redirect = new URLSearchParams(window.location.search).get('redirect');
+        if (redirect) {
+          var canonicalRedirects = {
+            '/privacy': '/privacy/',
+            '/privacy.html': '/privacy/',
+            '/terms': '/terms/',
+            '/terms.html': '/terms/'
+          };
+          redirect = canonicalRedirects[redirect] || redirect;
+          // Rewrite URL without query parameter and without page reload
+          window.history.replaceState(null, null, redirect);
+        }
+      })();
+    </script>
   </body>
 </html>

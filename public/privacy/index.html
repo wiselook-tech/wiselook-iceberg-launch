@@ -2,22 +2,461 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <!DOCTYPE html>
-    <html lang="en">
-      <head>
-        <meta charset="UTF-8" />
-        <meta http-equiv="refresh" content="0; url=/privacy/" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Redirecting to Privacy Policy</title>
-        <link rel="canonical" href="https://wiselook.ai/privacy/" />
-        <script>
-          window.location.replace('/privacy/');
-        </script>
-      </head>
-      <body>
-        <p>Redirecting to <a href="/privacy/">Privacy Policy</a>...</p>
-      </body>
-    </html>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Privacy Policy - Wiselook</title>
+    <link rel="icon" href="/favicon.ico" type="image/x-icon" />
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      :root {
+        --primary: #ff6b35;
+        --foreground: #1a1a1a;
+        --muted-foreground: #6b7280;
+        --background: #ffffff;
+        --muted: #f3f4f6;
+        --border: #e5e7eb;
+      }
+
+      body {
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+          Oxygen, Ubuntu, Cantarell, sans-serif;
+        line-height: 1.6;
+        color: var(--foreground);
+        background-color: var(--background);
+        min-height: 100vh;
+      }
+
+      nav {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 50;
+        background-color: rgba(255, 255, 255, 0.95);
+        -webkit-backdrop-filter: blur(8px);
+        backdrop-filter: blur(8px);
+        border-bottom: 1px solid var(--border);
+      }
+
+      .nav-container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 1rem 1.5rem;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+      }
+
+      .nav-brand {
+        display: flex;
+        align-items: center;
+        gap: 0.75rem;
+        text-decoration: none;
+        color: var(--foreground);
+        transition: opacity 0.2s;
+      }
+
+      .nav-brand:hover {
+        opacity: 0.8;
+      }
+
+      .nav-brand img {
+        height: 2rem;
+        width: 2rem;
+      }
+
+      .nav-brand span {
+        font-weight: bold;
+        font-size: 1.25rem;
+      }
+
+      .back-button {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.5rem;
+        padding: 0.5rem 1rem;
+        font-size: 0.875rem;
+        color: var(--foreground);
+        background: transparent;
+        border: none;
+        border-radius: 0.375rem;
+        cursor: pointer;
+        transition: background-color 0.2s;
+        text-decoration: none;
+      }
+
+      .back-button:hover {
+        background-color: var(--muted);
+      }
+
+      .back-button svg {
+        width: 1rem;
+        height: 1rem;
+      }
+
+      main {
+        padding-top: 5rem;
+        padding-bottom: 4rem;
+      }
+
+      .container {
+        max-width: 56rem;
+        margin: 0 auto;
+        padding: 0 1.5rem;
+      }
+
+      h1 {
+        font-weight: bold;
+        font-size: 2.25rem;
+        margin-bottom: 2rem;
+        color: var(--foreground);
+      }
+
+      h2 {
+        font-weight: 600;
+        font-size: 1.5rem;
+        margin-top: 2rem;
+        margin-bottom: 1rem;
+        color: var(--foreground);
+      }
+
+      h3 {
+        font-weight: 600;
+        font-size: 1.2rem;
+        margin-top: 1.5rem;
+        margin-bottom: 0.75rem;
+        color: var(--foreground);
+      }
+
+      p {
+        color: var(--muted-foreground);
+        line-height: 1.75;
+        margin-bottom: 1rem;
+      }
+
+      p strong {
+        color: var(--foreground);
+      }
+
+      ul {
+        list-style-type: disc;
+        padding-left: 1.5rem;
+        color: var(--muted-foreground);
+        margin-bottom: 1rem;
+      }
+
+      ul li {
+        margin-bottom: 0.5rem;
+      }
+
+      ol {
+        padding-left: 1.5rem;
+        color: var(--muted-foreground);
+        margin-bottom: 1rem;
+      }
+
+      ol li {
+        margin-bottom: 0.5rem;
+      }
+
+      section {
+        margin-bottom: 2rem;
+      }
+
+      .table-wrap {
+        overflow-x: auto;
+        margin-bottom: 1.5rem;
+      }
+
+      table {
+        width: 100%;
+        border-collapse: collapse;
+        font-size: 0.95rem;
+      }
+
+      th,
+      td {
+        padding: 0.75rem 1rem;
+        text-align: left;
+        border: 1px solid var(--border);
+        vertical-align: top;
+        color: var(--muted-foreground);
+        line-height: 1.6;
+      }
+
+      th {
+        background-color: var(--muted);
+        font-weight: 600;
+        color: var(--foreground);
+      }
+
+      td strong {
+        color: var(--foreground);
+      }
+
+      .kv-table th {
+        width: 35%;
+      }
+
+      .contact-box {
+        margin-top: 1rem;
+        padding: 1rem;
+        background-color: var(--muted);
+        border-radius: 0.5rem;
+      }
+
+      .contact-box p {
+        margin-bottom: 0.5rem;
+      }
+
+      .contact-box p:last-child {
+        margin-bottom: 0;
+      }
+
+      .contact-box .font-medium {
+        font-weight: 500;
+        color: var(--foreground);
+      }
+
+      a {
+        color: var(--primary);
+        text-decoration: none;
+      }
+
+      a:hover {
+        text-decoration: underline;
+      }
+
+      .last-updated {
+        color: var(--muted-foreground);
+        margin-bottom: 2rem;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Navigation Header -->
+    <nav>
+      <div class="nav-container">
+        <a href="/" class="nav-brand">
+          <img src="/favicon.ico" alt="Wiselook" />
+          <span>Wiselook</span>
+        </a>
+        <a href="/" class="back-button">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <path d="m12 19-7-7 7-7" />
+            <path d="M19 12H5" />
+          </svg>
+          Back
+        </a>
+      </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main>
+      <div class="container">
+        <h1>Privacy Policy</h1>
+
+        <p class="last-updated">
+          <strong>Last Updated:</strong> April 28, 2026 &middot; <strong>Version:</strong> 2.0
+        </p>
+
+        <div class="content">
+          <section>
+            <h2>At-a-glance summary</h2>
+            <div class="table-wrap">
+              <table class="kv-table">
+                <tbody>
+                  <tr>
+                    <th>Data Controller</th>
+                    <td>
+                      WISELOOK TALENT LAB, S.L. (Tax ID B22539084), Paseo de la
+                      Castellana 42, 1st floor, 28046 Madrid, Spain.
+                    </td>
+                  </tr>
+                  <tr>
+                    <th>Privacy contact</th>
+                    <td>
+                      <a href="mailto:privacy@wiselook.ai">privacy@wiselook.ai</a>
+                    </td>
+                  </tr>
+                  <tr>
+                    <th>What we do with your data</th>
+                    <td>
+                      We run AI-assisted conversational psychometric and competency
+                      assessments and make the results available to you and, where
+                      applicable, to the organisation that invited you to take the
+                      assessment.
+                    </td>
+                  </tr>
+                  <tr>
+                    <th>Legal bases</th>
+                    <td>
+                      Consent, performance of a contract, legitimate interests and
+                      legal obligations (see Section 4).
+                    </td>
+                  </tr>
+                  <tr>
+                    <th>Retention</th>
+                    <td>
+                      Up to 3 years from your last meaningful interaction, unless a
+                      longer period is legally required (see Section 7).
+                    </td>
+                  </tr>
+                  <tr>
+                    <th>Recipients</th>
+                    <td>
+                      The organisation that invited you (where applicable), our
+                      processors (technology providers) and competent authorities
+                      when legally required (see Section 6).
+                    </td>
+                  </tr>
+                  <tr>
+                    <th>Your rights</th>
+                    <td>
+                      Access, rectification, erasure, objection, restriction,
+                      portability, the right not to be subject to solely automated
+                      decisions, and the right to withdraw consent. You can exercise
+                      them at
+                      <a href="mailto:privacy@wiselook.ai">privacy@wiselook.ai</a>
+                      and lodge a complaint with the Spanish Data Protection Agency
+                      (<a href="http://www.aepd.es" target="_blank" rel="noopener noreferrer">www.aepd.es</a>).
+                    </td>
+                  </tr>
+                  <tr>
+                    <th>Automated decisions</th>
+                    <td>
+                      Our system supports decision-making but does not replace it.
+                      Qualified human review is in place, and you have the right to
+                      an explanation and to challenge any outcome (see Section 5).
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <p>
+              This is a layered notice consistent with the guidance issued by the
+              Spanish Data Protection Agency. We strongly recommend reading the
+              detailed information that follows.
+            </p>
+          </section>
+
+          <section>
+            <h2>Our key commitments to you</h2>
+            <ul>
+              <li>
+                <strong>We do not train models on your data.</strong> Wiselook does
+                not use your personal data to train third-party language models or
+                any other AI systems beyond the operation of the Service.
+              </li>
+              <li>
+                <strong>We do not sell your personal data.</strong> Wiselook does not
+                sell, rent or trade your personal data, under any circumstance.
+              </li>
+              <li>
+                <strong>We minimise the data we collect.</strong> The only directly
+                identifying information required is your email address (for login)
+                and, optionally, your name. See Section 4.
+              </li>
+            </ul>
+          </section>
+
+          <section>
+            <h2>1. Who we are and who this policy applies to</h2>
+            <p>
+              <strong>Wiselook Talent Lab, S.L.</strong> ("Wiselook", "we", "us",
+              "our") is a Spanish company that develops conversational, AI-powered
+              competency assessment technology, scientifically validated through
+              academic partnerships.
+            </p>
+            <p>
+              This Privacy Policy explains how we handle personal data in connection
+              with:
+            </p>
+            <ul>
+              <li>
+                <strong>Assessed individuals</strong> ("you"): people who take an
+                assessment through the Wiselook platform (the "Service"), whether on
+                their own initiative or because a company, educational institution or
+                other organisation ("Business Client") has invited them to do so.
+              </li>
+              <li>
+                <strong>Visitors</strong> to wiselook.ai and its sub-domains.
+              </li>
+              <li>
+                <strong>Contact persons of Business Clients, partners and suppliers</strong>,
+                and <strong>candidates</strong> applying for a position at Wiselook.
+              </li>
+            </ul>
+            <p>
+              If you have any questions about this policy, please write to
+              <a href="mailto:privacy@wiselook.ai"><strong>privacy@wiselook.ai</strong></a>.
+            </p>
+          </section>
+
+          <section>
+            <h2>2. Data Controller</h2>
+            <div class="table-wrap">
+              <table class="kv-table">
+                <tbody>
+                  <tr>
+                    <th>Legal name</th>
+                    <td>WISELOOK TALENT LAB, S.L.</td>
+                  </tr>
+                  <tr>
+                    <th>Tax ID (CIF)</th>
+                    <td>B22539084</td>
+                  </tr>
+                  <tr>
+                    <th>Registered address</th>
+                    <td>Paseo de la Castellana 42, 1st floor, 28046 Madrid, Spain</td>
+                  </tr>
+                  <tr>
+                    <th>Privacy contact</th>
+                    <td><a href="mailto:privacy@wiselook.ai">privacy@wiselook.ai</a></td>
+                  </tr>
+                  <tr>
+                    <th>Data Protection Officer</th>
+                    <td><a href="mailto:dpo@wiselook.ai">dpo@wiselook.ai</a></td>
+                  </tr>
+                  <tr>
+                    <th>General contact</th>
+                    <td><a href="mailto:hello@wiselook.ai">hello@wiselook.ai</a></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <p>
+              Unless expressly stated otherwise, Wiselook acts as the
+              <strong>Data Controller</strong> in respect of the personal data
+              described in this policy. In some scenarios Wiselook acts as a
+              <strong>Data Processor</strong> on behalf of a Business Client (see
+              Section 3).
+            </p>
+            <p>
+              Wiselook has designated a <strong>Data Protection Officer (DPO)</strong>
+              as a dedicated point of contact for any matter relating to the
+              protection of your personal data. You can reach the DPO at
+              <a href="mailto:dpo@wiselook.ai"><strong>dpo@wiselook.ai</strong></a>.
+            </p>
+          </section>
+
+          <section>
+            <h2>3. Roles: when we are Controller and when we are Processor</h2>
+            <p>
               Depending on the context in which you use the Service, Wiselook may
               act in two different capacities:
             </p>
