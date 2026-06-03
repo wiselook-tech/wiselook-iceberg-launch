@@ -37,3 +37,9 @@ updates:
     labels:
       - dependencies
       - ci
+    groups:
+      all-actions:
+        patterns: ["*"]
+    ignore:
+      - dependency-name: "*"
+        update-types: ["version-update:semver-major"]
