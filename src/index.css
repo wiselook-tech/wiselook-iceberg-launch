@@ -32,6 +32,14 @@ All colors MUST be HSL.
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 0 0% 100%;
 
+    /* Deep navy-purple (#170b6b). The product UI uses it for every heading and
+       for the wordmark; the site follows so both read as the same brand. */
+    --heading: 248 81% 23%;
+
+    /* Second brand color (#ff9966). Accent only — never a surface or body text. */
+    --brand-accent: 20 100% 70%;
+    --brand-accent-foreground: 248 81% 23%;
+
     --border: 0 0% 92.5%;
     --input: 0 0% 92.5%;
     --ring: 246 100% 55%;

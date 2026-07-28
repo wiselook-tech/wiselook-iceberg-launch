@@ -51,7 +51,7 @@ const UseCases = () => (
     <div className="container mx-auto px-6">
       <div className="max-w-4xl mx-auto space-y-10">
         <div className="text-center space-y-4">
-          <h2 className="font-heading font-bold text-3xl md:text-4xl text-foreground">
+          <h2 className="font-heading font-bold text-3xl md:text-4xl text-heading">
             Three decisions Wiselook is built for
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
@@ -76,7 +76,7 @@ const UseCases = () => (
             <TabsContent key={useCase.value} value={useCase.value} className="mt-6">
               <Card className="border-none bg-background shadow-card">
                 <CardHeader>
-                  <CardTitle className="font-heading text-xl md:text-2xl text-foreground">{useCase.heading}</CardTitle>
+                  <CardTitle className="font-heading text-xl md:text-2xl text-heading">{useCase.heading}</CardTitle>
                 </CardHeader>
                 <CardContent className="space-y-6">
                   <p className="text-muted-foreground">{useCase.body}</p>

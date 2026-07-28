@@ -9,7 +9,7 @@ const HowItWorks = () => (
     <div className="container mx-auto px-6">
       <div className="max-w-6xl mx-auto space-y-12">
         <div className="text-center space-y-4">
-          <h2 className="font-heading font-bold text-3xl md:text-4xl text-foreground">How it works</h2>
+          <h2 className="font-heading font-bold text-3xl md:text-4xl text-heading">How it works</h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
             A short, AI-native conversational flow that captures real evidence and turns it into action.
           </p>
@@ -29,7 +29,7 @@ const HowItWorks = () => (
                   />
                 </svg>
               </div>
-              <CardTitle className="font-heading text-xl text-foreground">Assess</CardTitle>
+              <CardTitle className="font-heading text-xl text-heading">Assess</CardTitle>
             </CardHeader>
             <CardContent>
               <p className="text-muted-foreground">
@@ -46,7 +46,7 @@ const HowItWorks = () => (
               <div className={iconWrapper}>
                 <CheckCircle2 className="h-6 w-6 text-primary" />
               </div>
-              <CardTitle className="font-heading text-xl text-foreground">Analyze</CardTitle>
+              <CardTitle className="font-heading text-xl text-heading">Analyze</CardTitle>
             </CardHeader>
             <CardContent>
               <p className="text-muted-foreground">
@@ -61,7 +61,7 @@ const HowItWorks = () => (
               <div className={iconWrapper}>
                 <ArrowRight className="h-6 w-6 text-primary" />
               </div>
-              <CardTitle className="font-heading text-xl text-foreground">Act</CardTitle>
+              <CardTitle className="font-heading text-xl text-heading">Act</CardTitle>
             </CardHeader>
             <CardContent>
               <p className="text-muted-foreground">

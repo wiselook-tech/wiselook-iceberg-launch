@@ -62,7 +62,7 @@ const SiteNav = () => {
               loading="eager"
               decoding="async"
             />
-            <span className="font-heading font-bold text-xl text-foreground">Wiselook</span>
+            <span className="font-heading font-bold text-xl text-heading">Wiselook</span>
           </button>
 
           <div className="hidden md:flex items-center gap-6 lg:gap-8">

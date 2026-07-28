@@ -47,7 +47,7 @@ const Support = () => {
                 loading="eager"
                 decoding="async"
               />
-              <span className="font-heading font-bold text-xl text-foreground">Wiselook</span>
+              <span className="font-heading font-bold text-xl text-heading">Wiselook</span>
             </button>
             <Button 
               variant="ghost" 
@@ -66,18 +66,18 @@ const Support = () => {
       <main className="pt-20 pb-16">
         <div className="container mx-auto px-6 max-w-4xl">
           <div className="prose prose-gray max-w-none">
-            <h1 className="font-heading font-bold text-4xl text-foreground mb-8">Support</h1>
+            <h1 className="font-heading font-bold text-4xl text-heading mb-8">Support</h1>
             
             <div className="space-y-8">
               <section>
-                <h2 className="font-heading font-semibold text-2xl text-foreground mb-4">Overview</h2>
+                <h2 className="font-heading font-semibold text-2xl text-heading mb-4">Overview</h2>
                 <p className="text-muted-foreground leading-relaxed">
                   Wiselook for Microsoft Teams helps organizations manage and discover top talent by bringing AI-driven talent insights directly into Teams. This page provides help, troubleshooting steps, and ways to contact us.
                 </p>
               </section>
 
               <section>
-                <h2 className="font-heading font-semibold text-2xl text-foreground mb-4">You need to agree to the following responsibilities before continuing:</h2>
+                <h2 className="font-heading font-semibold text-2xl text-heading mb-4">You need to agree to the following responsibilities before continuing:</h2>
                 <ul className="list-disc pl-6 text-muted-foreground space-y-2">
                   <li>I will take this assessment honestly and without any assistance from others.</li>
                   <li>I will not copy or distribute information from this assessment in any form.</li>
@@ -86,7 +86,7 @@ const Support = () => {
               </section>
 
               <section>
-                <h2 className="font-heading font-semibold text-2xl text-foreground mb-4">Getting Started</h2>
+                <h2 className="font-heading font-semibold text-2xl text-heading mb-4">Getting Started</h2>
                 <p className="text-muted-foreground leading-relaxed mb-4">
                   Follow these steps to install Wiselook in Microsoft Teams:
                 </p>
@@ -99,11 +99,11 @@ const Support = () => {
               </section>
 
               <section>
-                <h2 className="font-heading font-semibold text-2xl text-foreground mb-4">Common Issues and Troubleshooting</h2>
+                <h2 className="font-heading font-semibold text-2xl text-heading mb-4">Common Issues and Troubleshooting</h2>
                 
                 <div className="space-y-6">
                   <div>
-                    <h3 className="font-heading font-semibold text-lg text-foreground mb-2">
+                    <h3 className="font-heading font-semibold text-lg text-heading mb-2">
                       I can't sign in
                     </h3>
                     <ul className="list-disc pl-6 text-muted-foreground space-y-2">
@@ -113,7 +113,7 @@ const Support = () => {
                   </div>
 
                   <div>
-                    <h3 className="font-heading font-semibold text-lg text-foreground mb-2">
+                    <h3 className="font-heading font-semibold text-lg text-heading mb-2">
                       The bot doesn't respond
                     </h3>
                     <ul className="list-disc pl-6 text-muted-foreground space-y-2">
@@ -124,7 +124,7 @@ const Support = () => {
                   </div>
 
                   <div>
-                    <h3 className="font-heading font-semibold text-lg text-foreground mb-2">
+                    <h3 className="font-heading font-semibold text-lg text-heading mb-2">
                       Data isn't syncing from Teams
                     </h3>
                     <ul className="list-disc pl-6 text-muted-foreground space-y-2">
@@ -141,21 +141,21 @@ const Support = () => {
               </section>
 
               <section>
-                <h2 className="font-heading font-semibold text-2xl text-foreground mb-4">Contact Support</h2>
+                <h2 className="font-heading font-semibold text-2xl text-heading mb-4">Contact Support</h2>
                 <p className="text-muted-foreground leading-relaxed mb-4">
                   For technical support or account issues, contact us at <a href="mailto:support@wiselook.ai" className="text-primary hover:underline">support@wiselook.ai</a>. We typically respond within 1–2 business days.
                 </p>
               </section>
 
               <section>
-                <h2 className="font-heading font-semibold text-2xl text-foreground mb-4">Feedback and Feature Requests</h2>
+                <h2 className="font-heading font-semibold text-2xl text-heading mb-4">Feedback and Feature Requests</h2>
                 <p className="text-muted-foreground leading-relaxed">
                   We welcome your feedback. Share ideas or report bugs <a href="https://forms.gle/5AudQJ1SmDwoVE1G6" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">here</a> or email <a href="mailto:product@wiselook.ai" className="text-primary hover:underline">product@wiselook.ai</a>.
                 </p>
               </section>
 
               <section>
-                <h2 className="font-heading font-semibold text-2xl text-foreground mb-4">Additional Resources</h2>
+                <h2 className="font-heading font-semibold text-2xl text-heading mb-4">Additional Resources</h2>
                 <ul className="list-disc pl-6 text-muted-foreground space-y-2">
                   <li><a href="https://wiselook.ai/privacy/" className="text-primary hover:underline">Privacy Policy</a></li>
                   <li><a href="https://wiselook.ai/terms/" className="text-primary hover:underline">Terms of Service</a></li>

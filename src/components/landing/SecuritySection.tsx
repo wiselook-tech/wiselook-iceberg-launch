@@ -148,7 +148,7 @@ const SecuritySection = () => (
     <div className="container mx-auto px-6">
       <div className="max-w-6xl mx-auto space-y-12">
         <div className="text-center space-y-8">
-          <h2 className="font-heading font-bold text-3xl md:text-4xl text-foreground">
+          <h2 className="font-heading font-bold text-3xl md:text-4xl text-heading">
             Enterprise‑grade security and privacy
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
@@ -185,7 +185,7 @@ const SecuritySection = () => (
                 <div className={iconChip}>
                   <item.icon className="h-5 w-5 text-primary" />
                 </div>
-                <CardTitle className="font-heading text-lg text-foreground">{item.title}</CardTitle>
+                <CardTitle className="font-heading text-lg text-heading">{item.title}</CardTitle>
               </CardHeader>
               <CardContent>
                 <p className="text-sm text-muted-foreground">{item.body}</p>
@@ -195,7 +195,7 @@ const SecuritySection = () => (
         </div>
 
         <div className="max-w-3xl mx-auto space-y-4">
-          <h3 className="font-heading font-semibold text-xl text-foreground text-center">Full security posture</h3>
+          <h3 className="font-heading font-semibold text-xl text-heading text-center">Full security posture</h3>
           <Accordion type="single" collapsible className="w-full space-y-4">
             {groups.map((group) => (
               <AccordionItem
@@ -204,7 +204,7 @@ const SecuritySection = () => (
                 className="rounded-lg border-none bg-background px-6 shadow-card"
               >
                 <AccordionTrigger className="min-h-[44px] py-6 text-left hover:no-underline">
-                  <span className="font-heading font-semibold text-foreground">{group.title}</span>
+                  <span className="font-heading font-semibold text-heading">{group.title}</span>
                 </AccordionTrigger>
                 <AccordionContent className="space-y-4 pb-6">
                   {group.items.map((item) => (
@@ -213,7 +213,7 @@ const SecuritySection = () => (
                         <item.icon className="h-5 w-5 text-primary" />
                       </div>
                       <div>
-                        <h4 className="font-heading font-semibold text-foreground mb-1">{item.title}</h4>
+                        <h4 className="font-heading font-semibold text-heading mb-1">{item.title}</h4>
                         <p className="text-sm text-muted-foreground">{item.body}</p>
                       </div>
                     </div>

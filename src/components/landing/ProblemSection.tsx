@@ -7,7 +7,7 @@ const ProblemSection = () => (
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* Problem Content */}
           <div className="space-y-6">
-            <h2 className="font-heading font-bold text-3xl md:text-4xl text-foreground">
+            <h2 className="font-heading font-bold text-3xl md:text-4xl text-heading">
               Go beyond multiple‑choice tests and expensive executive assessments
             </h2>
             <p className="text-lg text-muted-foreground">

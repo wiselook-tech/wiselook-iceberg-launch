@@ -30,7 +30,7 @@ const ClaireChatMock = () => (
             <span className="flex h-7 w-7 items-center justify-center rounded-full bg-primary/10 font-heading text-xs font-bold text-primary">
               C
             </span>
-            <span className="font-heading text-sm font-semibold text-foreground">Claire</span>
+            <span className="font-heading text-sm font-semibold text-heading">Claire</span>
             <span className="text-xs text-muted-foreground">AI assessor</span>
           </div>
         </div>
