@@ -31,9 +31,10 @@ npm run preview          # locally preview the production build
 ```
 src/
   components/
-    landing/    # the sections that make up the landing page (Hero, ProofStrip,
+    landing/    # the sections that make up the landing page (Hero, AwardsSection,
                 # ProblemSection, HowItWorks, UseCases, WhyWiselook, SecuritySection,
-                # TeamSection, FaqSection, ContactCta, SiteNav, SiteFooter, StickyCta, ...)
+                # TeamSection, FaqSection, ContactCta, RecognizedBy, SiteNav,
+                # SiteFooter, StickyCta, ...)
     ui/         # the shadcn/ui primitives actually used by the landing components
     CookieConsent.tsx
   pages/        # route-level components (Index, Support, NotFound)

@@ -8,7 +8,7 @@ to where each section lives, in the order they render on `/` (see `src/pages/Ind
 | ----------------------------------- | ------------------------------------------------------------------------- |
 | Nav                                 | `SiteNav.tsx`                                                            |
 | Hero                                 | `HeroSection.tsx` (+ `ClaireChatMock.tsx`)                               |
-| Proof strip                         | `ProofStrip.tsx`                                                         |
+| Awards                              | `AwardsSection.tsx`                                                      |
 | Problem (`#problem`)                | `ProblemSection.tsx` (+ `TalentPyramid.tsx`)                             |
 | How it works (`#how-it-works`)      | `HowItWorks.tsx`                                                         |
 | Use cases (`#use-cases`)            | `UseCases.tsx`                                                           |
@@ -17,6 +17,7 @@ to where each section lives, in the order they render on `/` (see `src/pages/Ind
 | Team / About (`#about`)             | `TeamSection.tsx`                                                        |
 | FAQ                                  | `FaqSection.tsx`                                                         |
 | Contact (`#contact`)                | `ContactCta.tsx`                                                         |
+| Recognized by                       | `RecognizedBy.tsx`                                                       |
 | Footer                               | `SiteFooter.tsx`                                                         |
 | Mobile sticky CTA                   | `StickyCta.tsx` (rendered inside `Index.tsx`)                            |
 | Cookie banner                       | `CookieConsent.tsx` (rendered in `App.tsx`, on every route)              |
