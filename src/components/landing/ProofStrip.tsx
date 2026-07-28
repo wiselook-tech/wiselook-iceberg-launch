@@ -42,7 +42,7 @@ const recognizedBy = [
 ];
 
 const ProofStrip = () => (
-  <section className="scroll-reveal border-y border-border bg-muted/30 py-8">
+  <section className="border-y border-border bg-muted/30 py-8">
     <h2 className="sr-only">Awards and recognition</h2>
     <div className="container mx-auto px-6">
       <div className="mx-auto flex max-w-6xl flex-col items-center gap-6 lg:flex-row lg:justify-center lg:gap-8">
