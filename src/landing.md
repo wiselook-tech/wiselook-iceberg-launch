@@ -12,7 +12,7 @@ to where each section lives, in the order they render on `/` (see `src/pages/Ind
 | Problem (`#problem`)                | `ProblemSection.tsx` (+ `TalentPyramid.tsx`)                             |
 | How it works (`#how-it-works`)      | `HowItWorks.tsx`                                                         |
 | Use cases (`#use-cases`)            | `UseCases.tsx`                                                           |
-| Why Wiselook                        | `WhyWiselook.tsx` (includes the comparison table via `ComparisonTable.tsx`) |
+| Why Wiselook                        | `WhyWiselook.tsx` (+ `CompetitorQuadrant.tsx`)                           |
 | Security and privacy (`#security`)  | `SecuritySection.tsx`                                                    |
 | Team / About (`#about`)             | `TeamSection.tsx`                                                        |
 | FAQ                                  | `FaqSection.tsx`                                                         |
