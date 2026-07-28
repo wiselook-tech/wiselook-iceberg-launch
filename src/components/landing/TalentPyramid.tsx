@@ -93,11 +93,16 @@ const TalentPyramid = () => {
             >
               <span className="font-heading text-base font-semibold sm:text-lg">{tier.name}</span>
               <span className={`mt-1 text-xs sm:text-sm ${tier.bodyTone}`}>{tier.summary}</span>
+              {/* `invisible` (not just max-h-0) so a collapsed detail leaves the
+                  accessibility tree too — otherwise it would stay part of the
+                  button's accessible name while `aria-expanded` says false.
+                  `visibility` is special-cased in transitions, so it still
+                  flips at the right end of the fade. */}
               <span
                 id={`${tier.id}-detail`}
-                className={`block overflow-hidden pt-1.5 text-xs transition-[max-height,opacity] duration-300 ease-out motion-reduce:transition-none sm:text-sm ${
+                className={`block overflow-hidden pt-1.5 text-xs transition-[max-height,opacity,visibility] duration-300 ease-out motion-reduce:transition-none sm:text-sm ${
                   tier.bodyTone
-                } ${expanded ? "max-h-24 opacity-100" : "max-h-0 opacity-0"}`}
+                } ${expanded ? "visible max-h-24 opacity-100" : "invisible max-h-0 opacity-0"}`}
               >
                 {tier.detail}
               </span>

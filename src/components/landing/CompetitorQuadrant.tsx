@@ -216,6 +216,10 @@ const CompetitorQuadrant = () => {
                   return (
                     <g
                       key={competitor.id}
+                      // role="img" belongs here, on the focusable marker, not on
+                      // the SVG root: it gives the group a deterministic name and
+                      // prunes the plotted shapes and duplicated text beneath it.
+                      role="img"
                       tabIndex={0}
                       aria-label={`${competitor.label}: ${competitor.description}`}
                       onMouseEnter={() => show(competitor.id)}
