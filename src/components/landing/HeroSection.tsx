@@ -41,7 +41,7 @@ const HeroSection = () => (
         </div>
 
         {/* Product visual */}
-        <div className="relative lg:block">
+        <div className="relative">
           <ClaireChatMock />
         </div>
       </div>
