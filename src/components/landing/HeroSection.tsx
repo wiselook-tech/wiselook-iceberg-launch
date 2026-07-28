@@ -17,7 +17,7 @@ const HeroSection = () => (
             Claire, our AI assessor, turns structured conversations into scientific evidence of judgment, behavior, and
             competence — for the people decisions that matter most.
           </p>
-          <p className="text-sm text-muted-foreground/80 max-w-xl">
+          <p className="text-sm text-muted-foreground max-w-xl">
             Built for organizations where people decisions carry the most weight — banking, insurance, consulting,
             pharma.
           </p>

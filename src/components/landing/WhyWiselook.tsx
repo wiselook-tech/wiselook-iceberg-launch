@@ -77,9 +77,9 @@ const WhyWiselook = () => (
             </CardHeader>
             <CardContent>
               <p className="text-muted-foreground">
-                Conversational SJT with psychometric rigor uncovers what people can actually do, not what they
-                self-report — and turns it into behavioral levels and readiness signals for succession and mobility, not
-                just skills tags.
+                Conversational situational judgment scenarios with psychometric rigor uncover what people can actually
+                do, not what they self-report — and turn it into behavioral levels and readiness signals for
+                succession and mobility, not just skills tags.
               </p>
             </CardContent>
           </Card>
@@ -93,10 +93,6 @@ const WhyWiselook = () => (
             Wiselook vs. traditional assessments
           </h3>
           <p className="text-muted-foreground">Objective evidence, at scale — that's the gap we exist to close.</p>
-          <p className="text-muted-foreground">
-            Most tools either rely on subjective judgement or don't scale. We combine validated, objective evidence with
-            AI so organisations can make fair decisions at speed.
-          </p>
         </div>
 
         <ComparisonTable />

@@ -34,23 +34,23 @@ const HowItWorks = () => (
             <CardContent>
               <p className="text-muted-foreground">
                 People answer brief, open-ended prompts in a dialogue with Claire, our AI assessor, or complete
-                situational judgement scenarios — in their own words, delivered where they already work: Microsoft
+                situational judgment scenarios — in their own words, delivered where they already work: Microsoft
                 Teams, web, or embedded.
               </p>
             </CardContent>
           </Card>
 
-          {/* Analyse */}
+          {/* Analyze */}
           <Card className={cardClass}>
             <CardHeader className="space-y-4">
               <div className={iconWrapper}>
                 <CheckCircle2 className="h-6 w-6 text-primary" />
               </div>
-              <CardTitle className="font-heading text-xl text-foreground">Analyse</CardTitle>
+              <CardTitle className="font-heading text-xl text-foreground">Analyze</CardTitle>
             </CardHeader>
             <CardContent>
               <p className="text-muted-foreground">
-                Behavioural responses are evaluated against scientifically validated rubrics to map competencies.
+                Behavioral responses are evaluated against scientifically validated rubrics to map competencies.
               </p>
             </CardContent>
           </Card>
