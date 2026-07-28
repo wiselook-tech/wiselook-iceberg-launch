@@ -2,9 +2,9 @@ import { ArrowRight, Linkedin } from "lucide-react";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
-import jaimePhoto from "@/assets/profiles/jaime.jpg";
-import rocioPhoto from "@/assets/profiles/rocio.png";
-import rafaPhoto from "@/assets/profiles/rafa.png";
+import jaimePhoto from "@/assets/profiles/jaime.webp";
+import rocioPhoto from "@/assets/profiles/rocio.webp";
+import rafaPhoto from "@/assets/profiles/rafa.webp";
 
 interface Founder {
   name: string;
@@ -43,7 +43,7 @@ const founders: Founder[] = [
 ];
 
 const TeamSection = () => (
-  <section id="about" className="py-20 md:py-28 bg-gradient-card scroll-reveal scroll-mt-20">
+  <section id="about" className="py-20 md:py-28 bg-muted/30 scroll-reveal scroll-mt-20">
     <div className="container mx-auto px-6">
       <div className="max-w-6xl mx-auto space-y-12">
         <div className="text-center space-y-4">
@@ -63,22 +63,28 @@ const TeamSection = () => (
             <Card key={founder.name} className="border-none bg-background shadow-card">
               <CardContent className="flex h-full flex-col items-center space-y-6 p-8 text-center">
                 <Avatar className="h-32 w-32 shadow-soft">
-                  <AvatarImage src={founder.photo} alt={founder.name} className="object-cover" loading="lazy" />
+                  <AvatarImage
+                    src={founder.photo}
+                    alt={founder.name}
+                    className="object-cover"
+                    width={256}
+                    height={256}
+                    loading="lazy"
+                    decoding="async"
+                  />
                   <AvatarFallback className="font-heading text-2xl text-muted-foreground">
                     {founder.initials}
                   </AvatarFallback>
                 </Avatar>
 
                 <div className="space-y-2">
-                  <h3 className="font-heading font-bold text-2xl text-foreground min-h-[3.5rem] flex items-center justify-center">
+                  <h3 className="font-heading font-bold text-2xl text-foreground flex items-center justify-center">
                     {founder.name}
                   </h3>
-                  <p className="text-lg text-primary font-medium min-h-[3rem] flex items-center justify-center">
-                    {founder.role}
-                  </p>
+                  <p className="text-lg text-primary font-medium flex items-center justify-center">{founder.role}</p>
                 </div>
 
-                <p className="text-muted-foreground text-sm leading-relaxed flex-grow min-h-[8rem]">{founder.bio}</p>
+                <p className="text-muted-foreground text-sm leading-relaxed flex-grow">{founder.bio}</p>
 
                 <a
                   href={founder.linkedin}
