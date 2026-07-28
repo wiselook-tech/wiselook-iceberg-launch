@@ -17,4 +17,4 @@ Disallow: /src/
 Disallow: /.git/
 Disallow: /dist/
 
-Sitemap: https://wiselook-tech.github.io/wiselook-iceberg-launch/sitemap.xml
+Sitemap: https://wiselook.ai/sitemap.xml
