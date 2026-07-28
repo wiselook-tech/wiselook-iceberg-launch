@@ -19,8 +19,8 @@ npm run dev            # start the dev server (http://localhost:8080)
 Other scripts:
 
 ```bash
-npm run lint            # ESLint
-npx tsc --noEmit        # type check
+npm run lint                        # ESLint
+npx tsc -p tsconfig.app.json --noEmit   # type check
 npm run build            # production build -> docs/
 npm run build:dev        # build in development mode (unminified, for debugging)
 npm run preview          # locally preview the production build
@@ -48,15 +48,19 @@ that's the source of truth for page content, not a separate spec file. See
 
 ## Deployment
 
-The site builds to `docs/` (see `vite.config.ts`), which is what GitHub Pages serves
-from on the `main` branch. `.github/workflows/deploy.yml` runs on every push/PR:
+The site builds to `docs/` (see `vite.config.ts`), a local build artifact — GitHub
+Pages is configured to deploy from the GitHub Actions workflow, not from a branch, so
+`docs/` is never read directly by Pages. `.github/workflows/deploy.yml` runs on every
+push/PR (and can be triggered manually via `workflow_dispatch`):
 
 1. **build** job: `npm ci`, lint, type check, `npm run build`, then uploads `docs/`
    as a Pages artifact.
-2. **deploy** job: only runs on pushes to `main`, publishes the artifact to GitHub Pages.
+2. **deploy** job: runs on pushes to `main` (or a manual `workflow_dispatch` run
+   against `main`), publishes the uploaded artifact to GitHub Pages.
 
-The custom domain (`wiselook.ai`) is configured via the `CNAME` file at the repo root,
-which Vite copies into `docs/` on build (GitHub Pages reads `CNAME` from the published
-artifact).
+The custom domain (`wiselook.ai`) is configured via `public/CNAME`, which Vite copies
+into `docs/` on build — that's the file GitHub Pages actually reads from the published
+artifact. A legacy `CNAME` also exists at the repo root; it predates the artifact-based
+deploy and isn't part of the build output.
 
 `docs/` is git-ignored — it's a build artifact, not something to commit by hand.

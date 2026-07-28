@@ -23,4 +23,13 @@ export default tseslint.config(
       "@typescript-eslint/no-unused-vars": "warn",
     },
   },
+  {
+    // shadcn/ui primitives intentionally co-export non-component values (e.g.
+    // `buttonVariants`, `badgeVariants`) alongside the component itself — that's
+    // the upstream shadcn convention, not something worth restructuring here.
+    files: ["src/components/ui/**/*.{ts,tsx}"],
+    rules: {
+      "react-refresh/only-export-components": "off",
+    },
+  },
 );
