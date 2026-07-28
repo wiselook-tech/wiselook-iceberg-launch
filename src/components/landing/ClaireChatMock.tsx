@@ -40,8 +40,10 @@ const ClaireChatMock = () => (
     </p>
 
     <div aria-hidden="true" className="relative">
-      {/* Cool wash behind the panel, as on the product's assessment screen. */}
-      <div className="pointer-events-none absolute -left-16 -top-24 h-[420px] w-[calc(100%+8rem)] bg-[radial-gradient(1100px_420px_at_80%_-10%,#f1f5ff_0%,rgba(241,245,255,0)_60%)]" />
+      {/* Cool wash behind the panel, as on the product's assessment screen. The
+          `-z-10` resolves against HeroSection's `isolate`, so it stays behind the
+          hero copy when the columns stack. */}
+      <div className="pointer-events-none absolute -left-16 -top-24 -z-10 h-[420px] w-[calc(100%+8rem)] bg-[radial-gradient(1100px_420px_at_80%_-10%,#f1f5ff_0%,rgba(241,245,255,0)_60%)]" />
 
       {/* Assessment panel */}
       <div className="relative animate-fade-up overflow-hidden rounded-3xl border border-[#e2e8f0] bg-background shadow-[0_18px_44px_-30px_rgba(23,11,107,0.35)]">
