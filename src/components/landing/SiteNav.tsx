@@ -53,7 +53,15 @@ const SiteNav = () => {
             onClick={() => scrollToSection("home")}
             className="flex items-center gap-3 rounded transition-opacity hover:opacity-80 focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2"
           >
-            <img src={wiselookIcon} alt="Wiselook" className="h-8 w-8" />
+            <img
+              src={wiselookIcon}
+              alt="Wiselook"
+              className="h-8 w-8"
+              width={32}
+              height={32}
+              loading="eager"
+              decoding="async"
+            />
             <span className="font-heading font-bold text-xl text-foreground">Wiselook</span>
           </button>
 
