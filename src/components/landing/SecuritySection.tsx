@@ -135,13 +135,16 @@ const groups: SecurityGroup[] = [
   },
 ];
 
+const cardClass = "border-none bg-background shadow-card";
+const iconChip = "flex h-10 w-10 items-center justify-center rounded-lg bg-primary/10";
+
 /**
- * Dark band. The `dark` class scopes the dark design tokens from src/index.css to
- * this section, so `bg-background`, `bg-card` and `text-foreground` below resolve
- * to the dark palette.
+ * Cool-tinted band. `bg-accent/20` resolves to the same pale blue the product UI
+ * uses for its calm surfaces, so the section reads as a distinct band without
+ * leaving the brand palette (it used to be a near-black inversion).
  */
 const SecuritySection = () => (
-  <section id="security" className="dark bg-background py-20 md:py-28 scroll-reveal scroll-mt-20">
+  <section id="security" className="bg-accent/20 py-20 md:py-28 scroll-reveal scroll-mt-20">
     <div className="container mx-auto px-6">
       <div className="max-w-6xl mx-auto space-y-12">
         <div className="text-center space-y-8">
@@ -157,7 +160,7 @@ const SecuritySection = () => (
             <img
               src={gdprLogo}
               alt="GDPR-ready"
-              className="h-16 opacity-80 hover:opacity-100 transition-opacity"
+              className="h-16 w-auto"
               width={128}
               height={64}
               loading="lazy"
@@ -166,7 +169,7 @@ const SecuritySection = () => (
             <img
               src={euAiActLogo}
               alt="Built for the EU AI Act"
-              className="h-16 opacity-80 hover:opacity-100 transition-opacity"
+              className="h-16 w-auto"
               width={128}
               height={64}
               loading="lazy"
@@ -177,12 +180,12 @@ const SecuritySection = () => (
 
         <div className="grid md:grid-cols-3 gap-6">
           {headlineItems.map((item) => (
-            <Card key={item.title} className="bg-card border-border">
+            <Card key={item.title} className={cardClass}>
               <CardHeader className="space-y-4">
-                <div className="h-10 w-10 rounded-lg bg-primary/20 flex items-center justify-center">
-                  <item.icon className="h-5 w-5 text-primary-foreground" />
+                <div className={iconChip}>
+                  <item.icon className="h-5 w-5 text-primary" />
                 </div>
-                <CardTitle className="font-heading text-lg text-card-foreground">{item.title}</CardTitle>
+                <CardTitle className="font-heading text-lg text-foreground">{item.title}</CardTitle>
               </CardHeader>
               <CardContent>
                 <p className="text-sm text-muted-foreground">{item.body}</p>
@@ -193,17 +196,21 @@ const SecuritySection = () => (
 
         <div className="max-w-3xl mx-auto space-y-4">
           <h3 className="font-heading font-semibold text-xl text-foreground text-center">Full security posture</h3>
-          <Accordion type="single" collapsible className="w-full">
+          <Accordion type="single" collapsible className="w-full space-y-4">
             {groups.map((group) => (
-              <AccordionItem key={group.value} value={group.value} className="border-border">
-                <AccordionTrigger className="min-h-[44px] text-left hover:no-underline">
+              <AccordionItem
+                key={group.value}
+                value={group.value}
+                className="rounded-lg border-none bg-background px-6 shadow-card"
+              >
+                <AccordionTrigger className="min-h-[44px] py-6 text-left hover:no-underline">
                   <span className="font-heading font-semibold text-foreground">{group.title}</span>
                 </AccordionTrigger>
                 <AccordionContent className="space-y-4 pb-6">
                   {group.items.map((item) => (
                     <div key={item.title} className="flex items-start gap-4">
-                      <div className="h-10 w-10 rounded-lg bg-primary/20 flex items-center justify-center flex-shrink-0">
-                        <item.icon className="h-5 w-5 text-primary-foreground" />
+                      <div className={`${iconChip} flex-shrink-0`}>
+                        <item.icon className="h-5 w-5 text-primary" />
                       </div>
                       <div>
                         <h4 className="font-heading font-semibold text-foreground mb-1">{item.title}</h4>
