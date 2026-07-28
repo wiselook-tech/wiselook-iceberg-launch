@@ -127,6 +127,27 @@ export default {
             boxShadow: "0 0 0 8px hsl(var(--primary) / 0.1)"
           }
         },
+        // Claire's liquid avatar and typing dots, lifted verbatim from the
+        // product UI (`va-blob` / `dot` in the platform's globals.css and
+        // tailwind config) so the hero mock morphs at the same cadence.
+        "blob-morph": {
+          "0%, 100%": {
+            borderRadius: "42% 58% 62% 38% / 46% 44% 56% 54%"
+          },
+          "50%": {
+            borderRadius: "60% 40% 42% 58% / 56% 58% 42% 44%"
+          }
+        },
+        "typing-dot": {
+          "0%, 80%, 100%": {
+            transform: "scale(0.6)",
+            opacity: "0.4"
+          },
+          "40%": {
+            transform: "scale(1)",
+            opacity: "1"
+          }
+        },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
@@ -135,6 +156,8 @@ export default {
         "float": "float 3s ease-in-out infinite",
         "reveal": "reveal 2s ease-in-out infinite",
         "pulse-glow": "pulse-glow 2s ease-in-out infinite",
+        "blob-morph": "blob-morph 7.5s ease-in-out infinite",
+        "typing-dot": "typing-dot 1.2s ease infinite",
       },
       backgroundImage: {
         "gradient-hero": "var(--gradient-hero)",
