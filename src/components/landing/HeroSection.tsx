@@ -4,7 +4,7 @@ import { CALENDAR_URL, trackCtaClick } from "@/lib/constants";
 import ClaireChatMock from "@/components/landing/ClaireChatMock";
 
 const HeroSection = () => (
-  <section id="home" className="relative overflow-hidden bg-gradient-hero pt-20">
+  <section id="home" className="scroll-reveal relative overflow-hidden bg-gradient-hero pt-20">
     <div className="container mx-auto px-6 pt-20 pb-32 md:pt-28 md:pb-40">
       <div className="grid lg:grid-cols-2 gap-12 items-center">
         {/* Hero Content */}

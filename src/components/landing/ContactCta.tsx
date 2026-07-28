@@ -3,7 +3,7 @@ import { Button } from "@/components/ui/button";
 import { CALENDAR_URL, trackCtaClick } from "@/lib/constants";
 
 const ContactCta = () => (
-  <section id="contact" className="py-20 md:py-28 bg-gradient-hero scroll-mt-20">
+  <section id="contact" className="scroll-reveal py-20 md:py-28 bg-gradient-hero scroll-mt-20">
     <div className="container mx-auto px-6">
       <div className="max-w-3xl mx-auto text-center space-y-8">
         <h2 className="font-heading font-bold text-3xl md:text-5xl text-foreground">

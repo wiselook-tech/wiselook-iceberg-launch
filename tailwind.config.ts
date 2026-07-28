@@ -133,7 +133,6 @@ export default {
       },
       backgroundImage: {
         "gradient-hero": "var(--gradient-hero)",
-        "gradient-card": "var(--gradient-card)",
       },
       boxShadow: {
         "soft": "var(--shadow-soft)",

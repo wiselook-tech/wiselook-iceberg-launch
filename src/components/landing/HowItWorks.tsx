@@ -5,7 +5,7 @@ const cardClass = "border-none bg-background shadow-card text-center";
 const iconWrapper = "h-12 w-12 rounded-lg bg-primary/10 flex items-center justify-center mx-auto";
 
 const HowItWorks = () => (
-  <section id="how-it-works" className="py-20 md:py-28 bg-gradient-card scroll-reveal scroll-mt-20">
+  <section id="how-it-works" className="py-20 md:py-28 bg-muted/30 scroll-reveal scroll-mt-20">
     <div className="container mx-auto px-6">
       <div className="max-w-6xl mx-auto space-y-12">
         <div className="text-center space-y-4">
