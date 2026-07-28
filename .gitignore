@@ -10,8 +10,9 @@ lerna-debug.log*
 node_modules
 *.local
 
-# Build output (now using docs/)
+# Build output (CI builds this fresh via .github/workflows/deploy.yml; do not commit)
 dist
+docs
 
 # Editor directories and files
 .vscode/*
