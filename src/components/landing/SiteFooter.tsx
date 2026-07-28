@@ -4,7 +4,8 @@ import { scrollToSection } from "@/lib/scroll";
 import wiselookIcon from "@/assets/Wiselook_RGB_Iso_Positive_Color.svg";
 
 const SiteFooter = () => (
-  <footer className="py-12 bg-background border-t border-border">
+  // pb-24 leaves room for the mobile sticky CTA so it never covers these links.
+  <footer className="pt-12 pb-24 md:pb-12 bg-background border-t border-border">
     <div className="container mx-auto px-6">
       <div className="flex flex-col md:flex-row justify-between items-center gap-6">
         <div className="text-center md:text-left flex items-center gap-3">
@@ -14,7 +15,7 @@ const SiteFooter = () => (
             <p className="text-sm text-muted-foreground mt-1">The measurement layer for people decisions.</p>
           </div>
         </div>
-        <div className="flex gap-6 text-sm text-muted-foreground items-center">
+        <div className="flex flex-wrap justify-center gap-6 text-sm text-muted-foreground items-center">
           <button
             onClick={() => scrollToSection("problem")}
             className="hover:text-foreground transition-colors min-h-[44px] min-w-[44px] flex items-center focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 rounded"

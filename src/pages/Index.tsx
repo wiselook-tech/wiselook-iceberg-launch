@@ -1,3 +1,4 @@
+import { useHashScroll } from "@/hooks/use-hash-scroll";
 import { useRevealOnScroll } from "@/hooks/use-reveal-on-scroll";
 import SiteNav from "@/components/landing/SiteNav";
 import HeroSection from "@/components/landing/HeroSection";
@@ -15,20 +16,32 @@ import StickyCta from "@/components/landing/StickyCta";
 
 const Index = () => {
   useRevealOnScroll();
+  useHashScroll();
 
   return (
     <div className="min-h-screen bg-background font-body">
+      <a
+        href="#main-content"
+        className="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-[70] focus:rounded-md focus:bg-background focus:px-4 focus:py-2 focus:font-heading focus:text-sm focus:text-foreground focus:shadow-soft focus:outline-none focus:ring-2 focus:ring-ring"
+      >
+        Skip to content
+      </a>
+
       <SiteNav />
-      <HeroSection />
-      <ProofStrip />
-      <ProblemSection />
-      <HowItWorks />
-      <UseCases />
-      <WhyWiselook />
-      <SecuritySection />
-      <TeamSection />
-      <FaqSection />
-      <ContactCta />
+
+      <main id="main-content" tabIndex={-1} className="focus:outline-none">
+        <HeroSection />
+        <ProofStrip />
+        <ProblemSection />
+        <HowItWorks />
+        <UseCases />
+        <WhyWiselook />
+        <SecuritySection />
+        <TeamSection />
+        <FaqSection />
+        <ContactCta />
+      </main>
+
       <SiteFooter />
       <StickyCta />
     </div>

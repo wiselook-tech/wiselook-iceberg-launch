@@ -38,7 +38,7 @@ const ProofStrip = () => (
     <div className="container mx-auto px-6">
       <div className="mx-auto flex max-w-6xl flex-col items-center gap-6 lg:flex-row lg:justify-center lg:gap-8">
         {/* Award */}
-        <div className="flex flex-wrap items-center justify-center gap-3">
+        <div className="flex min-w-0 flex-wrap items-center justify-center gap-3 lg:flex-1">
           <img
             src={hrSummitAward}
             alt="Wiselook team receiving the HR Innovation Summit 2025 award"
@@ -64,7 +64,7 @@ const ProofStrip = () => (
         <Separator orientation="vertical" className="hidden h-10 lg:block" />
 
         {/* Recognized by */}
-        <div className="flex flex-wrap items-center justify-center gap-x-8 gap-y-4">
+        <div className="flex shrink-0 flex-wrap items-center justify-center gap-x-6 gap-y-4">
           {recognizedBy.map((logo) => (
             <a
               key={logo.href}

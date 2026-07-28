@@ -35,7 +35,8 @@ const ClaireChatMock = () => (
           </div>
         </div>
 
-        <div className="space-y-4 p-5">
+        {/* pb-14 keeps the report card below from covering the last message */}
+        <div className="space-y-4 p-5 pb-14">
           <div className="max-w-[88%] rounded-2xl rounded-tl-sm bg-muted px-4 py-3 text-sm text-foreground">
             Tell me about a time you had to deliver difficult news to your team.
           </div>
@@ -56,7 +57,7 @@ const ClaireChatMock = () => (
 
       {/* Competency report */}
       <div
-        className="animate-fade-up [animation-fill-mode:backwards] relative z-10 mx-4 -mt-6 rounded-xl border border-border bg-background p-4 shadow-soft sm:absolute sm:-bottom-10 sm:-right-4 sm:mx-0 sm:mt-0 sm:w-64"
+        className="animate-fade-up [animation-fill-mode:backwards] relative z-10 -mt-12 ml-auto mr-3 w-64 rounded-xl border border-border bg-background p-4 shadow-soft sm:mr-6"
         style={{ animationDelay: "200ms" }}
       >
         <p className="font-heading text-xs font-semibold uppercase tracking-wider text-muted-foreground">

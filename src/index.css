@@ -192,4 +192,9 @@ All colors MUST be HSL.
   .scroll-reveal {
     transition: none !important;
   }
+
+  /* Jump straight to anchors instead of animating the page there. */
+  html {
+    scroll-behavior: auto !important;
+  }
 }
