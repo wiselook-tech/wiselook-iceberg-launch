@@ -2,44 +2,29 @@ import { useEffect, useState } from "react";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 import { useStickyCtaVisible } from "@/lib/sticky-cta";
-
-const CONSENT_KEY = "wiselook-consent";
-
-type ConsentValue = "granted" | "denied";
+import { loadAnalytics } from "@/lib/analytics";
+import { readConsent, useConsentReopenToken, writeConsent } from "@/lib/consent";
 
 const grantAnalyticsConsent = () => {
   window.gtag?.("consent", "update", { analytics_storage: "granted" });
 };
 
-// localStorage can throw (Safari private mode, browser policies blocking Web
-// Storage, storage quota, etc.). Reads fall back to "undecided"; writes fail
-// silently — the in-page consent choice below still applies for this
-// session even if it can't be persisted.
-const readConsent = (): ConsentValue | null => {
-  try {
-    return localStorage.getItem(CONSENT_KEY) as ConsentValue | null;
-  } catch {
-    return null;
-  }
-};
-
-const writeConsent = (value: ConsentValue) => {
-  try {
-    localStorage.setItem(CONSENT_KEY, value);
-  } catch {
-    // Ignored: consent still applies in-page, it just won't persist.
-  }
+const denyAnalyticsConsent = () => {
+  window.gtag?.("consent", "update", { analytics_storage: "denied" });
 };
 
 const CookieConsent = () => {
   const [visible, setVisible] = useState(false);
   const stickyCtaVisible = useStickyCtaVisible();
+  const reopenToken = useConsentReopenToken();
 
   useEffect(() => {
     const stored = readConsent();
     if (stored === "granted") {
-      // Consent Mode resets to its "denied" default on every page load,
-      // so a returning, already-consenting visitor needs to be re-granted.
+      // gtag.js is only ever injected once consent is known, and Consent
+      // Mode resets to its "denied" default on every page load — so a
+      // returning, already-consenting visitor needs both steps repeated.
+      loadAnalytics();
       grantAnalyticsConsent();
       setVisible(false);
     } else if (stored === "denied") {
@@ -49,14 +34,23 @@ const CookieConsent = () => {
     }
   }, []);
 
+  // Re-show the banner when the footer's "Cookie preferences" link fires
+  // (reopenToken starts at 0 and only changes after that link is clicked).
+  useEffect(() => {
+    if (reopenToken === 0) return;
+    setVisible(true);
+  }, [reopenToken]);
+
   const handleAccept = () => {
     writeConsent("granted");
+    loadAnalytics();
     grantAnalyticsConsent();
     setVisible(false);
   };
 
   const handleDecline = () => {
     writeConsent("denied");
+    denyAnalyticsConsent();
     setVisible(false);
   };
 
