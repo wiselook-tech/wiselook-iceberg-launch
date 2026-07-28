@@ -1,8 +1,10 @@
+import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, CheckCircle2, Shield, Award, Users, Brain, Lock, Linkedin, Globe, Database, Search, Eye, UserCheck, FileText, ShieldCheck, Key } from "lucide-react";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import CompetitorQuadrant from "@/components/CompetitorQuadrant";
 import { useRevealOnScroll } from "@/hooks/use-reveal-on-scroll";
+import { CALENDAR_URL, trackCtaClick } from "@/lib/constants";
 import heroIceberg from "@/assets/landing-bg-grey.png";
 import wiselookLogo from "@/assets/wiselook-logo.svg";
 import wiselookIcon from "@/assets/Wiselook_RGB_Iso_Positive_Color.svg";
@@ -78,7 +80,7 @@ const Index = () => {
                 variant="hero" 
                 size="sm"
                 className="group"
-                onClick={() => window.open('https://calendar.app.google/EHMazdi37bBkGuwZ8', '_blank')}
+                onClick={() => { trackCtaClick('nav'); window.open(CALENDAR_URL, '_blank'); }}
               >
                 Let's talk
                 <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
@@ -107,7 +109,7 @@ const Index = () => {
                   variant="hero" 
                   size="xl" 
                   className="group w-fit animate-pulse-glow"
-                  onClick={() => window.open('https://calendar.app.google/EHMazdi37bBkGuwZ8', '_blank')}
+                  onClick={() => { trackCtaClick('hero'); window.open(CALENDAR_URL, '_blank'); }}
                 >
                   Let's talk
                   <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
@@ -443,8 +445,8 @@ const Index = () => {
               
               {/* Certification Logos */}
               <div className="flex items-center justify-center gap-8 flex-wrap pt-4">
-                <img src={gdprLogo} alt="GDPR Compliant" className="h-20 opacity-60 hover:opacity-100 transition-opacity" />
-                <img src={euAiActLogo} alt="EU AI Act Compliant" className="h-20 opacity-60 hover:opacity-100 transition-opacity" />
+                <img src={gdprLogo} alt="GDPR-ready" className="h-20 opacity-60 hover:opacity-100 transition-opacity" />
+                <img src={euAiActLogo} alt="Built for the EU AI Act" className="h-20 opacity-60 hover:opacity-100 transition-opacity" />
               </div>
             </div>
 
@@ -824,7 +826,7 @@ const Index = () => {
               variant="hero" 
               size="xl" 
               className="group min-h-[44px]"
-              onClick={() => window.open('https://calendar.app.google/EHMazdi37bBkGuwZ8', '_blank')}
+              onClick={() => { trackCtaClick('contact'); window.open(CALENDAR_URL, '_blank'); }}
             >
               Let's talk
                 <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
@@ -839,10 +841,10 @@ const Index = () => {
           <div className="flex items-center justify-center gap-6 flex-wrap text-sm text-muted-foreground">
             <div className="flex items-center gap-2">
               <Shield className="h-4 w-4" />
-              <span>GDPR compliant</span>
+              <span>GDPR-ready</span>
             </div>
             <span className="text-border">•</span>
-            <span>EU AI Act compliant</span>
+            <span>Built for the EU AI Act</span>
             <span className="text-border">•</span>
             <span>Enterprise-grade security</span>
           </div>
@@ -924,6 +926,8 @@ const Index = () => {
               <a href="/privacy/" className="hover:text-foreground transition-colors">Privacy Policy</a>
               <span>•</span>
               <a href="/terms/" className="hover:text-foreground transition-colors">Terms and Conditions</a>
+              <span>•</span>
+              <Link to="/support" className="hover:text-foreground transition-colors">Support</Link>
             </div>
           </div>
         </div>
@@ -935,7 +939,7 @@ const Index = () => {
           variant="hero" 
           size="lg" 
           className="w-full group min-h-[44px]"
-          onClick={() => window.open('https://calendar.app.google/EHMazdi37bBkGuwZ8', '_blank')}
+          onClick={() => { trackCtaClick('sticky'); window.open(CALENDAR_URL, '_blank'); }}
         >
           Let's talk
           <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
