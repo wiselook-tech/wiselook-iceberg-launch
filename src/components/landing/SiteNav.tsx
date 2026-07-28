@@ -9,15 +9,16 @@ import wiselookIcon from "@/assets/Wiselook_RGB_Iso_Positive_Color.svg";
 interface NavLink {
   id: string;
   label: string;
-  ariaLabel: string;
 }
 
+// No aria-labels here: the visible text is the accessible name, so voice control
+// and screen readers announce the same words the user reads (WCAG 2.5.3).
 const navLinks: NavLink[] = [
-  { id: "problem", label: "Product", ariaLabel: "Learn about our talent assessment solutions" },
-  { id: "use-cases", label: "Use cases", ariaLabel: "See what Wiselook is used for" },
-  { id: "security", label: "Security", ariaLabel: "View our security and compliance features" },
-  { id: "about", label: "About Us", ariaLabel: "Meet our team and learn about Wiselook" },
-  { id: "contact", label: "Contact", ariaLabel: "Get in touch with our team" },
+  { id: "problem", label: "Product" },
+  { id: "use-cases", label: "Use cases" },
+  { id: "security", label: "Security" },
+  { id: "about", label: "About Us" },
+  { id: "contact", label: "Contact" },
 ];
 
 const openCalendar = (location: string) => {
@@ -62,7 +63,6 @@ const SiteNav = () => {
                 key={link.id}
                 onClick={() => scrollToSection(link.id)}
                 className="rounded text-sm text-muted-foreground transition-colors hover:text-foreground focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2"
-                aria-label={link.ariaLabel}
               >
                 {link.label}
               </button>

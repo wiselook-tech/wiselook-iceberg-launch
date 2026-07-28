@@ -40,7 +40,7 @@ const rows: ComparisonRow[] = [
 
 const headerCell = "px-5 py-4 align-bottom font-heading text-sm font-semibold";
 const bodyCell = "px-5 py-4 align-top text-sm text-muted-foreground";
-const wiselookColumn = "border-x border-primary bg-primary/5";
+const wiselookColumn = "border-x border-primary";
 
 /** Semantic comparison table; scrolls horizontally inside its wrapper on narrow screens. */
 const ComparisonTable = () => (
@@ -60,7 +60,7 @@ const ComparisonTable = () => (
           <th scope="col" className={`${headerCell} text-foreground`}>
             Consulting assessments
           </th>
-          <th scope="col" className={`${headerCell} border-t border-primary bg-primary/10 text-primary ${wiselookColumn}`}>
+          <th scope="col" className={`${headerCell} ${wiselookColumn} border-t bg-primary/10 text-primary`}>
             Wiselook
           </th>
         </tr>
@@ -74,8 +74,8 @@ const ComparisonTable = () => (
             <td className={bodyCell}>{row.traditional}</td>
             <td className={bodyCell}>{row.consulting}</td>
             <td
-              className={`${bodyCell} font-medium text-foreground ${wiselookColumn} ${
-                index === rows.length - 1 ? "border-b border-primary" : ""
+              className={`${bodyCell} ${wiselookColumn} bg-primary/5 font-medium text-foreground ${
+                index === rows.length - 1 ? "border-b" : ""
               }`}
             >
               {row.wiselook}
