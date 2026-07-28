@@ -1,11 +1,49 @@
 import { ArrowRight, Linkedin } from "lucide-react";
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Button } from "@/components/ui/button";
+import { Card, CardContent } from "@/components/ui/card";
 import jaimePhoto from "@/assets/profiles/jaime.jpg";
 import rocioPhoto from "@/assets/profiles/rocio.png";
 import rafaPhoto from "@/assets/profiles/rafa.png";
 
+interface Founder {
+  name: string;
+  initials: string;
+  role: string;
+  bio: string;
+  photo: string;
+  linkedin: string;
+}
+
+const founders: Founder[] = [
+  {
+    name: "Jaime Oliver Huidobro, PhD",
+    initials: "JO",
+    role: "Co-Founder, Chief Product & Science Officer",
+    bio: "Applied scientist and product leader. Former Founder of Epoch Metrics and Lead Data Scientist at Clarity AI. Holds a PhD in Mathematical Engineering and completed postdoctoral research at MIT. Specializing in AI and data-driven product development, he is recognized for integrating advanced technology and science with business strategy to empower organizations and unlock human potential.",
+    photo: jaimePhoto,
+    linkedin: "https://www.linkedin.com/in/jaime-oliver-huidobro/",
+  },
+  {
+    name: "Rocío Fernández-Rubíes Aguirre",
+    initials: "RF",
+    role: "Co-Founder, Chief Executive Officer",
+    bio: "Entrepreneur and executive leader in customer experience, business design, and organizational intelligence. CXO at Restaurant Brands Iberia, business connector at Klarna, and former startup founder; expert in leading strategic digital transformation and acclaimed for her innovative approaches to talent and workforce management.",
+    photo: rocioPhoto,
+    linkedin: "https://www.linkedin.com/in/rocio-fernandez-rubies-aguirre-b8b1373b/",
+  },
+  {
+    name: "Rafael Sarandeses",
+    initials: "RS",
+    role: "Co-Founder, Non-Executive Chairman",
+    bio: "Multidisciplinary leader with over 25 years of experience in investment banking, entrepreneurship, and motorsports. CEO and Partner at Talengo, advisor and coach, former Goldman Sachs executive, and author; highly regarded for his expertise in leadership development, talent strategy, and organizational transformation across world-class institutions and ventures.",
+    photo: rafaPhoto,
+    linkedin: "https://www.linkedin.com/in/rafaelsarandeses/",
+  },
+];
+
 const TeamSection = () => (
-  <section id="about" className="py-20 md:py-28 bg-gradient-card scroll-reveal">
+  <section id="about" className="py-20 md:py-28 bg-gradient-card scroll-reveal scroll-mt-20">
     <div className="container mx-auto px-6">
       <div className="max-w-6xl mx-auto space-y-12">
         <div className="text-center space-y-4">
@@ -21,116 +59,39 @@ const TeamSection = () => (
         </div>
 
         <div className="grid md:grid-cols-3 gap-8 lg:gap-12">
-          {/* Jaime Oliver Huidobro */}
-          <div className="bg-background rounded-xl p-8 shadow-card flex flex-col h-full">
-            <div className="text-center space-y-6 flex flex-col h-full">
-              <img
-                src={jaimePhoto}
-                alt="Jaime Oliver Huidobro, PhD"
-                className="w-32 h-32 rounded-full mx-auto object-cover shadow-soft"
-                loading="lazy"
-              />
-              <div className="space-y-2">
-                <h3 className="font-heading font-bold text-2xl text-foreground min-h-[3.5rem] flex items-center justify-center">
-                  Jaime Oliver Huidobro, PhD
-                </h3>
-                <p className="text-lg text-primary font-medium min-h-[3rem] flex items-center justify-center">
-                  Co-Founder, Chief Product & Science Officer
-                </p>
-              </div>
+          {founders.map((founder) => (
+            <Card key={founder.name} className="border-none bg-background shadow-card">
+              <CardContent className="flex h-full flex-col items-center space-y-6 p-8 text-center">
+                <Avatar className="h-32 w-32 shadow-soft">
+                  <AvatarImage src={founder.photo} alt={founder.name} className="object-cover" loading="lazy" />
+                  <AvatarFallback className="font-heading text-2xl text-muted-foreground">
+                    {founder.initials}
+                  </AvatarFallback>
+                </Avatar>
 
-              <p className="text-muted-foreground text-sm leading-relaxed flex-grow min-h-[8rem] text-center">
-                Applied scientist and product leader. Former Founder of Epoch Metrics and Lead Data Scientist at Clarity
-                AI. Holds a PhD in Mathematical Engineering and completed postdoctoral research at MIT. Specializing in
-                AI and data-driven product development, he is recognized for integrating advanced technology and science
-                with business strategy to empower organizations and unlock human potential.
-              </p>
+                <div className="space-y-2">
+                  <h3 className="font-heading font-bold text-2xl text-foreground min-h-[3.5rem] flex items-center justify-center">
+                    {founder.name}
+                  </h3>
+                  <p className="text-lg text-primary font-medium min-h-[3rem] flex items-center justify-center">
+                    {founder.role}
+                  </p>
+                </div>
 
-              <a
-                href="https://www.linkedin.com/in/jaime-oliver-huidobro/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 text-primary hover:text-primary/80 transition-colors text-sm font-medium mt-auto"
-              >
-                <Linkedin className="h-4 w-4" />
-                Connect on LinkedIn
-              </a>
-            </div>
-          </div>
+                <p className="text-muted-foreground text-sm leading-relaxed flex-grow min-h-[8rem]">{founder.bio}</p>
 
-          {/* Rocío Fernández-Rubíes Aguirre */}
-          <div className="bg-background rounded-xl p-8 shadow-card flex flex-col h-full">
-            <div className="text-center space-y-6 flex flex-col h-full">
-              <img
-                src={rocioPhoto}
-                alt="Rocío Fernández-Rubíes Aguirre"
-                className="w-32 h-32 rounded-full mx-auto object-cover shadow-soft"
-                loading="lazy"
-              />
-              <div className="space-y-2">
-                <h3 className="font-heading font-bold text-2xl text-foreground min-h-[3.5rem] flex items-center justify-center">
-                  Rocío Fernández-Rubíes Aguirre
-                </h3>
-                <p className="text-lg text-primary font-medium min-h-[3rem] flex items-center justify-center">
-                  Co-Founder, Chief Executive Officer
-                </p>
-              </div>
-
-              <p className="text-muted-foreground text-sm leading-relaxed flex-grow min-h-[8rem] text-center">
-                Entrepreneur and executive leader in customer experience, business design, and organizational
-                intelligence. CXO at Restaurant Brands Iberia, business connector at Klarna, and former startup founder;
-                expert in leading strategic digital transformation and acclaimed for her innovative approaches to talent
-                and workforce management.
-              </p>
-
-              <a
-                href="https://www.linkedin.com/in/rocio-fernandez-rubies-aguirre-b8b1373b/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 text-primary hover:text-primary/80 transition-colors text-sm font-medium mt-auto"
-              >
-                <Linkedin className="h-4 w-4" />
-                Connect on LinkedIn
-              </a>
-            </div>
-          </div>
-
-          {/* Rafael Sarandeses */}
-          <div className="bg-background rounded-xl p-8 shadow-card flex flex-col h-full">
-            <div className="text-center space-y-6 flex flex-col h-full">
-              <img
-                src={rafaPhoto}
-                alt="Rafael Sarandeses"
-                className="w-32 h-32 rounded-full mx-auto object-cover shadow-soft"
-                loading="lazy"
-              />
-              <div className="space-y-2">
-                <h3 className="font-heading font-bold text-2xl text-foreground min-h-[3.5rem] flex items-center justify-center">
-                  Rafael Sarandeses
-                </h3>
-                <p className="text-lg text-primary font-medium min-h-[3rem] flex items-center justify-center">
-                  Co-Founder, Non-Executive Chairman
-                </p>
-              </div>
-
-              <p className="text-muted-foreground text-sm leading-relaxed flex-grow min-h-[8rem] text-center">
-                Multidisciplinary leader with over 25 years of experience in investment banking, entrepreneurship, and
-                motorsports. CEO and Partner at Talengo, advisor and coach, former Goldman Sachs executive, and author;
-                highly regarded for his expertise in leadership development, talent strategy, and organizational
-                transformation across world-class institutions and ventures.
-              </p>
-
-              <a
-                href="https://www.linkedin.com/in/rafaelsarandeses/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 text-primary hover:text-primary/80 transition-colors text-sm font-medium mt-auto"
-              >
-                <Linkedin className="h-4 w-4" />
-                Connect on LinkedIn
-              </a>
-            </div>
-          </div>
+                <a
+                  href={founder.linkedin}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 text-primary hover:text-primary/80 transition-colors text-sm font-medium mt-auto rounded focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2"
+                >
+                  <Linkedin className="h-4 w-4" />
+                  Connect on LinkedIn
+                </a>
+              </CardContent>
+            </Card>
+          ))}
         </div>
 
         {/* Join the Team CTA */}

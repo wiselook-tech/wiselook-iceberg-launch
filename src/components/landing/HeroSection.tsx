@@ -1,7 +1,7 @@
 import { ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { CALENDAR_URL, trackCtaClick } from "@/lib/constants";
-import heroIceberg from "@/assets/landing-bg-grey.png";
+import ClaireChatMock from "@/components/landing/ClaireChatMock";
 
 const HeroSection = () => (
   <section id="home" className="relative overflow-hidden bg-gradient-hero pt-20">
@@ -40,13 +40,9 @@ const HeroSection = () => (
           </div>
         </div>
 
-        {/* Hero Image */}
+        {/* Product visual */}
         <div className="relative lg:block">
-          <img
-            src={heroIceberg}
-            alt="Wiselook iceberg visualization showing visible and hidden talent potential"
-            className="w-full h-auto rounded-2xl shadow-soft hover:shadow-soft transition-all duration-300"
-          />
+          <ClaireChatMock />
         </div>
       </div>
     </div>

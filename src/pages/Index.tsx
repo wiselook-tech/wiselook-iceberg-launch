@@ -1,16 +1,15 @@
 import { useRevealOnScroll } from "@/hooks/use-reveal-on-scroll";
 import SiteNav from "@/components/landing/SiteNav";
 import HeroSection from "@/components/landing/HeroSection";
-import AwardsSection from "@/components/landing/AwardsSection";
+import ProofStrip from "@/components/landing/ProofStrip";
 import ProblemSection from "@/components/landing/ProblemSection";
 import HowItWorks from "@/components/landing/HowItWorks";
+import UseCases from "@/components/landing/UseCases";
 import WhyWiselook from "@/components/landing/WhyWiselook";
-import WhyUsSection from "@/components/landing/WhyUsSection";
 import SecuritySection from "@/components/landing/SecuritySection";
 import TeamSection from "@/components/landing/TeamSection";
 import FaqSection from "@/components/landing/FaqSection";
 import ContactCta from "@/components/landing/ContactCta";
-import TrustStrip from "@/components/landing/TrustStrip";
 import SiteFooter from "@/components/landing/SiteFooter";
 import StickyCta from "@/components/landing/StickyCta";
 
@@ -21,16 +20,15 @@ const Index = () => {
     <div className="min-h-screen bg-background font-body">
       <SiteNav />
       <HeroSection />
-      <AwardsSection />
+      <ProofStrip />
       <ProblemSection />
       <HowItWorks />
+      <UseCases />
       <WhyWiselook />
-      <WhyUsSection />
       <SecuritySection />
       <TeamSection />
       <FaqSection />
       <ContactCta />
-      <TrustStrip />
       <SiteFooter />
       <StickyCta />
     </div>

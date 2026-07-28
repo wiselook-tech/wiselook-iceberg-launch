@@ -3,14 +3,15 @@ import { Button } from "@/components/ui/button";
 import { CALENDAR_URL, trackCtaClick } from "@/lib/constants";
 
 const ContactCta = () => (
-  <section id="contact" className="py-20 md:py-28 bg-gradient-hero">
+  <section id="contact" className="py-20 md:py-28 bg-gradient-hero scroll-mt-20">
     <div className="container mx-auto px-6">
       <div className="max-w-3xl mx-auto text-center space-y-8">
         <h2 className="font-heading font-bold text-3xl md:text-5xl text-foreground">
           See your talent map in 30 minutes
         </h2>
         <p className="text-lg text-muted-foreground">
-          Ready to transform your talent assessment process? Let's discuss how Wiselook can help your organization.
+          Bring a real decision — a succession slate, a mobility round, a development cohort — and we'll show you the
+          evidence Claire produces for it.
         </p>
         <div className="flex flex-col items-center gap-3">
           <Button
