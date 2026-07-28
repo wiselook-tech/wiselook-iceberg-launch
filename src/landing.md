@@ -8,7 +8,7 @@
 
 - Audiences: HR leaders and VC investors
 - Positioning: Practical outcomes with a clear, science‑based approach scaled by AI
-- Primary CTA: Contact us to know more
+- Primary CTA: Book a 30-min demo
 
 ---
 
@@ -36,7 +36,7 @@
 
 - Headline: Discover your talent in minutes, not weeks
 - Subhead: Uncover hidden potential with science-backed, conversational assessments delivered natively in your system, ready to deploy and scale. Predictive soft-skills intelligence for succession planning, mobility, and workforce decisions.
-- Primary CTA: Let's talk
+- Primary CTA: Book a 30-min demo
 
 ### Proof and awards
 
@@ -96,7 +96,7 @@
 
 ### CTA
 
-- Let's talk
+- Book a 30-min demo
 
 ---
 
