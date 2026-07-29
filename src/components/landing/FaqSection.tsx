@@ -4,13 +4,13 @@ const FaqSection = () => (
   <section className="scroll-reveal py-16 md:py-20 bg-background">
     <div className="container mx-auto px-6">
       <div className="max-w-3xl mx-auto">
-        <h2 className="font-heading font-bold text-3xl md:text-4xl text-center text-foreground mb-8">
+        <h2 className="font-heading font-bold text-3xl md:text-4xl text-center text-heading mb-8 heading-accent">
           Frequently Asked Questions
         </h2>
         <Accordion type="single" collapsible className="w-full space-y-4">
           <AccordionItem value="problem" className="bg-card rounded-lg px-6 border-none shadow-card">
             <AccordionTrigger className="text-left hover:no-underline py-6 min-h-[44px]">
-              <span className="font-heading font-semibold text-foreground">What problem does Wiselook solve?</span>
+              <span className="font-heading font-semibold text-heading">What problem does Wiselook solve?</span>
             </AccordionTrigger>
             <AccordionContent className="text-muted-foreground pb-6">
               Most organizations only see a small part of their talent. Wiselook reveals skills and potential through
@@ -20,7 +20,7 @@ const FaqSection = () => (
 
           <AccordionItem value="different" className="bg-card rounded-lg px-6 border-none shadow-card">
             <AccordionTrigger className="text-left hover:no-underline py-6 min-h-[44px]">
-              <span className="font-heading font-semibold text-foreground">
+              <span className="font-heading font-semibold text-heading">
                 How is this different from traditional assessments?
               </span>
             </AccordionTrigger>
@@ -32,7 +32,7 @@ const FaqSection = () => (
 
           <AccordionItem value="competency" className="bg-card rounded-lg px-6 border-none shadow-card">
             <AccordionTrigger className="text-left hover:no-underline py-6 min-h-[44px]">
-              <span className="font-heading font-semibold text-foreground">
+              <span className="font-heading font-semibold text-heading">
                 Will it fit our competency model and culture?
               </span>
             </AccordionTrigger>
@@ -44,7 +44,7 @@ const FaqSection = () => (
 
           <AccordionItem value="practice" className="bg-card rounded-lg px-6 border-none shadow-card">
             <AccordionTrigger className="text-left hover:no-underline py-6 min-h-[44px]">
-              <span className="font-heading font-semibold text-foreground">How does it work in practice?</span>
+              <span className="font-heading font-semibold text-heading">How does it work in practice?</span>
             </AccordionTrigger>
             <AccordionContent className="text-muted-foreground pb-6">
               People complete brief, guided blocks where they already work, asynchronously. Responses are evaluated
@@ -54,7 +54,7 @@ const FaqSection = () => (
 
           <AccordionItem value="time" className="bg-card rounded-lg px-6 border-none shadow-card">
             <AccordionTrigger className="text-left hover:no-underline py-6 min-h-[44px]">
-              <span className="font-heading font-semibold text-foreground">How long does an assessment take?</span>
+              <span className="font-heading font-semibold text-heading">How long does an assessment take?</span>
             </AccordionTrigger>
             <AccordionContent className="text-muted-foreground pb-6">
               Each conversational block takes under 10 minutes — minutes, not weeks. Most people complete it in a single
@@ -64,7 +64,7 @@ const FaqSection = () => (
 
           <AccordionItem value="measured" className="bg-card rounded-lg px-6 border-none shadow-card">
             <AccordionTrigger className="text-left hover:no-underline py-6 min-h-[44px]">
-              <span className="font-heading font-semibold text-foreground">What does Wiselook actually measure?</span>
+              <span className="font-heading font-semibold text-heading">What does Wiselook actually measure?</span>
             </AccordionTrigger>
             <AccordionContent className="text-muted-foreground pb-6">
               Judgment, behavior, and competence — not personality types. Scoring methods were developed with
@@ -74,7 +74,7 @@ const FaqSection = () => (
 
           <AccordionItem value="security" className="bg-card rounded-lg px-6 border-none shadow-card">
             <AccordionTrigger className="text-left hover:no-underline py-6 min-h-[44px]">
-              <span className="font-heading font-semibold text-foreground">
+              <span className="font-heading font-semibold text-heading">
                 Is it enterprise-ready for security and privacy?
               </span>
             </AccordionTrigger>
@@ -87,7 +87,7 @@ const FaqSection = () => (
 
           <AccordionItem value="outcomes" className="bg-card rounded-lg px-6 border-none shadow-card">
             <AccordionTrigger className="text-left hover:no-underline py-6 min-h-[44px]">
-              <span className="font-heading font-semibold text-foreground">
+              <span className="font-heading font-semibold text-heading">
                 What outcomes can we expect and how do we start?
               </span>
             </AccordionTrigger>

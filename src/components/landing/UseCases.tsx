@@ -12,6 +12,17 @@ interface UseCase {
 
 const useCases: UseCase[] = [
   {
+    value: "hiring",
+    tab: "Hiring",
+    heading: "Hire on evidence, not impressions",
+    body: "Interviews reward people who interview well. Claire assesses every candidate against the competencies the role actually demands, in the same structured conversation, so the hiring decision rests on comparable evidence of judgment and behavior — before the offer goes out.",
+    bullets: [
+      "Every candidate measured against the same role rubric",
+      "Evidence of how people think and act, not how they self-present",
+      "Comparable results across interviewers, panels, and locations",
+    ],
+  },
+  {
     value: "succession",
     tab: "Succession",
     heading: "Know who is actually ready",
@@ -51,21 +62,24 @@ const UseCases = () => (
     <div className="container mx-auto px-6">
       <div className="max-w-4xl mx-auto space-y-10">
         <div className="text-center space-y-4">
-          <h2 className="font-heading font-bold text-3xl md:text-4xl text-foreground">
-            Three decisions Wiselook is built for
+          <h2 className="font-heading font-bold text-3xl md:text-4xl text-heading heading-accent">
+            Four decisions Wiselook is built for
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            Succession, internal mobility, and development — one evidence base, three different questions.
+            Hiring, succession, internal mobility, and development — one evidence base, four different questions.
           </p>
         </div>
 
         <Tabs defaultValue={useCases[0].value} className="w-full">
-          <TabsList className="grid h-auto w-full grid-cols-3 gap-1">
+          <TabsList className="grid h-auto w-full grid-cols-2 gap-1 sm:grid-cols-4">
             {useCases.map((useCase) => (
               <TabsTrigger
                 key={useCase.value}
                 value={useCase.value}
-                className="min-h-[44px] whitespace-normal px-2 py-2 font-heading text-xs sm:text-sm"
+                // Inset bottom bar in the accent colour marks the selected tab, so
+                // the active state is signalled by hue as well as by the white pill.
+                // Inset (not border-b) keeps it inside the pill's rounded corners.
+                className="min-h-[44px] whitespace-normal px-2 py-2 font-heading text-xs data-[state=active]:shadow-[0_1px_2px_0_rgb(0_0_0/0.05),inset_0_-3px_0_hsl(var(--brand-accent))] sm:text-sm"
               >
                 {useCase.tab}
               </TabsTrigger>
@@ -76,7 +90,7 @@ const UseCases = () => (
             <TabsContent key={useCase.value} value={useCase.value} className="mt-6">
               <Card className="border-none bg-background shadow-card">
                 <CardHeader>
-                  <CardTitle className="font-heading text-xl md:text-2xl text-foreground">{useCase.heading}</CardTitle>
+                  <CardTitle className="font-heading text-xl md:text-2xl text-heading">{useCase.heading}</CardTitle>
                 </CardHeader>
                 <CardContent className="space-y-6">
                   <p className="text-muted-foreground">{useCase.body}</p>

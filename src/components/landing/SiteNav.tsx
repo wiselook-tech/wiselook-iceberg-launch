@@ -1,7 +1,14 @@
 import { useRef, useState } from "react";
 import { ArrowRight, Menu } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { Sheet, SheetContent, SheetHeader, SheetTitle, SheetTrigger } from "@/components/ui/sheet";
+import {
+  Sheet,
+  SheetContent,
+  SheetDescription,
+  SheetHeader,
+  SheetTitle,
+  SheetTrigger,
+} from "@/components/ui/sheet";
 import { CALENDAR_URL, trackCtaClick } from "@/lib/constants";
 import { scrollToSection } from "@/lib/scroll";
 import wiselookIcon from "@/assets/Wiselook_RGB_Iso_Positive_Color.svg";
@@ -62,7 +69,7 @@ const SiteNav = () => {
               loading="eager"
               decoding="async"
             />
-            <span className="font-heading font-bold text-xl text-foreground">Wiselook</span>
+            <span className="font-heading font-bold text-xl text-heading">Wiselook</span>
           </button>
 
           <div className="hidden md:flex items-center gap-6 lg:gap-8">
@@ -79,7 +86,7 @@ const SiteNav = () => {
 
           <div className="hidden md:flex items-center gap-3">
             <Button variant="hero" size="sm" className="group" onClick={() => openCalendar("nav")}>
-              Book a 30-min demo
+              Talk to us
               <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
             </Button>
           </div>
@@ -94,6 +101,11 @@ const SiteNav = () => {
             <SheetContent side="right" className="w-[280px] sm:w-[320px]" onCloseAutoFocus={handleMenuClosed}>
               <SheetHeader>
                 <SheetTitle className="font-heading">Menu</SheetTitle>
+                {/* Radix warns when a dialog has no description; this also gives
+                    screen readers the panel's purpose beyond the "Menu" title. */}
+                <SheetDescription className="sr-only">
+                  Site sections and a link to book a conversation with the Wiselook team.
+                </SheetDescription>
               </SheetHeader>
               <div className="mt-6 flex flex-col gap-1">
                 {navLinks.map((link) => (
@@ -114,7 +126,7 @@ const SiteNav = () => {
                     openCalendar("nav-mobile");
                   }}
                 >
-                  Book a 30-min demo
+                  Talk to us
                   <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
                 </Button>
               </div>

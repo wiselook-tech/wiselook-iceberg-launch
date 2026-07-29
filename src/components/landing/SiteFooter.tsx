@@ -20,7 +20,7 @@ const SiteFooter = () => (
             decoding="async"
           />
           <div>
-            <p className="font-heading font-bold text-xl text-foreground">Wiselook</p>
+            <p className="font-heading font-bold text-xl text-heading">Wiselook</p>
             <p className="text-sm text-muted-foreground mt-1">The measurement layer for people decisions.</p>
           </div>
         </div>

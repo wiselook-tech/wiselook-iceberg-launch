@@ -2,7 +2,7 @@ import { useHashScroll } from "@/hooks/use-hash-scroll";
 import { useRevealOnScroll } from "@/hooks/use-reveal-on-scroll";
 import SiteNav from "@/components/landing/SiteNav";
 import HeroSection from "@/components/landing/HeroSection";
-import ProofStrip from "@/components/landing/ProofStrip";
+import AwardsSection from "@/components/landing/AwardsSection";
 import ProblemSection from "@/components/landing/ProblemSection";
 import HowItWorks from "@/components/landing/HowItWorks";
 import UseCases from "@/components/landing/UseCases";
@@ -11,6 +11,7 @@ import SecuritySection from "@/components/landing/SecuritySection";
 import TeamSection from "@/components/landing/TeamSection";
 import FaqSection from "@/components/landing/FaqSection";
 import ContactCta from "@/components/landing/ContactCta";
+import RecognizedBy from "@/components/landing/RecognizedBy";
 import SiteFooter from "@/components/landing/SiteFooter";
 import StickyCta from "@/components/landing/StickyCta";
 
@@ -31,7 +32,7 @@ const Index = () => {
 
       <main id="main-content" tabIndex={-1} className="focus:outline-none">
         <HeroSection />
-        <ProofStrip />
+        <AwardsSection />
         <ProblemSection />
         <HowItWorks />
         <UseCases />
@@ -40,6 +41,7 @@ const Index = () => {
         <TeamSection />
         <FaqSection />
         <ContactCta />
+        <RecognizedBy />
       </main>
 
       <SiteFooter />

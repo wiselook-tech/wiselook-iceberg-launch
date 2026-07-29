@@ -32,6 +32,18 @@ All colors MUST be HSL.
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 0 0% 100%;
 
+    /* Deep navy-purple (#170b6b). The product UI uses it for every heading and
+       for the wordmark; the site follows so both read as the same brand. */
+    --heading: 248 81% 23%;
+
+    /* Second brand color (#ff9966). Carries the warm half of the identity:
+       heading rules, icon chips, badges, and the Wiselook marker on the
+       competitor chart. Use it as a FILL with --brand-accent-foreground (navy)
+       on top — that pairing measures 7.72:1. Never as a text or icon color
+       directly on a light surface, where it only reaches ~2.1:1. */
+    --brand-accent: 20 100% 70%;
+    --brand-accent-foreground: 248 81% 23%;
+
     --border: 0 0% 92.5%;
     --input: 0 0% 92.5%;
     --ring: 246 100% 55%;
@@ -68,35 +80,6 @@ All colors MUST be HSL.
     --sidebar-ring: 217.2 91.2% 59.8%;
   }
 
-  .dark {
-    --background: 0 0% 5%;
-    --foreground: 0 0% 98%;
-
-    --card: 0 0% 8%;
-    --card-foreground: 0 0% 98%;
-
-    --popover: 0 0% 5%;
-    --popover-foreground: 0 0% 98%;
-
-    --primary: 246 100% 55%;
-    --primary-foreground: 0 0% 100%;
-
-    --secondary: 217 100% 76%;
-    --secondary-foreground: 0 0% 0%;
-
-    --muted: 0 0% 15%;
-    --muted-foreground: 0 0% 60%;
-
-    --accent: 221 100% 85%;
-    --accent-foreground: 0 0% 0%;
-
-    --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 0 0% 98%;
-
-    --border: 0 0% 15%;
-    --input: 0 0% 15%;
-    --ring: 246 100% 55%;
-  }
 }
 
 @layer base {
@@ -111,6 +94,25 @@ All colors MUST be HSL.
   html {
     scroll-behavior: smooth;
   }
+}
+
+/* Short bar in the second brand color (#ff9966), sat under a section heading to
+   give each section boundary a warm beat against the otherwise all-blue page.
+   Purely decorative: the accent never carries text, because #ff9966 on white is
+   ~2.1:1 and would fail WCAG AA as a text color. Centred by default, since most
+   section headings on this page are; use .heading-accent-start to left-align. */
+.heading-accent::after {
+  content: "";
+  display: block;
+  width: 3.5rem;
+  height: 4px;
+  margin: 1rem auto 0;
+  border-radius: 999px;
+  background-color: hsl(var(--brand-accent));
+}
+
+.heading-accent-start::after {
+  margin-inline: 0;
 }
 
 /* Scroll-triggered reveal */

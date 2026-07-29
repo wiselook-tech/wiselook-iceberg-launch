@@ -22,7 +22,7 @@ const NotFound = () => {
         decoding="async"
       />
       <div className="space-y-2">
-        <h1 className="font-heading text-5xl font-bold text-foreground">404</h1>
+        <h1 className="font-heading text-5xl font-bold text-heading">404</h1>
         <p className="text-xl text-muted-foreground">Oops! This page doesn't exist.</p>
       </div>
       <Button asChild variant="hero" size="lg">

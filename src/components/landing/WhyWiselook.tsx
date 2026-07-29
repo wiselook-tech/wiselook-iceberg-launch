@@ -1,6 +1,6 @@
 import { Brain, Users } from "lucide-react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import ComparisonTable from "@/components/landing/ComparisonTable";
+import CompetitorQuadrant from "@/components/landing/CompetitorQuadrant";
 
 const cardClass = "border-none bg-background shadow-card";
 const iconWrapper = "h-12 w-12 rounded-lg flex items-center justify-center";
@@ -9,13 +9,13 @@ const WhyWiselook = () => (
   <section className="scroll-reveal py-20 md:py-28 bg-background">
     <div className="container mx-auto px-6 space-y-16">
       <div className="max-w-4xl mx-auto space-y-12">
-        <h2 className="font-heading font-bold text-3xl md:text-4xl text-center text-foreground">Why Wiselook</h2>
+        <h2 className="font-heading font-bold text-3xl md:text-4xl text-center text-heading heading-accent">Why Wiselook</h2>
 
         <div className="grid md:grid-cols-2 gap-8">
           <Card className={cardClass}>
             <CardHeader className="space-y-4">
-              <div className={`${iconWrapper} bg-primary/10`}>
-                <svg className="h-6 w-6 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <div className={`${iconWrapper} bg-brand-accent`}>
+                <svg className="h-6 w-6 text-brand-accent-foreground" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path
                     strokeLinecap="round"
                     strokeLinejoin="round"
@@ -24,7 +24,7 @@ const WhyWiselook = () => (
                   />
                 </svg>
               </div>
-              <CardTitle className="font-heading text-xl text-foreground">Adapt to your culture</CardTitle>
+              <CardTitle className="font-heading text-xl text-heading">Adapt to your culture</CardTitle>
             </CardHeader>
             <CardContent>
               <p className="text-muted-foreground">
@@ -35,8 +35,8 @@ const WhyWiselook = () => (
 
           <Card className={cardClass}>
             <CardHeader className="space-y-4">
-              <div className={`${iconWrapper} bg-secondary/20`}>
-                <svg className="h-6 w-6 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <div className={`${iconWrapper} bg-brand-accent`}>
+                <svg className="h-6 w-6 text-brand-accent-foreground" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path
                     strokeLinecap="round"
                     strokeLinejoin="round"
@@ -45,7 +45,7 @@ const WhyWiselook = () => (
                   />
                 </svg>
               </div>
-              <CardTitle className="font-heading text-xl text-foreground">
+              <CardTitle className="font-heading text-xl text-heading">
                 Conversational, inclusive assessment
               </CardTitle>
             </CardHeader>
@@ -56,10 +56,10 @@ const WhyWiselook = () => (
 
           <Card className={cardClass}>
             <CardHeader className="space-y-4">
-              <div className={`${iconWrapper} bg-primary/10`}>
-                <Users className="h-6 w-6 text-primary" />
+              <div className={`${iconWrapper} bg-brand-accent`}>
+                <Users className="h-6 w-6 text-brand-accent-foreground" />
               </div>
-              <CardTitle className="font-heading text-xl text-foreground">Frictionless scale</CardTitle>
+              <CardTitle className="font-heading text-xl text-heading">Frictionless scale</CardTitle>
             </CardHeader>
             <CardContent>
               <p className="text-muted-foreground">
@@ -70,10 +70,10 @@ const WhyWiselook = () => (
 
           <Card className={cardClass}>
             <CardHeader className="space-y-4">
-              <div className={`${iconWrapper} bg-secondary/20`}>
-                <Brain className="h-6 w-6 text-primary" />
+              <div className={`${iconWrapper} bg-brand-accent`}>
+                <Brain className="h-6 w-6 text-brand-accent-foreground" />
               </div>
-              <CardTitle className="font-heading text-xl text-foreground">Predictive, decision-ready insight</CardTitle>
+              <CardTitle className="font-heading text-xl text-heading">Predictive, decision-ready insight</CardTitle>
             </CardHeader>
             <CardContent>
               <p className="text-muted-foreground">
@@ -86,17 +86,8 @@ const WhyWiselook = () => (
         </div>
       </div>
 
-      {/* Wiselook vs. the alternatives */}
-      <div className="max-w-5xl mx-auto space-y-8">
-        <div className="max-w-2xl mx-auto text-center space-y-4">
-          <h3 className="font-heading font-bold text-2xl md:text-3xl text-foreground">
-            Wiselook vs. traditional assessments
-          </h3>
-          <p className="text-muted-foreground">Objective evidence, at scale — that's the gap we exist to close.</p>
-        </div>
-
-        <ComparisonTable />
-      </div>
+      {/* Where Wiselook sits against the alternatives */}
+      <CompetitorQuadrant />
     </div>
   </section>
 );
