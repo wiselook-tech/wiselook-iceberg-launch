@@ -148,7 +148,7 @@ const SecuritySection = () => (
     <div className="container mx-auto px-6">
       <div className="max-w-6xl mx-auto space-y-12">
         <div className="text-center space-y-8">
-          <h2 className="font-heading font-bold text-3xl md:text-4xl text-heading">
+          <h2 className="font-heading font-bold text-3xl md:text-4xl text-heading heading-accent">
             Enterprise‑grade security and privacy
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">

@@ -228,9 +228,18 @@ const CompetitorQuadrant = () => {
                       onBlur={hide}
                       className="cursor-pointer focus:outline-none"
                     >
-                      {/* Halo effect for Wiselook */}
+                      {/* Halo effect for Wiselook. The marker uses the second brand
+                          colour so "us" separates from the grey field by hue, not
+                          just by size — the one spot on the chart that should pop. */}
                       {isWiselook && (
-                        <circle cx={x} cy={y} r="12" fill="hsl(var(--primary))" opacity="0.2" filter="url(#halo)" />
+                        <circle
+                          cx={x}
+                          cy={y}
+                          r="12"
+                          fill="hsl(var(--brand-accent))"
+                          opacity="0.25"
+                          filter="url(#halo)"
+                        />
                       )}
 
                       {/* Larger invisible hit/focus area */}
@@ -257,8 +266,8 @@ const CompetitorQuadrant = () => {
                         cx={x}
                         cy={y}
                         r={isWiselook ? "8" : "6"}
-                        fill={isWiselook ? "hsl(var(--primary))" : "hsl(var(--muted-foreground))"}
-                        stroke={isWiselook ? "hsl(var(--primary))" : "#374151"}
+                        fill={isWiselook ? "hsl(var(--brand-accent))" : "hsl(var(--muted-foreground))"}
+                        stroke={isWiselook ? "hsl(var(--heading))" : "#374151"}
                         strokeWidth={isWiselook ? "2" : "1"}
                         // Without fill-box the scale would pull the marker toward
                         // the SVG origin instead of growing it in place.
@@ -271,9 +280,11 @@ const CompetitorQuadrant = () => {
                         x={x}
                         y={y - 15}
                         textAnchor="middle"
+                        // The label stays dark: #ff9966 as text would only reach
+                        // ~2.1:1 on this surface. The marker carries the accent.
                         className={`text-xs transition-all duration-200 ${
-                          isWiselook ? "fill-primary" : "fill-gray-700"
-                        } ${isActive ? "font-semibold" : "font-medium"}`}
+                          isWiselook ? "fill-heading" : "fill-gray-700"
+                        } ${isWiselook || isActive ? "font-semibold" : "font-medium"}`}
                         style={{ fontSize: isWiselook ? "13px" : "12px" }}
                       >
                         {competitor.label}

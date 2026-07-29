@@ -6,7 +6,7 @@ const ContactCta = () => (
   <section id="contact" className="scroll-reveal py-20 md:py-28 bg-gradient-hero scroll-mt-20">
     <div className="container mx-auto px-6">
       <div className="max-w-3xl mx-auto text-center space-y-8">
-        <h2 className="font-heading font-bold text-3xl md:text-4xl text-heading">
+        <h2 className="font-heading font-bold text-3xl md:text-4xl text-heading heading-accent">
           See your talent map in 30 minutes
         </h2>
         <p className="text-lg text-muted-foreground">

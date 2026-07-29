@@ -92,6 +92,25 @@ All colors MUST be HSL.
   }
 }
 
+/* Short bar in the second brand color (#ff9966), sat under a section heading to
+   give each section boundary a warm beat against the otherwise all-blue page.
+   Purely decorative: the accent never carries text, because #ff9966 on white is
+   ~2.1:1 and would fail WCAG AA as a text color. Centred by default, since most
+   section headings on this page are; use .heading-accent-start to left-align. */
+.heading-accent::after {
+  content: "";
+  display: block;
+  width: 2.5rem;
+  height: 3px;
+  margin: 0.875rem auto 0;
+  border-radius: 999px;
+  background-color: hsl(var(--brand-accent));
+}
+
+.heading-accent-start::after {
+  margin-inline: 0;
+}
+
 /* Scroll-triggered reveal */
 .scroll-reveal {
   opacity: 0;

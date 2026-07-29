@@ -22,9 +22,13 @@ const AwardsSection = () => (
     <div className="container mx-auto px-6">
       <div className="mx-auto max-w-6xl space-y-12">
         <div className="space-y-4 text-center">
-          <div className="inline-flex items-center gap-2 rounded-full bg-primary/10 px-4 py-2">
-            <Award className="h-5 w-5 text-primary" />
-            <span className="font-heading text-sm font-medium uppercase tracking-wider text-primary">Award winner</span>
+          {/* Recognition reads warm rather than product-blue. Navy-on-#ff9966
+              clears WCAG AA, which orange text on the page background would not. */}
+          <div className="inline-flex items-center gap-2 rounded-full bg-brand-accent px-4 py-2">
+            <Award className="h-5 w-5 text-brand-accent-foreground" />
+            <span className="font-heading text-sm font-medium uppercase tracking-wider text-brand-accent-foreground">
+              Award winner
+            </span>
           </div>
           <h2 className="font-heading text-3xl font-bold text-heading md:text-4xl">
             Winner, HR Innovation Summit 2025 — Startup of the Year

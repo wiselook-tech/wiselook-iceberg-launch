@@ -62,7 +62,7 @@ const UseCases = () => (
     <div className="container mx-auto px-6">
       <div className="max-w-4xl mx-auto space-y-10">
         <div className="text-center space-y-4">
-          <h2 className="font-heading font-bold text-3xl md:text-4xl text-heading">
+          <h2 className="font-heading font-bold text-3xl md:text-4xl text-heading heading-accent">
             Four decisions Wiselook is built for
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
@@ -76,7 +76,10 @@ const UseCases = () => (
               <TabsTrigger
                 key={useCase.value}
                 value={useCase.value}
-                className="min-h-[44px] whitespace-normal px-2 py-2 font-heading text-xs sm:text-sm"
+                // Inset bottom bar in the accent colour marks the selected tab, so
+                // the active state is signalled by hue as well as by the white pill.
+                // Inset (not border-b) keeps it inside the pill's rounded corners.
+                className="min-h-[44px] whitespace-normal px-2 py-2 font-heading text-xs data-[state=active]:shadow-[0_1px_2px_0_rgb(0_0_0/0.05),inset_0_-3px_0_hsl(var(--brand-accent))] sm:text-sm"
               >
                 {useCase.tab}
               </TabsTrigger>

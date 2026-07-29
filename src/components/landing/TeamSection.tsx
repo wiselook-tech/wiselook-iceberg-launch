@@ -47,7 +47,7 @@ const TeamSection = () => (
     <div className="container mx-auto px-6">
       <div className="max-w-6xl mx-auto space-y-12">
         <div className="text-center space-y-4">
-          <h2 className="font-heading font-bold text-3xl md:text-4xl text-heading">About Us</h2>
+          <h2 className="font-heading font-bold text-3xl md:text-4xl text-heading heading-accent">About Us</h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
             Wiselook is the measurement layer for people decisions — helping organizations recognize and develop talent
             through structured, AI-led conversations delivered on Microsoft Teams, web, or embedded.

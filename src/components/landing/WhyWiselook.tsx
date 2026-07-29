@@ -9,7 +9,7 @@ const WhyWiselook = () => (
   <section className="scroll-reveal py-20 md:py-28 bg-background">
     <div className="container mx-auto px-6 space-y-16">
       <div className="max-w-4xl mx-auto space-y-12">
-        <h2 className="font-heading font-bold text-3xl md:text-4xl text-center text-heading">Why Wiselook</h2>
+        <h2 className="font-heading font-bold text-3xl md:text-4xl text-center text-heading heading-accent">Why Wiselook</h2>
 
         <div className="grid md:grid-cols-2 gap-8">
           <Card className={cardClass}>
