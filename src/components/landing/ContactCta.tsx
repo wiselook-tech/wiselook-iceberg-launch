@@ -10,8 +10,8 @@ const ContactCta = () => (
           See your talent map in 30 minutes
         </h2>
         <p className="text-lg text-muted-foreground">
-          Bring a real decision — a succession slate, a mobility round, a development cohort — and we'll show you the
-          evidence Claire produces for it.
+          Bring a real decision — a hiring shortlist, a succession slate, a mobility round, a development cohort — and
+          we'll show you the evidence Claire produces for it.
         </p>
         <div className="flex flex-col items-center gap-3">
           <Button

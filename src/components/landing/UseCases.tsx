@@ -12,6 +12,17 @@ interface UseCase {
 
 const useCases: UseCase[] = [
   {
+    value: "hiring",
+    tab: "Hiring",
+    heading: "Hire on evidence, not impressions",
+    body: "Interviews reward people who interview well. Claire assesses every candidate against the competencies the role actually demands, in the same structured conversation, so the hiring decision rests on comparable evidence of judgment and behavior — before the offer goes out.",
+    bullets: [
+      "Every candidate measured against the same role rubric",
+      "Evidence of how people think and act, not how they self-present",
+      "Comparable results across interviewers, panels, and locations",
+    ],
+  },
+  {
     value: "succession",
     tab: "Succession",
     heading: "Know who is actually ready",
@@ -52,15 +63,15 @@ const UseCases = () => (
       <div className="max-w-4xl mx-auto space-y-10">
         <div className="text-center space-y-4">
           <h2 className="font-heading font-bold text-3xl md:text-4xl text-heading">
-            Three decisions Wiselook is built for
+            Four decisions Wiselook is built for
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            Succession, internal mobility, and development — one evidence base, three different questions.
+            Hiring, succession, internal mobility, and development — one evidence base, four different questions.
           </p>
         </div>
 
         <Tabs defaultValue={useCases[0].value} className="w-full">
-          <TabsList className="grid h-auto w-full grid-cols-3 gap-1">
+          <TabsList className="grid h-auto w-full grid-cols-2 gap-1 sm:grid-cols-4">
             {useCases.map((useCase) => (
               <TabsTrigger
                 key={useCase.value}
