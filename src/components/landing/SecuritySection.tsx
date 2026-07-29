@@ -154,11 +154,23 @@ const SecuritySection = () => (
 
           {/* Certification imagery */}
           <div className="flex items-center justify-center gap-8 flex-wrap pt-4">
-            <img src={gdprLogo} alt="GDPR-ready" className="h-16 opacity-80 hover:opacity-100 transition-opacity" />
+            <img
+              src={gdprLogo}
+              alt="GDPR-ready"
+              className="h-16 opacity-80 hover:opacity-100 transition-opacity"
+              width={128}
+              height={64}
+              loading="lazy"
+              decoding="async"
+            />
             <img
               src={euAiActLogo}
               alt="Built for the EU AI Act"
               className="h-16 opacity-80 hover:opacity-100 transition-opacity"
+              width={128}
+              height={64}
+              loading="lazy"
+              decoding="async"
             />
           </div>
         </div>

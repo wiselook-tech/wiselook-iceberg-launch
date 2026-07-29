@@ -6,7 +6,7 @@ const cardClass = "border-none bg-background shadow-card";
 const iconWrapper = "h-12 w-12 rounded-lg flex items-center justify-center";
 
 const WhyWiselook = () => (
-  <section className="py-20 md:py-28 bg-background">
+  <section className="scroll-reveal py-20 md:py-28 bg-background">
     <div className="container mx-auto px-6 space-y-16">
       <div className="max-w-4xl mx-auto space-y-12">
         <h2 className="font-heading font-bold text-3xl md:text-4xl text-center text-foreground">Why Wiselook</h2>

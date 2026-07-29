@@ -9,7 +9,15 @@ const SiteFooter = () => (
     <div className="container mx-auto px-6">
       <div className="flex flex-col md:flex-row justify-between items-center gap-6">
         <div className="text-center md:text-left flex items-center gap-3">
-          <img src={wiselookIcon} alt="Wiselook" className="h-10 w-10" />
+          <img
+            src={wiselookIcon}
+            alt="Wiselook"
+            className="h-10 w-10"
+            width={40}
+            height={40}
+            loading="lazy"
+            decoding="async"
+          />
           <div>
             <p className="font-heading font-bold text-xl text-foreground">Wiselook</p>
             <p className="text-sm text-muted-foreground mt-1">The measurement layer for people decisions.</p>

@@ -16,7 +16,15 @@ const Support = () => {
               onClick={() => navigate("/")}
               className="flex items-center gap-3 hover:opacity-80 transition-opacity"
             >
-              <img src={wiselookIcon} alt="Wiselook" className="h-8 w-8" />
+              <img
+                src={wiselookIcon}
+                alt="Wiselook"
+                className="h-8 w-8"
+                width={32}
+                height={32}
+                loading="eager"
+                decoding="async"
+              />
               <span className="font-heading font-bold text-xl text-foreground">Wiselook</span>
             </button>
             <Button 

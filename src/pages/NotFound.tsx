@@ -12,7 +12,15 @@ const NotFound = () => {
 
   return (
     <div className="flex min-h-screen flex-col items-center justify-center gap-6 bg-background px-6 text-center font-body">
-      <img src={wiselookIcon} alt="Wiselook" className="h-12 w-12" />
+      <img
+        src={wiselookIcon}
+        alt="Wiselook"
+        className="h-12 w-12"
+        width={48}
+        height={48}
+        loading="eager"
+        decoding="async"
+      />
       <div className="space-y-2">
         <h1 className="font-heading text-5xl font-bold text-foreground">404</h1>
         <p className="text-xl text-muted-foreground">Oops! This page doesn't exist.</p>

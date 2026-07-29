@@ -1,6 +1,6 @@
 import { Badge } from "@/components/ui/badge";
 import { Separator } from "@/components/ui/separator";
-import hrSummitAward from "@/assets/hr_summit/WhatsApp Image 2025-10-06 at 11.24.31.jpeg";
+import hrSummitAward from "@/assets/hr_summit/hr-summit-award.webp";
 import enisaCertificada from "@/assets/enisa-certificada.png";
 import fueLogo from "@/assets/fue-logo.png";
 import celeraLogo from "@/assets/celera-logo.svg";
@@ -12,24 +12,32 @@ const recognizedBy = [
     src: enisaCertificada,
     alt: "Empresa Emergente Certificada por ENISA",
     title: "Empresa Emergente Certificada por ENISA (Ley 28/2022)",
+    width: 98,
+    height: 72,
   },
   {
     href: "https://fundacionuniversidadempresa.es/",
     src: fueLogo,
     alt: "Fundación Universidad Empresa",
     title: "Fundación Universidad Empresa",
+    width: 200,
+    height: 47,
   },
   {
     href: "https://acelerame.org/",
     src: celeraLogo,
     alt: "Fundación Celera",
     title: "Fundación Celera",
+    width: 127,
+    height: 36,
   },
   {
     href: "https://www.incibe.es/incibe-emprende",
     src: incibeEmprendeLogo,
     alt: "INCIBE Emprende Ventures",
     title: "Sello Ventures INCIBE Emprende",
+    width: 72,
+    height: 72,
   },
 ];
 
@@ -44,7 +52,10 @@ const ProofStrip = () => (
             src={hrSummitAward}
             alt="Wiselook team receiving the HR Innovation Summit 2025 award"
             className="h-10 w-10 rounded-full object-cover grayscale"
-            loading="lazy"
+            width={136}
+            height={80}
+            loading="eager"
+            decoding="async"
           />
           <Badge variant="secondary" className="font-heading uppercase tracking-wider">
             Award winner
@@ -79,7 +90,10 @@ const ProofStrip = () => (
                 alt={logo.alt}
                 title={logo.title}
                 className="h-9 w-auto opacity-50 grayscale transition-all duration-200 hover:opacity-80 hover:grayscale-[50%]"
-                loading="lazy"
+                width={logo.width}
+                height={logo.height}
+                loading="eager"
+                decoding="async"
               />
             </a>
           ))}

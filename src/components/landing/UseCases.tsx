@@ -47,7 +47,7 @@ const useCases: UseCase[] = [
 ];
 
 const UseCases = () => (
-  <section id="use-cases" className="py-20 md:py-28 bg-background scroll-mt-20">
+  <section id="use-cases" className="scroll-reveal py-20 md:py-28 bg-background scroll-mt-20">
     <div className="container mx-auto px-6">
       <div className="max-w-4xl mx-auto space-y-10">
         <div className="text-center space-y-4">
