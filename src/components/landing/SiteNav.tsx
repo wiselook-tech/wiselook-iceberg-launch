@@ -1,7 +1,14 @@
 import { useRef, useState } from "react";
 import { ArrowRight, Menu } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { Sheet, SheetContent, SheetHeader, SheetTitle, SheetTrigger } from "@/components/ui/sheet";
+import {
+  Sheet,
+  SheetContent,
+  SheetDescription,
+  SheetHeader,
+  SheetTitle,
+  SheetTrigger,
+} from "@/components/ui/sheet";
 import { CALENDAR_URL, trackCtaClick } from "@/lib/constants";
 import { scrollToSection } from "@/lib/scroll";
 import wiselookIcon from "@/assets/Wiselook_RGB_Iso_Positive_Color.svg";
@@ -94,6 +101,11 @@ const SiteNav = () => {
             <SheetContent side="right" className="w-[280px] sm:w-[320px]" onCloseAutoFocus={handleMenuClosed}>
               <SheetHeader>
                 <SheetTitle className="font-heading">Menu</SheetTitle>
+                {/* Radix warns when a dialog has no description; this also gives
+                    screen readers the panel's purpose beyond the "Menu" title. */}
+                <SheetDescription className="sr-only">
+                  Site sections and a link to book a conversation with the Wiselook team.
+                </SheetDescription>
               </SheetHeader>
               <div className="mt-6 flex flex-col gap-1">
                 {navLinks.map((link) => (
