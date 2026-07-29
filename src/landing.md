@@ -1,170 +1,24 @@
-### Wiselook landing — sitemap and concise copy (v1 per guidance)
+# Landing page map
 
-**Status: ✅ FULLY IMPLEMENTED** - All sections have been built and deployed
+Copy for every section lives inline in its component under `src/components/landing/`
+— that's the source of truth for page content, not this file. This is just a pointer
+to where each section lives, in the order they render on `/` (see `src/pages/Index.tsx`).
 
----
+| Section (anchor)                   | Component                                                                |
+| ----------------------------------- | ------------------------------------------------------------------------- |
+| Nav                                 | `SiteNav.tsx`                                                            |
+| Hero                                 | `HeroSection.tsx` (+ `ClaireChatMock.tsx`)                               |
+| Proof strip                         | `ProofStrip.tsx`                                                         |
+| Problem (`#problem`)                | `ProblemSection.tsx` (+ `TalentPyramid.tsx`)                             |
+| How it works (`#how-it-works`)      | `HowItWorks.tsx`                                                         |
+| Use cases (`#use-cases`)            | `UseCases.tsx`                                                           |
+| Why Wiselook                        | `WhyWiselook.tsx` (includes the comparison table via `ComparisonTable.tsx`) |
+| Security and privacy (`#security`)  | `SecuritySection.tsx`                                                    |
+| Team / About (`#about`)             | `TeamSection.tsx`                                                        |
+| FAQ                                  | `FaqSection.tsx`                                                         |
+| Contact (`#contact`)                | `ContactCta.tsx`                                                         |
+| Footer                               | `SiteFooter.tsx`                                                         |
+| Mobile sticky CTA                   | `StickyCta.tsx` (rendered inside `Index.tsx`)                            |
+| Cookie banner                       | `CookieConsent.tsx` (rendered in `App.tsx`, on every route)              |
 
-### Targets and stance
-
-- Audiences: HR leaders and VC investors
-- Positioning: Practical outcomes with a clear, science‑based approach scaled by AI
-- Primary CTA: Book a 30-min demo
-
----
-
-### Sitemap (current)
-
-- Home
-    - Hero (headline, subhead, Claire chat mock)
-    - Proof strip (award, "Recognized by" logos, UAM methodology line)
-    - Problem (Go beyond multiple‑choice tests) + talent pyramid
-    - How it works (Assess / Analyse / Act)
-    - Use cases (tabs: succession, internal mobility, development)
-    - Why Wiselook (4 benefits) + Wiselook vs. traditional assessments table
-    - Security and privacy (dark band: 3 commitments + full-posture accordion)
-    - About Us / team
-    - FAQ
-    - Contact (final CTA)
-    - Footer
-
-Anchors: `#home`, `#problem`, `#how-it-works`, `#use-cases`, `#security`, `#about`, `#contact`.
-
----
-
-### Home — concise copy (v1 deck, superseded by the implemented copy)
-
-### Hero
-
-- Headline: Discover your talent in minutes, not weeks
-- Subhead: Uncover hidden potential with science-backed, conversational assessments delivered natively in your system, ready to deploy and scale. Predictive soft-skills intelligence for succession planning, mobility, and workforce decisions.
-- Primary CTA: Book a 30-min demo
-
-### Proof and awards
-
-- Winner, HR Innovation Summit — Startup of the Year.[[1]](https://www.rrhhdigital.com/secciones/eventos-rrhhdigital/781586/hr-innovation-summit-2025-mas-talento-mas-ideas-y-una-asistencia-record/)
-- Academic collaboration and validation
-- Industry expertise and implementation
-
-### Problem (Go beyond multiple‑choice tests)
-
-- Headline: Go beyond multiple‑choice tests
-- Body: Most assessments only capture the obvious. The real skills, judgment, and potential stay invisible. It's time to see the whole picture.
-- Visual: Invisible Talent Pyramid showing three workforce layers (Execs, Best of Workforce, Line Workers) with "Human Skills get tested" and "Human Skills get debated" labels
-
-### Solution (How we solve it)
-
-- Headline: How we solve it
-- Intro: A short, conversational flow that captures real evidence and turns it into action.
-- Three-step process:
-    1. **Assess**: People answer brief, open‑ended prompts in their own words where they already work.
-    2. **Analyse**: Responses are evaluated against validated rubrics to surface skills, strengths, and potential.
-    3. **Act**: Managers and HR get clear, practical insights to make fair, faster talent decisions.
-
-### Approach and value
-
-- **Adapt to your culture**: Modular building blocks that adapt to each company's model, culture, and values
-- **Conversational, inclusive assessment**: AI-powered scale without making technology the headline, focusing on human potential
-- **Frictionless scale**: Native in Microsoft Teams drives higher completion and faster time-to-value vs. separate-platform tools
-- **Predictive intelligence**: Conversational SJT with psychometric rigor uncovers what people can actually do, not what they self-report
-- **Decision-ready insights**: Behavioral levels and readiness signals for succession and mobility, not just skills tags
-- **Enterprise‑grade privacy and security**: Built with security first
-
-### Competitor landscape
-
-- **Heading**: Competitor Landscape
-- **Context**: "Why this matters" - Most tools either rely on subjective judgement or don't scale. We combine validated, objective evidence with automation so organisations can make fair decisions at speed.
-- **Visual**: Interactive 2×2 quadrant positioning Wiselook in "Objective and High Scalability" quadrant
-- **Axes**: X-axis "Objectivity" (Subjective ↔ Objective), Y-axis "Scalability" (Low ↔ High)
-- **Competitors**: Neutral categories - Traditional Consulting, MCQ Assessments, Taxonomy Platforms, HR Suites, Point Tools
-- **Positioning**: Wiselook highlighted in top-right quadrant with primary theme color and halo effect
-- **Interactivity**: Hover states showing one-line descriptions for each category
-
-### Follow us on LinkedIn
-
-- Headline: Follow us on LinkedIn
-- Body: Stay updated with our latest insights on workforce intelligence and talent assessment.
-- CTA: Follow us on LinkedIn (with LinkedIn icon)
-
-### Security and privacy
-
-- Privacy‑first design with consent, RGPD controls, and Azure security
-
-### FAQ (short)
-
-- Do we need Microsoft Teams? Yes, Wiselook runs inside Teams.
-- Time to complete? Most flows finish in under 10 minutes.
-- Is it validated? Yes. Methods are developed with Universidad Autónoma de Madrid and calibrated over time.
-
-### CTA
-
-- Book a 30-min demo
-
----
-
-### Product — keep it aspirational
-
-- Inside your system for high adoption
-- Adaptive "bloques" to measure competencies with low friction
-- Insights that guide development and decisions
-- Emphasis on potential and growth, beyond résumé history
-
----
-
-### Initial slugs
-
-- Home → /
-- Product → /product
-- Security and privacy → /security
-- About Us → /about
-- Contact → /contact
-
----
-
-### Implementation Status
-
-**✅ COMPLETED SECTIONS:**
-- Hero section with headline, subhead, CTA, and Claire chat mock
-- Proof strip (award line, "Recognized by" logos, UAM methodology line)
-- Problem section with the static talent pyramid
-- How it works (Assess / Analyse / Act)
-- Use cases (tabs: succession, internal mobility, development)
-- Why Wiselook (4 benefits) and the Wiselook vs. traditional assessments table
-- Security and privacy as a dark band (3 commitments + full-posture accordion)
-- About section with team profiles
-- FAQ section (8 questions, mirrored in the FAQPage JSON-LD in index.html)
-- Contact section with calendar booking
-- Navigation header with smooth scrolling and a mobile Sheet menu
-- Mobile-responsive design, skip link, sticky mobile CTA
-- Footer with legal links
-
-**🎨 DESIGN FEATURES:**
-- Modern gradient backgrounds
-- Smooth animations and transitions
-- Mobile-first responsive design
-- Accessibility features (focus states, ARIA labels)
-- Professional typography with custom fonts
-- Interactive elements (accordions, buttons, hover effects)
-
-**📱 TECHNICAL IMPLEMENTATION:**
-- Built with React + TypeScript + Vite
-- Styled with Tailwind CSS + shadcn/ui components
-- Fully responsive design
-- Smooth scrolling navigation
-- External calendar integration (Google Calendar)
-- SEO-optimized structure
-
-**🚀 DEPLOYMENT:**
-- **Lovable**: https://lovable.dev/projects/426d3b4f-9f9a-4790-8f56-713cc8b8045b
-- **GitHub Pages**: https://wiselook-tech.github.io/wiselook-iceberg-launch/
-- Build commands: `npm run build` (Lovable) / `npm run build:github` (GitHub Pages)
-
-**📸 ASSETS INCLUDED:**
-- HR Innovation Summit award photos (2 images - team receiving award, presentation)
-- Wiselook logo and icon
-- Hero iceberg visualization
-- All images optimized and responsive
-
-**🔗 EXTERNAL LINKS:**
-- Calendar booking: https://calendar.app.google/EHMazdi37bBkGuwZ8
-- HR Innovation Summit announcement: https://www.rrhhdigital.com/secciones/eventos-rrhhdigital/781586/hr-innovation-summit-2025-mas-talento-mas-ideas-y-una-asistencia-record/
-- LinkedIn company page: https://www.linkedin.com/company/wiselook
+Other routes: `/support` (`src/pages/Support.tsx`), 404 (`src/pages/NotFound.tsx`).

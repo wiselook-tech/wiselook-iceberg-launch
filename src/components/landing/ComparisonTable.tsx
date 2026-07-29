@@ -15,7 +15,7 @@ const rows: ComparisonRow[] = [
   {
     factor: "Format",
     traditional: "Multiple-choice questionnaires",
-    consulting: "Interviews and assessment centres",
+    consulting: "Interviews and assessment centers",
     wiselook: "Structured conversation with Claire, our AI assessor",
   },
   {
@@ -44,7 +44,12 @@ const wiselookColumn = "border-x border-primary";
 
 /** Semantic comparison table; scrolls horizontally inside its wrapper on narrow screens. */
 const ComparisonTable = () => (
-  <div className="overflow-x-auto rounded-xl border border-border bg-background shadow-card">
+  <div
+    tabIndex={0}
+    role="region"
+    aria-label="Comparison table"
+    className="overflow-x-auto rounded-xl border border-border bg-background shadow-card"
+  >
     <table className="w-full min-w-[720px] border-collapse text-left">
       <caption className="sr-only">
         How Wiselook compares with traditional tests and consulting assessments.

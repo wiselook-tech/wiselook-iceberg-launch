@@ -1,10 +1,32 @@
+import { useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { ArrowLeft } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 import wiselookIcon from "@/assets/favicon.ico";
 
+const HOME_TITLE = "Wiselook | Evidence for People Decisions";
+const HOME_CANONICAL = "https://wiselook.ai/";
+
 const Support = () => {
   const navigate = useNavigate();
+
+  useEffect(() => {
+    const previousTitle = document.title;
+    const canonicalLink = document.querySelector<HTMLLinkElement>('link[rel="canonical"]');
+    const previousCanonical = canonicalLink?.href;
+
+    document.title = "Support | Wiselook";
+    if (canonicalLink) {
+      canonicalLink.href = "https://wiselook.ai/support";
+    }
+
+    return () => {
+      document.title = previousTitle || HOME_TITLE;
+      if (canonicalLink) {
+        canonicalLink.href = previousCanonical || HOME_CANONICAL;
+      }
+    };
+  }, []);
 
   return (
     <div className="min-h-screen bg-background font-body">
@@ -122,9 +144,6 @@ const Support = () => {
                 <h2 className="font-heading font-semibold text-2xl text-foreground mb-4">Contact Support</h2>
                 <p className="text-muted-foreground leading-relaxed mb-4">
                   For technical support or account issues, contact us at <a href="mailto:support@wiselook.ai" className="text-primary hover:underline">support@wiselook.ai</a>. We typically respond within 1–2 business days.
-                </p>
-                <p className="text-muted-foreground leading-relaxed">
-                  If you have a helpdesk or knowledge base link, include it here for faster self-serve support.
                 </p>
               </section>
 

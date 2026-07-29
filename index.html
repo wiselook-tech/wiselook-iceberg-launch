@@ -40,7 +40,16 @@
     <meta name="msapplication-TileColor" content="#301aff" />
     <meta http-equiv="X-Content-Type-Options" content="nosniff" />
     
-    <!-- Google Analytics: Consent Mode v2 default (denied until the visitor opts in via the cookie banner) -->
+    <!--
+      Google Analytics: Consent Mode v2 default (denied until the visitor
+      opts in via the cookie banner). This only sets up the dataLayer queue
+      and the "denied" default — gtag.js itself is NOT loaded here. Loading
+      it unconditionally would still send cookieless pings under "advanced"
+      consent mode even before consent is granted. Instead, src/lib/analytics.ts
+      injects gtag.js only after CookieConsent confirms consent is granted
+      (see src/components/CookieConsent.tsx), so no request ever reaches
+      googletagmanager.com/google-analytics.com pre-consent.
+    -->
     <script>
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
@@ -51,12 +60,7 @@
         ad_personalization: 'denied'
       });
     </script>
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-M5L6JSSDW7"></script>
-    <script>
-      gtag('js', new Date());
-      gtag('config', 'G-M5L6JSSDW7');
-    </script>
-    
+
     <!-- Structured Data -->
     <script type="application/ld+json">
     {

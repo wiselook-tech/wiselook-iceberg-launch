@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import { Linkedin } from "lucide-react";
 import { scrollToSection } from "@/lib/scroll";
+import { withdrawConsent } from "@/lib/consent";
 import wiselookIcon from "@/assets/Wiselook_RGB_Iso_Positive_Color.svg";
 
 const SiteFooter = () => (
@@ -74,6 +75,14 @@ const SiteFooter = () => (
           <Link to="/support" className="hover:text-foreground transition-colors">
             Support
           </Link>
+          <span>•</span>
+          <button
+            type="button"
+            onClick={withdrawConsent}
+            className="hover:text-foreground transition-colors"
+          >
+            Cookie preferences
+          </button>
         </div>
       </div>
     </div>

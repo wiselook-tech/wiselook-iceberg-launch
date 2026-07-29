@@ -1,73 +1,66 @@
-# Welcome to your Lovable project
+# wiselook.ai
 
-## Project info
+Marketing/landing site for Wiselook, deployed at [wiselook.ai](https://wiselook.ai).
 
-**URL**: https://lovable.dev/projects/426d3b4f-9f9a-4790-8f56-713cc8b8045b
+## Stack
 
-## How can I edit this code?
+- [Vite](https://vitejs.dev/) + React 18 + TypeScript
+- [Tailwind CSS](https://tailwindcss.com/) + a small set of [shadcn/ui](https://ui.shadcn.com/) components (Radix UI primitives)
+- Fonts self-hosted via [@fontsource](https://fontsource.org/) (Inter, Space Grotesk) — no external font requests
+- Static output, no backend: the whole site is a pre-built bundle served from GitHub Pages
 
-There are several ways of editing your application.
+## Development
 
-**Use Lovable**
-
-Simply visit the [Lovable Project](https://lovable.dev/projects/426d3b4f-9f9a-4790-8f56-713cc8b8045b) and start prompting.
-
-Changes made via Lovable will be committed automatically to this repo.
-
-**Use your preferred IDE**
-
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
-
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
-
-Follow these steps:
-
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
-
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
-
-# Step 3: Install the necessary dependencies.
+```bash
 npm i
-
-# Step 4: Start the development server with auto-reloading and an instant preview.
-npm run dev
+npm run dev            # start the dev server (http://localhost:8080)
 ```
 
-**Edit a file directly in GitHub**
+Other scripts:
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+```bash
+npm run lint                        # ESLint
+npx tsc -p tsconfig.app.json --noEmit   # type check
+npm run build            # production build -> docs/
+npm run build:dev        # build in development mode (unminified, for debugging)
+npm run preview          # locally preview the production build
+```
 
-**Use GitHub Codespaces**
+## Structure
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+```
+src/
+  components/
+    landing/    # the sections that make up the landing page (Hero, ProofStrip,
+                # ProblemSection, HowItWorks, UseCases, WhyWiselook, SecuritySection,
+                # TeamSection, FaqSection, ContactCta, SiteNav, SiteFooter, StickyCta, ...)
+    ui/         # the shadcn/ui primitives actually used by the landing components
+    CookieConsent.tsx
+  pages/        # route-level components (Index, Support, NotFound)
+  hooks/        # small shared hooks (hash-scroll, scroll-reveal)
+  lib/          # constants and small utilities (cn, scroll helpers, sticky CTA store)
+  assets/       # images and logos used by the landing components
+```
 
-## What technologies are used for this project?
+Copy for each section lives inline in its component under `src/components/landing/` —
+that's the source of truth for page content, not a separate spec file. See
+`src/landing.md` for a short pointer to where each section lives.
 
-This project is built with:
+## Deployment
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+The site builds to `docs/` (see `vite.config.ts`), a local build artifact — GitHub
+Pages is configured to deploy from the GitHub Actions workflow, not from a branch, so
+`docs/` is never read directly by Pages. `.github/workflows/deploy.yml` runs on every
+push/PR (and can be triggered manually via `workflow_dispatch`):
 
-## How can I deploy this project?
+1. **build** job: `npm ci`, lint, type check, `npm run build`, then uploads `docs/`
+   as a Pages artifact.
+2. **deploy** job: runs on pushes to `main` (or a manual `workflow_dispatch` run
+   against `main`), publishes the uploaded artifact to GitHub Pages.
 
-Simply open [Lovable](https://lovable.dev/projects/426d3b4f-9f9a-4790-8f56-713cc8b8045b) and click on Share -> Publish.
+The custom domain (`wiselook.ai`) is configured via `public/CNAME`, which Vite copies
+into `docs/` on build — that's the file GitHub Pages actually reads from the published
+artifact. A legacy `CNAME` also exists at the repo root; it predates the artifact-based
+deploy and isn't part of the build output.
 
-## Can I connect a custom domain to my Lovable project?
-
-Yes, you can!
-
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
-
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/features/custom-domain#custom-domain)
+`docs/` is git-ignored — it's a build artifact, not something to commit by hand.

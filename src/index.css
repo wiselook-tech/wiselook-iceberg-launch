@@ -125,9 +125,7 @@ All colors MUST be HSL.
 
 /* Respect users who request reduced motion: disable decorative animations */
 @media (prefers-reduced-motion: reduce) {
-  .animate-fade-up,
-  .animate-pulse-glow,
-  .animate-float {
+  .animate-fade-up {
     animation: none !important;
   }
 

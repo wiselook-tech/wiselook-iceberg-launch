@@ -3,10 +3,6 @@ name: Deploy to GitHub Pages
 on:
   push:
     branches: [ main ]
-    # Ignore commits that only change docs/ folder (to prevent infinite loop)
-    # The workflow will still run if source files change
-    paths-ignore:
-      - 'docs/**'
   pull_request:
     branches: [ main ]
 
@@ -36,15 +32,21 @@ jobs:
       - name: Setup Node
         uses: actions/setup-node@v4
         with:
-          node-version: '18'
+          node-version: '20'
           cache: 'npm'
-          
+
       - name: Setup Pages
         uses: actions/configure-pages@v4
-        
+
       - name: Install dependencies
         run: npm ci
-        
+
+      - name: Lint
+        run: npx eslint . --max-warnings=0
+
+      - name: Type check
+        run: npx tsc -p tsconfig.app.json --noEmit
+
       - name: Build
         run: npm run build
       
@@ -55,7 +57,7 @@ jobs:
 
   # Deployment job
   deploy:
-    if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+    if: (github.event_name == 'push' || github.event_name == 'workflow_dispatch') && github.ref == 'refs/heads/main'
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
