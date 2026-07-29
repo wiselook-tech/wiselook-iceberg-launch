@@ -136,7 +136,7 @@ const groups: SecurityGroup[] = [
 ];
 
 const cardClass = "border-none bg-background shadow-card";
-const iconChip = "flex h-10 w-10 items-center justify-center rounded-lg bg-primary/10";
+const iconChip = "flex h-10 w-10 items-center justify-center rounded-lg bg-brand-accent";
 
 /**
  * Cool-tinted band. `bg-accent/20` resolves to the same pale blue the product UI
@@ -183,7 +183,7 @@ const SecuritySection = () => (
             <Card key={item.title} className={cardClass}>
               <CardHeader className="space-y-4">
                 <div className={iconChip}>
-                  <item.icon className="h-5 w-5 text-primary" />
+                  <item.icon className="h-5 w-5 text-brand-accent-foreground" />
                 </div>
                 <CardTitle className="font-heading text-lg text-heading">{item.title}</CardTitle>
               </CardHeader>
@@ -210,7 +210,7 @@ const SecuritySection = () => (
                   {group.items.map((item) => (
                     <div key={item.title} className="flex items-start gap-4">
                       <div className={`${iconChip} flex-shrink-0`}>
-                        <item.icon className="h-5 w-5 text-primary" />
+                        <item.icon className="h-5 w-5 text-brand-accent-foreground" />
                       </div>
                       <div>
                         <h4 className="font-heading font-semibold text-heading mb-1">{item.title}</h4>

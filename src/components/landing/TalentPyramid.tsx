@@ -41,8 +41,10 @@ const tiers: Tier[] = [
     detail: "Foundation of the workforce. Where potential begins — and where nobody looks.",
     width: "w-full",
     rest: "bg-muted text-foreground",
-    active: "bg-accent/60 text-accent-foreground",
-    bodyTone: "text-muted-foreground",
+    // The widest, most-ignored tier is the one Wiselook exists to reach, so its
+    // active state lands in the accent rather than another pale blue.
+    active: "bg-brand-accent text-brand-accent-foreground",
+    bodyTone: "text-brand-accent-foreground/80",
   },
 ];
 

@@ -14,7 +14,7 @@ const HeroSection = () => (
       <div className="grid lg:grid-cols-2 gap-12 items-center">
         {/* Hero Content */}
         <div className="space-y-8 animate-fade-up">
-          <h1 className="font-heading font-bold text-4xl md:text-5xl lg:text-6xl leading-tight text-heading">
+          <h1 className="heading-accent heading-accent-start font-heading font-bold text-4xl md:text-5xl lg:text-6xl leading-tight text-heading">
             Map your talent. <br />
             In minutes.
           </h1>

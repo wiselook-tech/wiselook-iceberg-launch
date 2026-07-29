@@ -14,8 +14,8 @@ const WhyWiselook = () => (
         <div className="grid md:grid-cols-2 gap-8">
           <Card className={cardClass}>
             <CardHeader className="space-y-4">
-              <div className={`${iconWrapper} bg-primary/10`}>
-                <svg className="h-6 w-6 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <div className={`${iconWrapper} bg-brand-accent`}>
+                <svg className="h-6 w-6 text-brand-accent-foreground" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path
                     strokeLinecap="round"
                     strokeLinejoin="round"
@@ -35,8 +35,8 @@ const WhyWiselook = () => (
 
           <Card className={cardClass}>
             <CardHeader className="space-y-4">
-              <div className={`${iconWrapper} bg-secondary/20`}>
-                <svg className="h-6 w-6 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <div className={`${iconWrapper} bg-brand-accent`}>
+                <svg className="h-6 w-6 text-brand-accent-foreground" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path
                     strokeLinecap="round"
                     strokeLinejoin="round"
@@ -56,8 +56,8 @@ const WhyWiselook = () => (
 
           <Card className={cardClass}>
             <CardHeader className="space-y-4">
-              <div className={`${iconWrapper} bg-primary/10`}>
-                <Users className="h-6 w-6 text-primary" />
+              <div className={`${iconWrapper} bg-brand-accent`}>
+                <Users className="h-6 w-6 text-brand-accent-foreground" />
               </div>
               <CardTitle className="font-heading text-xl text-heading">Frictionless scale</CardTitle>
             </CardHeader>
@@ -70,8 +70,8 @@ const WhyWiselook = () => (
 
           <Card className={cardClass}>
             <CardHeader className="space-y-4">
-              <div className={`${iconWrapper} bg-secondary/20`}>
-                <Brain className="h-6 w-6 text-primary" />
+              <div className={`${iconWrapper} bg-brand-accent`}>
+                <Brain className="h-6 w-6 text-brand-accent-foreground" />
               </div>
               <CardTitle className="font-heading text-xl text-heading">Predictive, decision-ready insight</CardTitle>
             </CardHeader>

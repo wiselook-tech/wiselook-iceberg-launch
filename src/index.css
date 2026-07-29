@@ -36,7 +36,11 @@ All colors MUST be HSL.
        for the wordmark; the site follows so both read as the same brand. */
     --heading: 248 81% 23%;
 
-    /* Second brand color (#ff9966). Accent only — never a surface or body text. */
+    /* Second brand color (#ff9966). Carries the warm half of the identity:
+       heading rules, icon chips, badges, and the Wiselook marker on the
+       competitor chart. Use it as a FILL with --brand-accent-foreground (navy)
+       on top — that pairing measures 7.72:1. Never as a text or icon color
+       directly on a light surface, where it only reaches ~2.1:1. */
     --brand-accent: 20 100% 70%;
     --brand-accent-foreground: 248 81% 23%;
 
@@ -100,9 +104,9 @@ All colors MUST be HSL.
 .heading-accent::after {
   content: "";
   display: block;
-  width: 2.5rem;
-  height: 3px;
-  margin: 0.875rem auto 0;
+  width: 3.5rem;
+  height: 4px;
+  margin: 1rem auto 0;
   border-radius: 999px;
   background-color: hsl(var(--brand-accent));
 }
