@@ -95,10 +95,10 @@ const CompetitorQuadrant: React.FC = () => {
       <div className="bg-background rounded-xl p-8 shadow-card">
         <div className="text-center space-y-6 mb-8">
           <h3 className="font-heading font-bold text-2xl md:text-3xl text-foreground">
-            Why Us? 
+            Why Us?
           </h3>
           <p className="text-sm text-muted-foreground max-w-2xl mx-auto">
-            Because we are born to provide objective evidence at scale
+            Objective evidence, at scale — that's the gap we exist to close.
           </p>
         </div>
 

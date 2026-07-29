@@ -172,3 +172,24 @@ All colors MUST be HSL.
 .scroll-reveal.is-visible {
   opacity: 1;
 }
+
+/* Respect users who request reduced motion: disable decorative animations */
+@media (prefers-reduced-motion: reduce) {
+  .animate-fade-up,
+  .animate-pulse-glow,
+  .animate-float {
+    animation: none !important;
+  }
+
+  .animate-slide-up,
+  .animate-slide-in-left,
+  .animate-slide-down {
+    animation: none !important;
+    opacity: 1 !important;
+    transform: none !important;
+  }
+
+  .scroll-reveal {
+    transition: none !important;
+  }
+}

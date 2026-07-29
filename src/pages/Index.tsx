@@ -82,7 +82,7 @@ const Index = () => {
                 className="group"
                 onClick={() => { trackCtaClick('nav'); window.open(CALENDAR_URL, '_blank'); }}
               >
-                Let's talk
+                Book a 30-min demo
                 <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
               </Button>
             </div>
@@ -101,25 +101,31 @@ const Index = () => {
                 In minutes.
               </h1>
               <p className="text-lg md:text-xl text-muted-foreground max-w-xl">
-                Uncover the hidden potential in your organization with science-backed, conversational assessments. 
-                Our AI scales natively in your system, unlocking soft-skills intelligence for succession planning, mobility, and workforce decisions.
+                Claire, our AI assessor, turns structured conversations into scientific evidence of judgment, behavior, and competence — for the people decisions that matter most.
               </p>
-              <div className="pt-4 flex flex-col gap-4">
-                <Button 
-                  variant="hero" 
-                  size="xl" 
-                  className="group w-fit animate-pulse-glow"
+              <p className="text-sm text-muted-foreground/80 max-w-xl">
+                Built for organizations where people decisions carry the most weight — banking, insurance, consulting, pharma.
+              </p>
+              <div className="pt-4 flex flex-wrap items-center gap-4">
+                <Button
+                  variant="hero"
+                  size="xl"
+                  className="group w-fit"
                   onClick={() => { trackCtaClick('hero'); window.open(CALENDAR_URL, '_blank'); }}
                 >
-                  Let's talk
+                  Book a 30-min demo
                   <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
                 </Button>
-                <a 
-                  href="#how-it-works" 
-                  className="hidden md:inline-block text-sm text-muted-foreground hover:text-foreground transition-colors underline-offset-4 hover:underline w-fit"
+                <Button
+                  variant="outline"
+                  size="xl"
+                  className="group w-fit"
+                  asChild
                 >
-                  Jump to how it works
-                </a>
+                  <a href="#how-it-works">
+                    Jump to how it works
+                  </a>
+                </Button>
               </div>
             </div>
 
@@ -148,10 +154,10 @@ const Index = () => {
                 </span>
               </div>
               <h2 className="font-heading font-bold text-3xl md:text-4xl text-foreground">
-                Winner, HR Innovation Summit — Startup of the Year
+                Winner, HR Innovation Summit 2025 — Startup of the Year
               </h2>
               <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-                Recognized for innovation in talent assessment and workforce intelligence
+                Recognized for innovation in talent assessment
               </p>
               <a 
                 href="https://www.rrhhdigital.com/secciones/eventos-rrhhdigital/781586/hr-innovation-summit-2025-mas-talento-mas-ideas-y-una-asistencia-record/"
@@ -238,7 +244,7 @@ const Index = () => {
                   Go beyond multiple‑choice tests and expensive executive assessments
                 </h2>
                 <p className="text-lg text-muted-foreground">
-                  We unlock real measurement of talent across your organization. It's time to see the whole picture.
+                  Companies model, forecast, and audit every decision about money. People decisions — who to hire, who to promote, who's ready for what's next — still run on a CV, a few interviews, and gut feel. Wiselook brings the same rigor to the people side of the business.
                 </p>
               </div>
 
@@ -324,7 +330,7 @@ const Index = () => {
                 </div>
                 <h3 className="font-heading font-semibold text-xl text-foreground">Assess</h3>
                 <p className="text-muted-foreground">
-                  Teams go through open‑ended conversations or Situational Judgement Tests (SJT). At scale.
+                  People answer brief, open-ended prompts in a dialogue with Claire, our AI assessor, or complete situational judgement scenarios — in their own words, delivered where they already work: Microsoft Teams, web, or embedded.
                 </p>
               </div>
 
@@ -383,7 +389,7 @@ const Index = () => {
                   </svg>
                 </div>
                 <h3 className="font-heading font-semibold text-xl text-foreground">Conversational, inclusive assessment</h3>
-                <p className="text-muted-foreground">AI-powered scale without making technology the headline, focusing on human potential</p>
+                <p className="text-muted-foreground">AI does the heavy lifting; people stay the headline.</p>
               </div>
 
               <div className="space-y-4 p-6 rounded-xl bg-background shadow-card">
@@ -619,10 +625,10 @@ const Index = () => {
                 About Us
               </h2>
               <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-                Wiselook is a science-based talent intelligence platform that helps organizations recognize and develop their workforce potential through AI-powered assessments integrated directly into Microsoft Teams.
+                Wiselook is the measurement layer for people decisions — helping organizations recognize and develop talent through structured, AI-led conversations delivered on Microsoft Teams, web, or embedded.
               </p>
               <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-                Visionary leaders combining deep expertise in AI, data science, and customer experience to revolutionize workforce intelligence.
+                Leaders combining deep expertise in AI, data science, and customer experience, applying the rigor of finance to how organizations understand their people.
               </p>
             </div>
 
@@ -732,8 +738,8 @@ const Index = () => {
 
             {/* Join the Team CTA */}
             <div className="text-center pt-8">
-              <Button 
-                variant="hero" 
+              <Button
+                variant="outline"
                 size="lg"
                 className="group"
                 onClick={() => window.open('https://www.linkedin.com/company/wiselook/jobs/', '_blank')}
@@ -790,12 +796,30 @@ const Index = () => {
                 </AccordionContent>
               </AccordionItem>
 
+              <AccordionItem value="time" className="bg-card rounded-lg px-6 border-none shadow-card">
+                <AccordionTrigger className="text-left hover:no-underline py-6 min-h-[44px]">
+                  <span className="font-heading font-semibold text-foreground">How long does an assessment take?</span>
+                </AccordionTrigger>
+                <AccordionContent className="text-muted-foreground pb-6">
+                  Each conversational block takes under 10 minutes — minutes, not weeks. Most people complete it in a single sitting, in their own words.
+                </AccordionContent>
+              </AccordionItem>
+
+              <AccordionItem value="measured" className="bg-card rounded-lg px-6 border-none shadow-card">
+                <AccordionTrigger className="text-left hover:no-underline py-6 min-h-[44px]">
+                  <span className="font-heading font-semibold text-foreground">What does Wiselook actually measure?</span>
+                </AccordionTrigger>
+                <AccordionContent className="text-muted-foreground pb-6">
+                  Judgment, behavior, and competence — not personality types. Scoring methods were developed with Universidad Autónoma de Madrid and are validated and recalibrated over time.
+                </AccordionContent>
+              </AccordionItem>
+
               <AccordionItem value="security" className="bg-card rounded-lg px-6 border-none shadow-card">
                 <AccordionTrigger className="text-left hover:no-underline py-6 min-h-[44px]">
                   <span className="font-heading font-semibold text-foreground">Is it enterprise-ready for security and privacy?</span>
                 </AccordionTrigger>
                 <AccordionContent className="text-muted-foreground pb-6">
-                  Yes. We follow privacy by design, least-privilege access, and auditability. Current posture aligns to GDPR controls, with a published Trust Center and subprocessors list as it evolves.
+                  Yes. We follow privacy by design, least-privilege access, and full auditability, and our practices align with GDPR. We walk every prospective customer through our security documentation as part of the evaluation.
                 </AccordionContent>
               </AccordionItem>
 
@@ -804,7 +828,7 @@ const Index = () => {
                   <span className="font-heading font-semibold text-foreground">What outcomes can we expect and how do we start?</span>
                 </AccordionTrigger>
                 <AccordionContent className="text-muted-foreground pb-6">
-                  Faster, evidence-based decisions, higher completion vs. long tests, and clearer signals on strengths and mobility. Start with a short pilot using your model and a small cohort, then scale via a simple form-based intake and SSO when needed.
+                  Faster, evidence-based decisions, higher completion than long tests, and clearer signals on strengths and readiness for mobility. Start with a short pilot using your own competency model and a small cohort, then expand at your own pace.
                 </AccordionContent>
               </AccordionItem>
             </Accordion>
@@ -817,20 +841,31 @@ const Index = () => {
         <div className="container mx-auto px-6">
           <div className="max-w-3xl mx-auto text-center space-y-8">
             <h2 className="font-heading font-bold text-3xl md:text-5xl text-foreground">
-              Contact us to know more
+              See your talent map in 30 minutes
             </h2>
             <p className="text-lg text-muted-foreground">
               Ready to transform your talent assessment process? Let's discuss how Wiselook can help your organization.
             </p>
-            <Button 
-              variant="hero" 
-              size="xl" 
-              className="group min-h-[44px]"
-              onClick={() => { trackCtaClick('contact'); window.open(CALENDAR_URL, '_blank'); }}
-            >
-              Let's talk
+            <div className="flex flex-col items-center gap-3">
+              <Button
+                variant="hero"
+                size="xl"
+                className="group min-h-[44px]"
+                onClick={() => { trackCtaClick('contact'); window.open(CALENDAR_URL, '_blank'); }}
+              >
+                Book a 30-min demo
                 <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
               </Button>
+              <p className="text-sm text-muted-foreground/70">
+                30 minutes · no commitment · we'll bring a sample report.
+              </p>
+              <a
+                href="mailto:hello@wiselook.ai"
+                className="text-sm text-muted-foreground hover:text-foreground transition-colors underline-offset-4 hover:underline"
+              >
+                Prefer email? hello@wiselook.ai
+              </a>
+            </div>
           </div>
         </div>
       </section>
@@ -880,7 +915,7 @@ const Index = () => {
               <img src={wiselookIcon} alt="Wiselook" className="h-10 w-10" />
               <div>
                 <p className="font-heading font-bold text-xl text-foreground">Wiselook</p>
-                <p className="text-sm text-muted-foreground mt-1">Unlocking human potential. At scale.</p>
+                <p className="text-sm text-muted-foreground mt-1">The measurement layer for people decisions.</p>
               </div>
             </div>
             <div className="flex gap-6 text-sm text-muted-foreground items-center">
@@ -941,7 +976,7 @@ const Index = () => {
           className="w-full group min-h-[44px]"
           onClick={() => { trackCtaClick('sticky'); window.open(CALENDAR_URL, '_blank'); }}
         >
-          Let's talk
+          Book a 30-min demo
           <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
         </Button>
       </div>
