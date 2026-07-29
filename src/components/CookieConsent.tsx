@@ -1,5 +1,7 @@
 import { useEffect, useState } from "react";
 import { Button } from "@/components/ui/button";
+import { cn } from "@/lib/utils";
+import { useStickyCtaVisible } from "@/lib/sticky-cta";
 
 const CONSENT_KEY = "wiselook-consent";
 
@@ -31,6 +33,7 @@ const writeConsent = (value: ConsentValue) => {
 
 const CookieConsent = () => {
   const [visible, setVisible] = useState(false);
+  const stickyCtaVisible = useStickyCtaVisible();
 
   useEffect(() => {
     const stored = readConsent();
@@ -65,10 +68,13 @@ const CookieConsent = () => {
     <div
       role="region"
       aria-label="Cookie consent"
-      // bottom-[76px] keeps this clear of Index.tsx's mobile-only sticky CTA
-      // (p-4 padding + a size="lg"/h-11 button = 76px tall, hidden at md+),
-      // so the two fixed bottom bars never overlap on mobile.
-      className="fixed inset-x-0 bottom-[76px] z-[60] border-t border-border bg-background/95 p-4 shadow-soft backdrop-blur-sm md:bottom-0"
+      className={cn(
+        "fixed inset-x-0 z-[60] border-t border-border bg-background/95 p-4 shadow-soft backdrop-blur-sm md:bottom-0",
+        // The mobile-only sticky CTA is 76px tall (p-4 padding + a size="lg"/h-11
+        // button) and slides in once the hero scrolls away. Lift the banner over it
+        // while it is on screen so the two fixed bottom bars never overlap.
+        stickyCtaVisible ? "bottom-[76px]" : "bottom-0",
+      )}
     >
       <div className="container mx-auto flex flex-col items-center gap-4 px-2 md:flex-row md:justify-between md:gap-6">
         <p className="text-center text-sm text-muted-foreground md:text-left">

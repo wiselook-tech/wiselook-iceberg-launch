@@ -12,25 +12,26 @@
 
 ---
 
-### Sitemap (lean)
+### Sitemap (current)
 
 - Home
-    - Hero
-    - Proof and awards
-    - Problem (Go beyond multiple‑choice tests)
-    - Solution (How we solve it)
-    - Approach and value
-    - Competitor landscape
-    - Follow us on LinkedIn
-    - Security and privacy
-    - About Us
-    - Team
-    - Contact
+    - Hero (headline, subhead, Claire chat mock)
+    - Proof strip (award, "Recognized by" logos, UAM methodology line)
+    - Problem (Go beyond multiple‑choice tests) + talent pyramid
+    - How it works (Assess / Analyse / Act)
+    - Use cases (tabs: succession, internal mobility, development)
+    - Why Wiselook (4 benefits) + Wiselook vs. traditional assessments table
+    - Security and privacy (dark band: 3 commitments + full-posture accordion)
+    - About Us / team
     - FAQ
+    - Contact (final CTA)
+    - Footer
+
+Anchors: `#home`, `#problem`, `#how-it-works`, `#use-cases`, `#security`, `#about`, `#contact`.
 
 ---
 
-### Home — concise copy
+### Home — concise copy (v1 deck, superseded by the implemented copy)
 
 ### Hero
 
@@ -122,20 +123,19 @@
 ### Implementation Status
 
 **✅ COMPLETED SECTIONS:**
-- Hero section with headline, subhead, and CTA
-- Proof and awards section with HR Innovation Summit photos
-- Problem → Solution section
-- How it works in Teams (4-step process)
-- Approach and value (6 key benefits)
-- Competitor landscape (interactive 2×2 quadrant)
-- Follow us on LinkedIn section (positioned as last section of product section)
-- Security and privacy (GDPR, Azure)
+- Hero section with headline, subhead, CTA, and Claire chat mock
+- Proof strip (award line, "Recognized by" logos, UAM methodology line)
+- Problem section with the static talent pyramid
+- How it works (Assess / Analyse / Act)
+- Use cases (tabs: succession, internal mobility, development)
+- Why Wiselook (4 benefits) and the Wiselook vs. traditional assessments table
+- Security and privacy as a dark band (3 commitments + full-posture accordion)
 - About section with team profiles
+- FAQ section (8 questions, mirrored in the FAQPage JSON-LD in index.html)
 - Contact section with calendar booking
-- FAQ section (3 questions, positioned at end of website)
-- Navigation header with smooth scrolling
-- Mobile-responsive design
-- Footer with security badges
+- Navigation header with smooth scrolling and a mobile Sheet menu
+- Mobile-responsive design, skip link, sticky mobile CTA
+- Footer with legal links
 
 **🎨 DESIGN FEATURES:**
 - Modern gradient backgrounds
