@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Política de Privacidad - Wiselook</title>
+    <link rel="icon" href="/favicon.ico" type="image/x-icon" />
+    <link rel="alternate" hreflang="en" href="https://wiselook.ai/privacy/" />
+    <link rel="alternate" hreflang="es" href="https://wiselook.ai/es/privacy/" />
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      :root {
+        --primary: #301aff;
+        --foreground: #1a1a1a;
+        --heading: #170b6b;
+        --muted-foreground: #6b7280;
+        --background: #ffffff;
+        --muted: #f3f4f6;
+        --border: #e5e7eb;
+      }
+
+      body {
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+          Oxygen, Ubuntu, Cantarell, sans-serif;
+        line-height: 1.6;
+        color: var(--foreground);
+        background-color: var(--background);
+        min-height: 100vh;
+      }
+
+      nav {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 50;
+        background-color: rgba(255, 255, 255, 0.95);
+        -webkit-backdrop-filter: blur(8px);
+        backdrop-filter: blur(8px);
+        border-bottom: 1px solid var(--border);
+      }
+
+      .nav-container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 1rem 1.5rem;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+      }
+
+      .nav-brand {
+        display: flex;
+        align-items: center;
+        gap: 0.75rem;
+        text-decoration: none;
+        color: var(--heading);
+        transition: opacity 0.2s;
+      }
+
+      .nav-brand:hover {
+        opacity: 0.8;
+      }
+
+      .nav-brand img {
+        height: 2rem;
+        width: 2rem;
+      }
+
+      .nav-brand span {
+        font-weight: bold;
+        font-size: 1.25rem;
+      }
+
+      .back-button {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.5rem;
+        padding: 0.5rem 1rem;
+        font-size: 0.875rem;
+        color: var(--foreground);
+        background: transparent;
+        border: none;
+        border-radius: 0.375rem;
+        cursor: pointer;
+        transition: background-color 0.2s;
+        text-decoration: none;
+      }
+
+      .back-button:hover {
+        background-color: var(--muted);
+      }
+
+      .back-button svg {
+        width: 1rem;
+        height: 1rem;
+      }
+
+      .nav-actions {
+        display: flex;
+        align-items: center;
+        gap: 0.75rem;
+      }
+
+      main {
+        padding-top: 5rem;
+        padding-bottom: 4rem;
+      }
+
+      .container {
+        max-width: 56rem;
+        margin: 0 auto;
+        padding: 0 1.5rem;
+      }
+
+      h1 {
+        font-weight: bold;
+        font-size: 2.25rem;
+        margin-bottom: 2rem;
+        color: var(--heading);
+      }
+
+      h2 {
+        font-weight: 600;
+        font-size: 1.5rem;
+        margin-top: 2rem;
+        margin-bottom: 1rem;
+        color: var(--heading);
+      }
+
+      h3 {
+        font-weight: 600;
+        font-size: 1.2rem;
+        margin-top: 1.5rem;
+        margin-bottom: 0.75rem;
+        color: var(--heading);
+      }
+
+      p {
+        color: var(--muted-foreground);
+        line-height: 1.75;
+        margin-bottom: 1rem;
+      }
+
+      p strong {
+        color: var(--foreground);
+      }
+
+      ul {
+        list-style-type: disc;
+        padding-left: 1.5rem;
+        color: var(--muted-foreground);
+        margin-bottom: 1rem;
+      }
+
+      ul li {
+        margin-bottom: 0.5rem;
+      }
+
+      ol {
+        padding-left: 1.5rem;
+        color: var(--muted-foreground);
+        margin-bottom: 1rem;
+      }
+
+      ol li {
+        margin-bottom: 0.5rem;
+      }
+
+      section {
+        margin-bottom: 2rem;
+      }
+
+      .table-wrap {
+        overflow-x: auto;
+        margin-bottom: 1.5rem;
+      }
+
+      table {
+        width: 100%;
+        border-collapse: collapse;
+        font-size: 0.95rem;
+      }
+
+      th,
+      td {
+        padding: 0.75rem 1rem;
+        text-align: left;
+        border: 1px solid var(--border);
+        vertical-align: top;
+        color: var(--muted-foreground);
+        line-height: 1.6;
+      }
+
+      th {
+        background-color: var(--muted);
+        font-weight: 600;
+        color: var(--foreground);
+      }
+
+      td strong {
+        color: var(--foreground);
+      }
+
+      .kv-table th {
+        width: 35%;
+      }
+
+      .contact-box {
+        margin-top: 1rem;
+        padding: 1rem;
+        background-color: var(--muted);
+        border-radius: 0.5rem;
+      }
+
+      .contact-box p {
+        margin-bottom: 0.5rem;
+      }
+
+      .contact-box p:last-child {
+        margin-bottom: 0;
+      }
+
+      .contact-box .font-medium {
+        font-weight: 500;
+        color: var(--foreground);
+      }
+
+      a {
+        color: var(--primary);
+        text-decoration: none;
+      }
+
+      a:hover {
+        text-decoration: underline;
+      }
+
+      .last-updated {
+        color: var(--muted-foreground);
+        margin-bottom: 2rem;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Navigation Header -->
+    <nav>
+      <div class="nav-container">
+        <a href="/" class="nav-brand">
+          <img src="/favicon.ico" alt="Wiselook" />
+          <span>Wiselook</span>
+        </a>
+        <div class="nav-actions">
+          <a href="/privacy/" class="back-button">EN</a>
+          <a href="/" class="back-button">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <path d="m12 19-7-7 7-7" />
+              <path d="M19 12H5" />
+            </svg>
+            Volver
+          </a>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main>
+      <div class="container">
+        <h1>Política de Privacidad</h1>
+
+        <p class="last-updated">
+          <strong>Última actualización:</strong> 28 de abril de 2026 &middot; <strong>Versión:</strong> 2.0
+        </p>
+
+        <div class="content">
+          <section>
+            <h2>Resumen de un vistazo</h2>
+            <div class="table-wrap">
+              <table class="kv-table">
+                <tbody>
+                  <tr>
+                    <th>Responsable del tratamiento</th>
+                    <td>
+                      WISELOOK TALENT LAB, S.L. (NIF B22539084), Paseo de la
+                      Castellana 42, 1.ª planta, 28046 Madrid, España.
+                    </td>
+                  </tr>
+                  <tr>
+                    <th>Contacto de privacidad</th>
+                    <td>
+                      <a href="mailto:privacy@wiselook.ai">privacy@wiselook.ai</a>
+                    </td>
+                  </tr>
+                  <tr>
+                    <th>Qué hacemos con sus datos</th>
+                    <td>
+                      Realizamos evaluaciones conversacionales psicométricas y de
+                      competencias asistidas por IA y ponemos los resultados a su
+                      disposición y, cuando proceda, a disposición de la organización
+                      que le invitó a realizar la evaluación.
+                    </td>
+                  </tr>
+                  <tr>
+                    <th>Bases jurídicas</th>
+                    <td>
+                      Consentimiento, ejecución de un contrato, intereses legítimos y
+                      obligaciones legales (véase el apartado 4).
+                    </td>
+                  </tr>
+                  <tr>
+                    <th>Conservación</th>
+                    <td>
+                      Hasta 3 años desde su última interacción significativa, salvo
+                      que la ley exija un plazo mayor (véase el apartado 7).
+                    </td>
+                  </tr>
+                  <tr>
+                    <th>Destinatarios</th>
+                    <td>
+                      La organización que le invitó (cuando proceda), nuestros
+                      encargados del tratamiento (proveedores tecnológicos) y las
+                      autoridades competentes cuando sea legalmente obligatorio
+                      (véase el apartado 6).
+                    </td>
+                  </tr>
+                  <tr>
+                    <th>Sus derechos</th>
+                    <td>
+                      Acceso, rectificación, supresión, oposición, limitación,
+                      portabilidad, derecho a no ser objeto de decisiones basadas
+                      únicamente en tratamientos automatizados y derecho a retirar el
+                      consentimiento. Puede ejercerlos en
+                      <a href="mailto:privacy@wiselook.ai">privacy@wiselook.ai</a>
+                      y presentar una reclamación ante la Agencia Española de
+                      Protección de Datos
+                      (<a href="http://www.aepd.es" target="_blank" rel="noopener noreferrer">www.aepd.es</a>).
+                    </td>
+                  </tr>
+                  <tr>
+                    <th>Decisiones automatizadas</th>
+                    <td>
+                      Nuestro sistema apoya la toma de decisiones, pero no la
+                      sustituye. Existe una revisión humana cualificada, y usted tiene
+                      derecho a obtener una explicación y a impugnar cualquier
+                      resultado (véase el apartado 5).
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <p>
+              Este es un aviso por capas conforme a las orientaciones emitidas por la
+              Agencia Española de Protección de Datos. Recomendamos encarecidamente
+              leer la información detallada que figura a continuación.
+            </p>
+          </section>
+
+          <section>
+            <h2>Nuestros compromisos principales con usted</h2>
+            <ul>
+              <li>
+                <strong>No entrenamos modelos con sus datos.</strong> Wiselook no
+                utiliza sus datos personales para entrenar modelos lingüísticos de
+                terceros ni ningún otro sistema de IA más allá del funcionamiento del
+                Servicio.
+              </li>
+              <li>
+                <strong>No vendemos sus datos personales.</strong> Wiselook no vende,
+                alquila ni comercializa sus datos personales bajo ninguna
+                circunstancia.
+              </li>
+              <li>
+                <strong>Minimizamos los datos que recopilamos.</strong> La única
+                información directamente identificativa exigida es su dirección de
+                correo electrónico (para iniciar sesión) y, opcionalmente, su nombre.
+                Véase el apartado 4.
+              </li>
+            </ul>
+          </section>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>
