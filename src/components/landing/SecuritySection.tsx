@@ -1,10 +1,10 @@
 import type { ReactNode } from "react";
 import type { LucideIcon } from "lucide-react";
-import { Database, Eye, FileText, Globe, Key, Search, Shield, ShieldCheck, UserCheck } from "lucide-react";
+import { ArrowUpRight, Database, Eye, FileText, Globe, Key, Search, Shield, ShieldCheck, UserCheck } from "lucide-react";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import gdprLogo from "@/assets/gdpr-logo.svg";
-import euAiActLogo from "@/assets/eu-ai-act-logo.svg";
+import { TRUST_CENTER_URL } from "@/lib/constants";
+import TrustBadges from "@/components/landing/TrustBadges";
 
 interface SecurityItem {
   icon: LucideIcon;
@@ -155,26 +155,21 @@ const SecuritySection = () => (
             Built with security and privacy by design, ensuring your data is protected at every step
           </p>
 
-          {/* Certification imagery */}
-          <div className="flex items-center justify-center gap-8 flex-wrap pt-4">
-            <img
-              src={gdprLogo}
-              alt="GDPR-ready"
-              className="h-16 w-auto"
-              width={128}
-              height={64}
-              loading="lazy"
-              decoding="async"
-            />
-            <img
-              src={euAiActLogo}
-              alt="Built for the EU AI Act"
-              className="h-16 w-auto"
-              width={128}
-              height={64}
-              loading="lazy"
-              decoding="async"
-            />
+          {/* Frameworks tracked in the Trust Center. Badges name the standards
+              only; the linked Trust Center shows each one's live status. */}
+          <div className="space-y-5 pt-4">
+            <TrustBadges size="md" />
+            <p className="text-center text-sm">
+              <a
+                href={TRUST_CENTER_URL}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-1 rounded text-primary underline-offset-4 transition-colors hover:text-primary/80 hover:underline focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2"
+              >
+                Explore our Trust Center
+                <ArrowUpRight className="h-3.5 w-3.5" aria-hidden="true" />
+              </a>
+            </p>
           </div>
         </div>
 
