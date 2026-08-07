@@ -1,7 +1,9 @@
 import { Link } from "react-router-dom";
-import { Linkedin } from "lucide-react";
+import { ArrowUpRight, Linkedin } from "lucide-react";
 import { scrollToSection } from "@/lib/scroll";
 import { withdrawConsent } from "@/lib/consent";
+import { TRUST_CENTER_URL } from "@/lib/constants";
+import TrustBadges from "@/components/landing/TrustBadges";
 import wiselookIcon from "@/assets/Wiselook_RGB_Iso_Positive_Color.svg";
 
 const SiteFooter = () => (
@@ -61,6 +63,26 @@ const SiteFooter = () => (
           </a>
         </div>
       </div>
+      {/* Compliance strip: framework badges only name the standards we pursue —
+          the Trust Center holds the live status of each, so no claims are made here. */}
+      <div className="mt-10 pt-8 border-t border-border">
+        <p className="text-center font-heading text-xs font-medium uppercase tracking-widest text-muted-foreground">
+          Security &amp; compliance
+        </p>
+        <TrustBadges className="mt-5" />
+        <p className="mt-5 text-center">
+          <a
+            href={TRUST_CENTER_URL}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-1 rounded text-sm text-primary underline-offset-4 transition-colors hover:text-primary/80 hover:underline focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2"
+          >
+            Visit our Trust Center
+            <ArrowUpRight className="h-3.5 w-3.5" aria-hidden="true" />
+          </a>
+        </p>
+      </div>
+
       <div className="mt-8 pt-8 border-t border-border text-center text-sm text-muted-foreground">
         <p>© 2025 Wiselook Talent Lab S.L. All rights reserved.</p>
         <div className="mt-2 flex justify-center gap-4">
